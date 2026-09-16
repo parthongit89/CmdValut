@@ -952,3 +952,46 @@ body.light-theme .command-box:hover {
     display: none;
   }
 }
+
+/* Under Development Badge */
+.dev-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 14px;
+  background: rgba(253, 214, 99, 0.12);
+  color: #fdd663;
+  border: 1px solid rgba(253, 214, 99, 0.28);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  user-select: none;
+  margin-left: 8px;
+}
+
+body.light-theme .dev-chip {
+  background: rgba(249, 171, 0, 0.14);
+  color: #b06000;
+  border-color: rgba(249, 171, 0, 0.35);
+}
+
+.dev-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fdd663;
+  box-shadow: 0 0 6px rgba(253, 214, 99, 0.8);
+  animation: devPulse 2s infinite ease-in-out;
+}
+
+body.light-theme .dev-chip-dot {
+  background: #b06000;
+  box-shadow: 0 0 6px rgba(176, 96, 0, 0.6);
+}
+
+@keyframes devPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
