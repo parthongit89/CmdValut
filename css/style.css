@@ -161,63 +161,46 @@ body {
   transition: background-color 0.25s ease;
 }
 
-/* Google Logo Brand */
+/* Brand Logo (Clean, Sharp & Exact to Figma) */
 .logo-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   cursor: pointer;
   user-select: none;
+  transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
-.logo-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--g-surface-elevated);
-  border: 1px solid var(--g-border-subtle);
-  border-radius: 14px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
-}
-
-.logo-wrapper:hover .logo-badge {
+.logo-wrapper:hover {
+  opacity: 0.9;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
 }
 
 .logo-symbol {
-  font-family: var(--font-code);
-  font-size: 22px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #4285F4 0%, #EA4335 35%, #FBBC05 70%, #34A853 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff9f9;
   line-height: 1;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.logo-text-wrap {
-  display: flex;
-  flex-direction: column;
+body.light-theme .logo-symbol {
+  color: #1a73e8;
+  text-shadow: none;
 }
 
 .logo-text {
-  font-size: 24px;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.logo-subtext {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--google-blue);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1;
 }
 
 /* Google Search Pill */
