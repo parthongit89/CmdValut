@@ -4,6 +4,13 @@
 !.env.example
 js/env.js
 
+# Data & Source Reference Files (Excluded from public repo)
+Data Commands/
+Data Commands/*
+data/
+Data/
+*.pdf
+
 # OS & Editor temporary files
 *Zone.Identifier
 Thumbs.db
