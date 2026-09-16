@@ -1,0 +1,23 @@
+# Security: Exclude all environment secrets and local credential files
+.env
+.env.*
+!.env.example
+js/env.js
+
+# OS & Editor temporary files
+*Zone.Identifier
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs & build artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

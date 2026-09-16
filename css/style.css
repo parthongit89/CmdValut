@@ -1,0 +1,777 @@
+/* ==========================================================================
+   CmdVault Design System & Typography
+   Figma Exact Match (Node 767:3)
+   ========================================================================== */
+
+/* Local Font Declarations */
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('../font-familiy/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf') format('truetype-variations'),
+       url('../font-familiy/Google_Sans_Flex/static/GoogleSansFlex_36pt-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../font-familiy/Google_Sans_Code/static/GoogleSansCode-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../font-familiy/Google_Sans_Code/static/GoogleSansCode-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../font-familiy/Google_Sans_Code/static/GoogleSansCode-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Code';
+  src: url('../font-familiy/Google_Sans_Code/static/GoogleSansCode-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+  --bg-page: #1e1e1e;
+  --bg-surface: #1a1a1a;
+  --bg-surface-hover: #242424;
+  --border-color: rgba(255, 249, 249, 0.25);
+  --border-active: rgba(255, 249, 249, 0.6);
+  --text-white: #ffffff;
+  --text-offwhite: #fff9f9;
+  --text-sub: rgba(255, 255, 255, 0.85);
+  --text-dim: rgba(255, 255, 255, 0.55);
+  --text-faint: rgba(255, 255, 255, 0.25);
+  --accent-color: #60a5fa;
+  --toast-bg: #2d2d2d;
+  --font-ui: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-code: 'Google Sans Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Light Theme Support */
+body.light-theme {
+  --bg-page: #f5f6f8;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f0f2f5;
+  --border-color: rgba(0, 0, 0, 0.15);
+  --border-active: rgba(0, 0, 0, 0.4);
+  --text-white: #111827;
+  --text-offwhite: #111827;
+  --text-sub: rgba(17, 24, 39, 0.85);
+  --text-dim: rgba(17, 24, 39, 0.65);
+  --text-faint: rgba(17, 24, 39, 0.35);
+  --accent-color: #2563eb;
+  --toast-bg: #ffffff;
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-white);
+  font-family: var(--font-ui);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Container */
+.app-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Header Bar (Top Nav)
+   ========================================================================== */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 48px 25px 30px;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  gap: 4px;
+}
+
+.logo-symbol {
+  font-size: 30px;
+  color: var(--text-offwhite);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 25px;
+  color: var(--text-white);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Center Search Bar */
+.search-container {
+  flex: 1;
+  max-width: 693px;
+  height: 49px;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px 0 24px;
+  gap: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-container:focus-within {
+  border-color: var(--border-active);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.55;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-white);
+}
+
+.search-input::placeholder {
+  color: var(--text-faint);
+}
+
+.search-clear {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.search-clear.visible {
+  display: block;
+}
+
+/* Header Right Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* GitHub Login Pill Button */
+.auth-btn {
+  height: 51px;
+  min-width: 220px;
+  padding: 0 24px;
+  background-color: var(--bg-surface);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.auth-btn:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-color);
+}
+
+.auth-btn:active {
+  transform: scale(0.98);
+}
+
+.auth-icon {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.auth-label {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-white);
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+/* User Logged In Profile Menu */
+.user-profile {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.user-profile.active {
+  display: flex;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-white);
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logout-link {
+  font-size: 12px;
+  color: var(--text-dim);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-link:hover {
+  color: #ef4444;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  height: 46px;
+  width: 50px;
+  background-color: var(--bg-surface);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-color);
+}
+
+.theme-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(1);
+  transition: transform 0.3s ease;
+}
+
+body.light-theme .theme-icon {
+  filter: invert(1);
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   Category Navigation Bar (Sub Header)
+   ========================================================================== */
+.category-nav-bar {
+  background-color: var(--bg-surface);
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  gap: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav-tab {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-white);
+  opacity: 0.75;
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.nav-tab:hover {
+  opacity: 1;
+}
+
+.nav-tab.active {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--text-white);
+  border-radius: 3px 3px 0 0;
+}
+
+/* ==========================================================================
+   Main Content Area
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 60px 80px 100px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title-wrap {
+  margin-bottom: 48px;
+}
+
+.page-title {
+  font-size: 45px;
+  font-weight: 500;
+  color: var(--text-white);
+  margin-bottom: 40px;
+  letter-spacing: -0.01em;
+}
+
+/* OS Filter Pills */
+.os-filters-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.os-pill {
+  height: 44px;
+  padding: 0 24px;
+  background-color: var(--bg-surface);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.os-pill:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-color);
+}
+
+.os-pill.active {
+  border-color: var(--border-active);
+  background-color: var(--bg-surface-hover);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.os-pill img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.os-pill span {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-white);
+}
+
+/* ==========================================================================
+   Command Sections & Cards
+   ========================================================================== */
+.commands-container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-top: 40px;
+}
+
+.command-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+}
+
+.section-heading {
+  font-size: 35px;
+  font-weight: 400;
+  color: var(--text-white);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.section-desc {
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--text-white);
+  opacity: 0.55;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.command-group {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.command-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1000px;
+}
+
+/* Command Code Box */
+.command-box {
+  width: 100%;
+  min-height: 63px;
+  background-color: var(--bg-surface);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.command-box:hover {
+  border-color: var(--border-color);
+  background-color: var(--bg-surface-hover);
+}
+
+.command-code {
+  font-family: var(--font-code);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--text-white);
+  opacity: 0.7;
+  white-space: pre-wrap;
+  word-break: break-all;
+  user-select: all;
+  transition: opacity 0.2s ease;
+}
+
+.command-box:hover .command-code {
+  opacity: 0.95;
+}
+
+/* Copy Action Button */
+.copy-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.copy-btn:active {
+  transform: scale(0.9);
+}
+
+.copy-btn img,
+.copy-btn svg {
+  width: 22px;
+  height: 22px;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.copy-btn:hover img,
+.copy-btn:hover svg {
+  opacity: 0.95;
+}
+
+.copy-btn.copied svg path {
+  fill: #10b981;
+}
+
+/* Command Explanation Text */
+.command-explanation {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--text-white);
+  opacity: 0.85;
+  line-height: 1.4;
+  padding-left: 4px;
+}
+
+/* Divider Line */
+.section-divider {
+  width: 100%;
+  max-width: 1240px;
+  margin-top: 40px;
+  opacity: 0.35;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Empty State */
+.empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  gap: 16px;
+}
+
+.empty-state.visible {
+  display: flex;
+}
+
+.empty-state-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-white);
+}
+
+.empty-state-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-dim);
+}
+
+.reset-search-btn {
+  margin-top: 12px;
+  padding: 10px 24px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-white);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-search-btn:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-active);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 80px 20px 60px 20px;
+  margin-top: auto;
+}
+
+.footer-links {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-white);
+  opacity: 0.25;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-white);
+  opacity: 0.25;
+}
+
+/* ==========================================================================
+   Toast Notification
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  background-color: var(--toast-bg);
+  color: var(--text-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: auto;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .header-bar {
+    padding: 24px 30px;
+    flex-wrap: wrap;
+  }
+  .search-container {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+  .category-nav-bar {
+    padding: 0 30px;
+    gap: 30px;
+    overflow-x: auto;
+  }
+  .main-content {
+    padding: 40px 30px 80px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-bar {
+    padding: 18px 20px;
+  }
+  .auth-btn {
+    min-width: unset;
+    padding: 0 14px;
+  }
+  .auth-label {
+    display: none;
+  }
+  .category-nav-bar {
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .main-content {
+    padding: 30px 20px 60px 20px;
+  }
+  .page-title {
+    font-size: 32px;
+  }
+  .section-heading {
+    font-size: 26px;
+  }
+  .section-desc {
+    font-size: 18px;
+  }
+  .command-code {
+    font-size: 16px;
+  }
+  .command-explanation {
+    font-size: 16px;
+  }
+  .command-box {
+    padding: 12px 18px;
+  }
+}
