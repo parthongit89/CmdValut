@@ -1,80 +1,149 @@
-# CmdVault - Command Line Quick Reference & Cheat Sheet
+<p align="center">
+  <img src="images/logo.png" alt="CmdVault Logo" width="128" height="128" style="border-radius: 50%;" />
+</p>
 
-[![Status: Under Development](https://img.shields.io/badge/Status-Under--Development-f59e0b?style=for-the-badge&logo=git&logoColor=white)](https://cmd-valut.vercel.app/)
-[![Vercel Deployment](https://img.shields.io/badge/Live%20Demo-cmd--valut.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://cmd-valut.vercel.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+<h1 align="center">CmdVault</h1>
 
-> 🚧 **PROJECT NOTICE**: This repository is actively **flagged as under-development**.  
-> **Live Website**: [CmdVault - Command Line Quick Reference & Cheat Sheet](https://cmd-valut.vercel.app/)
+<p align="center">
+  <strong>Command Line Quick Reference &amp; Interactive Developer Cheat Sheet</strong>
+</p>
+
+<p align="center">
+  <a href="https://cmd-valut.vercel.app/"><img src="https://img.shields.io/badge/Status-Under--Development-f59e0b?style=for-the-badge&logo=git&logoColor=white" alt="Status: Under Development" /></a>
+  <a href="https://cmd-valut.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-cmd--valut.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo on Vercel" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License: MIT" /></a>
+  <img src="https://img.shields.io/badge/Vanilla-HTML5%20%7C%20CSS3%20%7C%20JS-F16529?style=for-the-badge&logo=javascript&logoColor=white" alt="Stack" />
+</p>
+
+<p align="center">
+  <a href="https://cmd-valut.vercel.app/">🚀 <b>Explore Live Application</b></a> •
+  <a href="#-features">✨ Features</a> •
+  <a href="#-project-structure">📁 Architecture</a> •
+  <a href="#-getting-started">💻 Getting Started</a> •
+  <a href="#-security--privacy">🔒 Security</a> •
+  <a href="#-contact--author">📬 Contact</a>
+</p>
 
 ---
 
-A modern, fast, and responsive web application replicating the Figma design for **CmdVault** with Google Material 3 aesthetic. Provides instant access to essential commands across **GitHub-Git**, **Linux-Bash**, and **PowerShell-Windows** with 1-click clipboard copy, real-time search, operating system filtering, dark/light theme toggle, and Firebase GitHub OAuth.
+> 🚧 **PROJECT NOTICE**: This repository is actively **flagged as under-development**.  
+> Features, command collections, and shortcuts are regularly updated.  
+> **Live Production Website**: [https://cmd-valut.vercel.app/](https://cmd-valut.vercel.app/)
 
-## 🚀 Live Demo
-Visit the live deployed site on Vercel:
-👉 **[CmdVault - Command Line Quick Reference & Cheat Sheet](https://cmd-valut.vercel.app/)**
+---
+
+## 📖 Overview
+
+**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, and DevOps engineers instant access to essential commands across **GitHub & Git**, **Linux & Bash**, and **Windows PowerShell**.
+
+No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semantic HTML5, modern CSS3, and modular vanilla JavaScript**, delivering zero-latency search, instantaneous 1-click clipboard copying, and edge performance on Vercel.
 
 ---
 
 ## ✨ Features
 
-- **Google Material 3 Aesthetic**: Designed with Google dark palette (`#131314`, `#1e1f20`, `#282a2c`), Google brand accents (Blue `#8ab4f8`, Green `#81c995`, Amber `#fdd663`, Red `#f28b82`), and 4-color gradient brand badge.
-- **Under-Development Status**: Active development notice and badge maintained on GitHub.
-- **Local Typography**: Embedded `@font-face` rules for local `Google Sans Flex` and `Google Sans Code` fonts.
-- **Instant Search**: Real-time matching across commands, descriptions, and categories with keyboard shortcut (`/` to search).
-- **Categorized Command Vault**:
-  - **GitHub-Git**: Setup, Setup & Init, Stage & Snapshot, Branch & Merge, Share & Update, Tracking Path Changes, Temporary Commits, Rewrite History, Inspect & Compare.
-  - **Linux-Bash**: File Management, Permissions & Ownership, System Diagnostics, Systemd Services, Compression.
-  - **PowerShell-Windows**: Navigation, Process & Service Control, System & Network Administration.
-- **Platform Filter Chips**: Filter pills for Windows, Linux, and macOS.
-- **1-Click Copy**: Instant clipboard copy with animated green checkmark and Material 3 snackbar feedback.
-- **GitHub Authentication**: Firebase Auth with GitHub OAuth provider and secure runtime environment resolution.
-- **Dark / Light Mode**: Seamless theme switching with local storage persistence.
-- **Vercel Edge Ready**: Pure HTML5/CSS3/JavaScript with edge caching headers in `vercel.json`.
+### 🎨 Design & Experience
+- **Google Material 3 Aesthetic**: Deep background (`#131314`), elevated surface cards (`#1e1f20`), Google Blue accents (`#8ab4f8`), and crisp terminal typography using local `Google Sans Flex` and `Google Sans Code`.
+- **Full-Width Modern Layout**: Edge-to-edge navigation and category bars that seamlessly scale across ultrawide monitors and mobile screens.
+- **Dynamic Dark / Light Theme**: Seamless theme toggling with high-contrast icon adaptations and persistent user preferences stored in `localStorage`.
+- **100% Mobile Responsive**: Fluid breakpoints, full-width collapsible search input, touch-friendly tap targets, and horizontal swipeable category tabs.
+
+### ⚡ Productivity & Commands
+- **Instant Keyword Search**: Real-time filtering across commands, syntax, and descriptions with visual `<mark>` highlighting.
+- **Global Keyboard Shortcut**: Press <kbd>/</kbd> anywhere on the page to instantly focus and type in the search bar.
+- **Multi-OS Filter Chips**: Filter commands by **Windows**, **Linux**, or **macOS** with high-contrast platform icons.
+- **1-Click Clipboard Copy**: One-click copying with an animated green checkmark confirmation and a Google Material 3 snackbar toast.
+
+### 🔐 Security & Architecture
+- **Zero-Secret Client Architecture**: API keys are completely isolated from GitHub using `.gitignore` and dynamic Vercel serverless `/api/config` runtime injection.
+- **GitHub OAuth Authentication**: One-click sign-in powered by Firebase Authentication to personalize developer sessions.
+- **Complete Compliance Suite**: Standalone, dedicated pages for **Privacy Policy**, **Terms & Conditions**, **Cookies Policy**, and **Contact Us**.
+
+---
+
+## 🗂️ Supported Command Categories
+
+| Ecosystem | Focus Areas | Key Capabilities |
+| :--- | :--- | :--- |
+| **GitHub & Git** | Setup, Init, Staging, Branching, Merging, Remote Updates, History Rewrites | Global configurations, commit snapshots, interactive rebase, cherry-pick, stash, branch management |
+| **Linux & Bash** | Filesystem, Permissions, Process Management, Systemd Services, Diagnostics | `chown`, `chmod`, `systemctl`, `journalctl`, disk diagnostics, tar compression, networking |
+| **PowerShell** | Navigation, Process Control, Admin Scripts, Network Diagnostics | `Get-Service`, `Stop-Process`, `Test-NetConnection`, execution policies, package management |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-CmdValut/
-├── index.html            # Main semantic HTML5 interface
+CmdVault/
+├── index.html            # Main semantic application dashboard
+├── contact.html          # Dedicated maintainer & feedback contact page
+├── privacy.html          # GDPR & GitHub OAuth Privacy Policy
+├── terms.html            # Terms of Service & terminal command execution disclaimer
+├── cookies.html          # Cookie and storage usage policy
 ├── css/
-│   └── style.css         # Complete Google Material 3 stylesheet
+│   └── style.css         # Google Material 3 design system, typography & themes
 ├── js/
-│   ├── commands-data.js  # Structured command database
-│   ├── firebase-config.js# Firebase App & GitHub OAuth configuration
-│   ├── env.template.js   # Public environment variable template
-│   └── app.js            # Reactive rendering, search, copy & theme logic
+│   ├── app.js            # Core application controller (search, copy, rendering, theme)
+│   ├── commands-data.js  # Curated database of terminal commands and explanations
+│   ├── firebase-config.js# Firebase Authentication & GitHub OAuth runtime loader
+│   └── env.template.js   # Public environment variable template
 ├── api/
-│   └── config.js         # Vercel serverless environment variable provider
-├── icons/                # SVG & PNG icons (search, copy, sun, OS badges, GitHub)
-├── font-familiy/         # Local Google Sans Flex & Google Sans Code TTF files
-├── Data Commands/        # Source cheat sheets and PDF references
-├── vercel.json           # Vercel deployment configuration
-├── .env.example          # Safe environment variables reference
-└── README.md             # Documentation
+│   └── config.js         # Vercel Serverless Function serving secure runtime config
+├── images/
+│   ├── logo.png          # CmdVault circular brand logo
+│   └── Group 1.png       # Original vector asset
+├── icons/                # System SVGs & icons (copy, search, sun, OS logos)
+├── font-familiy/         # Local Google Sans Flex & Google Sans Code TTF font files
+├── vercel.json           # Edge caching headers, clean URLs & security directives
+├── .env.example          # Safe environment variables template
+└── README.md             # Project documentation
 ```
 
 ---
 
-## 💻 Local Development
+## 💻 Getting Started
 
-Run any static file server, for example with Python:
+### Prerequisites
+- Any modern web browser (Chrome, Firefox, Safari, Edge).
+- (Optional) Python 3, Node.js, or any local static web server.
 
+### 1. Clone the Repository
 ```bash
-python -m http.server 8080
+git clone https://github.com/parthongit89/CmdValut.git
+cd CmdValut
 ```
 
-Open your browser at `http://localhost:8080`.
+### 2. Configure Local Environment (Optional for Auth)
+To test GitHub Authentication locally, copy `.env.example` to `js/env.js`:
+```bash
+cp .env.example .env
+```
+Add your Firebase Web credentials to `.env`. Both `.env` and `js/env.js` are strictly ignored by `.gitignore` and will never be pushed.
+
+### 3. Run Locally
+Start a local static server:
+
+```bash
+# Using Python:
+python -m http.server 8080
+
+# Or using Node.js npx:
+npx serve .
+```
+
+Open your browser at:
+```text
+http://localhost:8080
+```
 
 ---
 
 ## 🌐 Production Deployment (Vercel)
 
-1. Repository is deployed at: **[https://cmd-valut.vercel.app/](https://cmd-valut.vercel.app/)**
-2. In Vercel Project Settings → **Environment Variables**, add:
+CmdVault is optimized for zero-configuration deployment on **Vercel**:
+
+1. **Connect Repository**: Import `parthongit89/CmdValut` into your Vercel dashboard.
+2. **Set Environment Variables**: In Vercel Project Settings &rarr; **Environment Variables**, add:
    - `FIREBASE_API_KEY`
    - `FIREBASE_AUTH_DOMAIN`
    - `FIREBASE_PROJECT_ID`
@@ -82,4 +151,51 @@ Open your browser at `http://localhost:8080`.
    - `FIREBASE_MESSAGING_SENDER_ID`
    - `FIREBASE_APP_ID`
    - `FIREBASE_MEASUREMENT_ID`
-3. In Firebase Console → **Authentication → Settings → Authorized Domains**, ensure `cmd-valut.vercel.app` is added.
+3. **Authorize Vercel Domain in Firebase**:
+   - Go to **Firebase Console &rarr; Authentication &rarr; Settings &rarr; Authorized domains**.
+   - Add `cmd-valut.vercel.app`.
+4. **Deploy**: Every push to `main` triggers an automatic edge deployment.
+
+---
+
+## 🔒 Security & Privacy
+
+- **Zero Secrets in Git**: Sensitive credentials, API keys, and internal reference PDFs are permanently excluded from Git tracking via `.gitignore`.
+- **Command Safety Disclaimer**: Terminal commands (especially destructive operations like `rm -rf` or `git reset --hard`) are provided for reference only. Users must verify all commands before execution.
+- **Read Our Policies**:
+  - [Privacy Policy](https://cmd-valut.vercel.app/privacy)
+  - [Terms & Conditions](https://cmd-valut.vercel.app/terms)
+  - [Cookies Policy](https://cmd-valut.vercel.app/cookies)
+
+---
+
+## 🤝 Contributing
+
+Contributions, feedback, and command suggestions are welcome!
+
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/NewCommand`).
+3. Commit your Changes (`git commit -m 'feat: add docker & k8s commands'`).
+4. Push to the Branch (`git push origin feature/NewCommand`).
+5. Open a Pull Request.
+
+---
+
+## 📬 Contact & Author
+
+CmdVault is designed, maintained, and developed by:
+
+- **Author**: **Parth Sonavane**
+- **GitHub**: [@parthongit89](https://github.com/parthongit89)
+- **Email**: [sonavaneparthgit@gmail.com](mailto:sonavaneparthgit@gmail.com)
+- **Contact Page**: [https://cmd-valut.vercel.app/contact](https://cmd-valut.vercel.app/contact)
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
+
+<p align="center">
+  <sub>Built with ❤️ for developers by Parth Sonavane • CmdVault © 2026</sub>
+</p>
