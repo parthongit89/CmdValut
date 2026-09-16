@@ -42,11 +42,19 @@
 
       <!-- Right Header Actions -->
       <div class="header-actions">
-        <!-- Auth Button -->
-        <button id="auth-btn" class="auth-btn" aria-label="Login with GitHub">
-          <img src="icons/GITHUB ICON 1.png" alt="GitHub" class="auth-icon" width="22" height="22" />
-          <span class="auth-label">Login with Github</span>
-        </button>
+        <!-- Auth Wrapper with GitHub Legal Consent Notice -->
+        <div class="auth-wrapper">
+          <button id="auth-btn" class="auth-btn" aria-label="Login with GitHub">
+            <img src="icons/GITHUB ICON 1.png" alt="GitHub" class="auth-icon" width="22" height="22" />
+            <span class="auth-label">Login with Github</span>
+          </button>
+          <span class="auth-legal-subtext">
+            By continuing, you agree to our 
+            <a href="terms.html" class="legal-modal-trigger" data-policy="terms">Terms</a>, 
+            <a href="privacy.html" class="legal-modal-trigger" data-policy="privacy">Privacy</a> &amp; 
+            <a href="cookies.html" class="legal-modal-trigger" data-policy="cookies">Cookies</a>.
+          </span>
+        </div>
 
         <!-- Logged In Profile -->
         <div id="user-profile" class="user-profile">
@@ -109,9 +117,13 @@
     <!-- Footer -->
     <footer class="footer-bar" role="contentinfo">
       <div class="footer-links">
-        <a href="mailto:support@cmdvault.dev">Contact Us</a>
+        <a href="privacy.html" class="legal-modal-trigger" data-policy="privacy">Privacy Policy</a>
         <span>•</span>
-        <a href="#support">Support</a>
+        <a href="terms.html" class="legal-modal-trigger" data-policy="terms">Terms &amp; Conditions</a>
+        <span>•</span>
+        <a href="cookies.html" class="legal-modal-trigger" data-policy="cookies">Cookies Policy</a>
+        <span>•</span>
+        <a href="mailto:support@cmdvault.dev">Contact Us</a>
         <span>•</span>
         <a href="mailto:contact@cmdvault.dev">Email</a>
       </div>

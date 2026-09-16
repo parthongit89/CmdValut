@@ -336,3 +336,93 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial Render
   renderCommands();
 });
+
+  // ==========================================
+  // In-App Legal Modal Logic
+  // ==========================================
+  const legalModal = document.getElementById("legal-modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalBody = document.getElementById("modal-body");
+  const modalClose = document.getElementById("modal-close");
+  const modalAcceptBtn = document.getElementById("modal-accept-btn");
+  const modalExternalLink = document.getElementById("modal-external-link");
+  const legalTriggers = document.querySelectorAll(".legal-modal-trigger");
+
+  const legalSummaries = {
+    privacy: {
+      title: "Privacy Policy (GitHub Login)",
+      url: "privacy.html",
+      content: `
+        <div class="callout-box">
+          <strong>Privacy Summary:</strong> CmdVault is an open-source CLI reference. When signing in with GitHub via Firebase, we only receive your public profile identifier, username, and email to maintain your session and bookmarks.
+        </div>
+        <h4>1. Data Collected via GitHub</h4>
+        <p>We request standard <code>read:user</code> scope only. We never access private repositories, SSH keys, or personal access tokens.</p>
+        <h4>2. Data Security & Storage</h4>
+        <p>Authentication sessions are managed securely by Google Cloud Firebase Authentication with end-to-end TLS 1.3 encryption. We never store passwords on private servers.</p>
+        <h4>3. Your Control & Revocation</h4>
+        <p>You may revoke CmdVault's authorization at any time from your GitHub settings under <em>Settings → Applications → Authorized OAuth Apps</em>.</p>
+      `
+    },
+    terms: {
+      title: "Terms & Conditions of Service",
+      url: "terms.html",
+      content: `
+        <div class="callout-box">
+          <strong>Terms Summary:</strong> By accessing CmdVault and signing in with GitHub, you agree to these terms and use commands responsibly.
+        </div>
+        <div class="warning-box">
+          <strong>⚠️ Terminal Command Disclaimer:</strong> All terminal commands, code snippets, and flags are for reference only. CmdVault and its authors assume no liability for commands executed on your machine. Always verify commands before running in production.
+        </div>
+        <h4>1. Open Source License</h4>
+        <p>CmdVault is open source software released under the MIT License.</p>
+        <h4>2. Acceptable Use</h4>
+        <p>Users agree not to misuse the GitHub authentication gateway, scrape rate-limited APIs, or engage in malicious activity.</p>
+      `
+    },
+    cookies: {
+      title: "Cookies & Local Storage Policy",
+      url: "cookies.html",
+      content: `
+        <div class="callout-box">
+          <strong>No Tracking Cookies:</strong> CmdVault does not deploy advertising trackers or marketing cookies.
+        </div>
+        <h4>Technologies We Use</h4>
+        <ul>
+          <li><strong>Local Storage (<code>cmdvault_theme</code>):</strong> Remembers your dark or light theme preference across visits.</li>
+          <li><strong>IndexedDB / Session Storage:</strong> Stores temporary Firebase Auth session tokens while you are logged in.</li>
+          <li><strong>Local Storage (<code>cmdvault_saved_commands</code>):</strong> Keeps your starred and bookmarked commands on your local device.</li>
+        </ul>
+        <p>Clicking <strong>Sign Out</strong> clears your authentication session tokens immediately.</p>
+      `
+    }
+  };
+
+  legalTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const policyType = trigger.dataset.policy;
+      const data = legalSummaries[policyType];
+      if (data && legalModal) {
+        modalTitle.textContent = data.title;
+        modalBody.innerHTML = data.content;
+        if (modalExternalLink) {
+          modalExternalLink.href = data.url;
+          modalExternalLink.textContent = `Open full ${data.title} ↗`;
+        }
+        legalModal.classList.add("open");
+      }
+    });
+  });
+
+  function closeModal() {
+    if (legalModal) legalModal.classList.remove("open");
+  }
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (modalAcceptBtn) modalAcceptBtn.addEventListener("click", closeModal);
+  if (legalModal) {
+    legalModal.addEventListener("click", (e) => {
+      if (e.target === legalModal) closeModal();
+    });
+  }
