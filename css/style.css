@@ -137,8 +137,6 @@ body {
 
 .app-container {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -149,16 +147,24 @@ body {
    Header Bar (Google Brand & Pill Search)
    ========================================================================== */
 .header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 56px 20px 56px;
-  gap: 28px;
+  width: 100%;
+  background-color: var(--g-bg);
+  border-bottom: 1px solid var(--g-border-subtle);
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--g-bg);
   transition: background-color 0.25s ease;
+}
+
+.header-inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
 }
 
 /* Brand Logo (Clean, Sharp & Exact to Figma) */
@@ -241,11 +247,23 @@ body.light-theme .search-container:hover {
   opacity: 0.65;
   flex-shrink: 0;
   pointer-events: none;
-  filter: brightness(1.2);
+  filter: brightness(0) invert(0.85);
+  transition: opacity 0.2s ease;
+}
+
+.search-container:hover .search-icon,
+.search-container:focus-within .search-icon {
+  opacity: 0.95;
 }
 
 body.light-theme .search-icon {
-  filter: invert(0.6);
+  filter: brightness(0);
+  opacity: 0.55;
+}
+
+body.light-theme .search-container:hover .search-icon,
+body.light-theme .search-container:focus-within .search-icon {
+  opacity: 0.9;
 }
 
 .search-input {
@@ -454,14 +472,20 @@ body.light-theme .theme-icon {
    ========================================================================== */
 .category-nav-bar {
   background-color: var(--g-surface);
-  height: 56px;
   width: 100%;
+  border-top: 1px solid var(--g-border-subtle);
+  border-bottom: 1px solid var(--g-border-subtle);
+}
+
+.category-nav-inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  height: 56px;
   display: flex;
   align-items: center;
   padding: 0 56px;
   gap: 12px;
-  border-top: 1px solid var(--g-border-subtle);
-  border-bottom: 1px solid var(--g-border-subtle);
   overflow-x: auto;
 }
 
@@ -496,6 +520,9 @@ body.light-theme .theme-icon {
    ========================================================================== */
 .main-content {
   flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 48px 56px 80px 56px;
   display: flex;
   flex-direction: column;
@@ -554,6 +581,24 @@ body.light-theme .os-pill:hover {
   width: 18px;
   height: 18px;
   object-fit: contain;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+}
+
+.os-pill:hover img {
+  opacity: 1;
+}
+
+body.light-theme .os-pill img {
+  filter: brightness(0) opacity(0.75);
+}
+
+body.light-theme .os-pill:hover img {
+  filter: brightness(0) opacity(0.95);
+}
+
+body.light-theme .os-pill.active img {
+  filter: brightness(0) opacity(1);
 }
 
 .os-pill span {
@@ -708,17 +753,37 @@ body.light-theme .command-box:hover {
 .copy-btn svg {
   width: 20px;
   height: 20px;
-  opacity: 0.65;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.75;
+  filter: brightness(0) invert(0.85);
+  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
 }
 
 .copy-btn:hover img,
 .copy-btn:hover svg {
   opacity: 1;
+  filter: brightness(0) invert(1);
+}
+
+body.light-theme .copy-btn img,
+body.light-theme .copy-btn svg {
+  opacity: 0.65;
+  filter: brightness(0);
+}
+
+body.light-theme .copy-btn:hover img,
+body.light-theme .copy-btn:hover svg {
+  opacity: 0.95;
+  filter: brightness(0);
 }
 
 .copy-btn.copied {
   background-color: var(--google-green-surface);
+}
+
+.copy-btn.copied img,
+.copy-btn.copied svg {
+  filter: none;
+  opacity: 1;
 }
 
 .copy-btn.copied svg path {
@@ -794,14 +859,22 @@ body.light-theme .command-box:hover {
    Footer
    ========================================================================== */
 .footer-bar {
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid var(--g-border-subtle);
+  background-color: var(--g-bg);
+  padding: 48px 20px 40px 20px;
+}
+
+.footer-inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 60px 20px 48px 20px;
-  margin-top: auto;
-  border-top: 1px solid var(--g-border-subtle);
 }
 
 .footer-links {
@@ -878,8 +951,8 @@ body.light-theme .command-box:hover {
    Responsive Adaptations
    ========================================================================== */
 @media (max-width: 1024px) {
-  .header-bar {
-    padding: 20px 28px;
+  .header-inner {
+    padding: 16px 28px;
     flex-wrap: wrap;
   }
   .search-container {
@@ -887,7 +960,7 @@ body.light-theme .command-box:hover {
     max-width: 100%;
     width: 100%;
   }
-  .category-nav-bar {
+  .category-nav-inner {
     padding: 0 28px;
   }
   .main-content {
@@ -896,8 +969,8 @@ body.light-theme .command-box:hover {
 }
 
 @media (max-width: 640px) {
-  .header-bar {
-    padding: 16px 20px;
+  .header-inner {
+    padding: 14px 20px;
     gap: 16px;
   }
   .auth-btn {
@@ -906,7 +979,7 @@ body.light-theme .command-box:hover {
   .auth-label {
     display: none;
   }
-  .category-nav-bar {
+  .category-nav-inner {
     padding: 0 16px;
     gap: 8px;
   }

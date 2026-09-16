@@ -14,65 +14,63 @@
   <div class="app-container">
     <!-- Header Bar (Top Navigation) -->
     <header class="header-bar" role="banner">
-      <!-- Brand Logo (Clean, Sharp & Exact) -->
-      <a href="/" class="logo-wrapper" aria-label="CmdVault Home">
-        <span class="logo-symbol">&lt;/&gt;!</span>
-        <span class="logo-text">CmdVault</span>
-      </a>
+      <div class="header-inner">
+        <!-- Brand Logo (Clean, Sharp & Exact) -->
+        <a href="/" class="logo-wrapper" aria-label="CmdVault Home">
+          <span class="logo-symbol">&lt;/&gt;!</span>
+          <span class="logo-text">CmdVault</span>
+        </a>
 
-      <!-- Google Search Pill -->
-      <div class="search-container" role="search">
-        <img src="icons/search.svg" alt="Search icon" class="search-icon" width="20" height="20" />
-        <input 
-          type="text" 
-          id="search-input" 
-          class="search-input" 
-          placeholder="Search commands, flags, or syntax..." 
-          autocomplete="off" 
-          spellcheck="false" 
-          aria-label="Search commands" 
-        />
-        <kbd class="search-kbd" title="Press / to search">/</kbd>
-        <button id="search-clear" class="search-clear" aria-label="Clear search" title="Clear search">&times;</button>
-      </div>
-
-      <!-- Right Header Actions -->
-      <div class="header-actions">
-        <!-- Auth Wrapper with GitHub Legal Consent Notice -->
-        <div class="auth-wrapper">
-          <button id="auth-btn" class="auth-btn" aria-label="Login with GitHub">
-            <img src="icons/GITHUB ICON 1.png" alt="GitHub" class="auth-icon" width="22" height="22" />
-            <span class="auth-label">Login with Github</span>
-          </button>
-          <span class="auth-legal-subtext">
-            By continuing, you agree to our 
-            <a href="terms.html" class="legal-modal-trigger" data-policy="terms">Terms</a>, 
-            <a href="privacy.html" class="legal-modal-trigger" data-policy="privacy">Privacy</a> &amp; 
-            <a href="cookies.html" class="legal-modal-trigger" data-policy="cookies">Cookies</a>.
-          </span>
+        <!-- Google Search Pill -->
+        <div class="search-container" role="search">
+          <img src="icons/search.svg" alt="Search icon" class="search-icon" width="20" height="20" />
+          <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="Search commands, flags, or syntax..." 
+            autocomplete="off" 
+            spellcheck="false" 
+            aria-label="Search commands" 
+          />
+          <kbd class="search-kbd" title="Press / to search">/</kbd>
+          <button id="search-clear" class="search-clear" aria-label="Clear search" title="Clear search">&times;</button>
         </div>
 
-        <!-- Logged In Profile -->
-        <div id="user-profile" class="user-profile">
-          <img id="user-avatar" class="user-avatar" src="" alt="User Avatar" />
-          <div class="user-details">
-            <span id="user-name" class="user-name">User</span>
-            <a href="#" id="logout-btn" class="logout-link">Sign Out</a>
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <!-- Auth Wrapper -->
+          <div class="auth-wrapper">
+            <button id="auth-btn" class="auth-btn" aria-label="Login with GitHub">
+              <img src="icons/GITHUB ICON 1.png" alt="GitHub" class="auth-icon" width="22" height="22" />
+              <span class="auth-label">Login with Github</span>
+            </button>
           </div>
-        </div>
 
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
-          <img src="icons/sun.svg" alt="Theme icon" class="theme-icon" width="20" height="20" />
-        </button>
+          <!-- Logged In Profile -->
+          <div id="user-profile" class="user-profile">
+            <img id="user-avatar" class="user-avatar" src="" alt="User Avatar" />
+            <div class="user-details">
+              <span id="user-name" class="user-name">User</span>
+              <a href="#" id="logout-btn" class="logout-link">Sign Out</a>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <img src="icons/sun.svg" alt="Theme icon" class="theme-icon" width="20" height="20" />
+          </button>
+        </div>
       </div>
     </header>
 
     <!-- Sub-Header Category Navigation Tabs (Google Material 3 Segmented Nav) -->
     <nav class="category-nav-bar" aria-label="Command Categories">
-      <button class="nav-tab active" data-category="github-git">GitHub-Git</button>
-      <button class="nav-tab" data-category="linux-bash">Linux-Bash</button>
-      <button class="nav-tab" data-category="powershell-windows">Powershell-Windows</button>
+      <div class="category-nav-inner">
+        <button class="nav-tab active" data-category="github-git">GitHub-Git</button>
+        <button class="nav-tab" data-category="linux-bash">Linux-Bash</button>
+        <button class="nav-tab" data-category="powershell-windows">Powershell-Windows</button>
+      </div>
     </nav>
 
     <!-- Main Content -->
@@ -112,18 +110,20 @@
 
     <!-- Footer -->
     <footer class="footer-bar" role="contentinfo">
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <span>•</span>
-        <a href="terms.html">Terms &amp; Conditions</a>
-        <span>•</span>
-        <a href="cookies.html">Cookies Policy</a>
-        <span>•</span>
-        <a href="contact.html">Contact Us</a>
-        <span>•</span>
-        <a href="mailto:sonavaneparthgit@gmail.com">Email</a>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <span>•</span>
+          <a href="cookies.html">Cookies Policy</a>
+          <span>•</span>
+          <a href="contact.html">Contact Us</a>
+          <span>•</span>
+          <a href="mailto:sonavaneparthgit@gmail.com">Email</a>
+        </div>
+        <p class="footer-copyright">CmdVault • Open-source CLI Reference</p>
       </div>
-      <p class="footer-copyright">CmdVault • Open-source CLI Reference</p>
     </footer>
   </div>
 

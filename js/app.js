@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.CmdVaultAuth) {
     window.CmdVaultAuth.subscribeAuth((user) => {
       if (user) {
+        const authWrapper = document.querySelector(".auth-wrapper");
+        if (authWrapper) authWrapper.style.display = "none";
         if (authBtn) authBtn.style.display = "none";
         if (userProfile) {
           userProfile.classList.add("active");
@@ -60,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
           userName.textContent = user.displayName || user.email || "GitHub User";
         }
       } else {
+        const authWrapper = document.querySelector(".auth-wrapper");
+        if (authWrapper) authWrapper.style.display = "flex";
         if (authBtn) authBtn.style.display = "flex";
         if (userProfile) userProfile.classList.remove("active");
       }
