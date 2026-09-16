@@ -313,6 +313,357 @@ const COMMANDS_DATA = [
     command: "git show [SHA]",
     description: "show any object in Git in human-readable format"
   },
+  {
+    id: "git-stash-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git stash push -m \"wip: feature implementation\"",
+    description: "save modified and staged working directory changes to stash stack with a descriptive label"
+  },
+  {
+    id: "git-stash-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git stash list",
+    description: "inspect all stored stash entries with index, branch identifier, and commit description"
+  },
+  {
+    id: "git-stash-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git stash pop",
+    description: "apply the latest stashed changes and remove them from the stash stack"
+  },
+  {
+    id: "git-stash-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git stash apply stash@{0}",
+    description: "reapply specific stashed changes without removing them from the stash list"
+  },
+  {
+    id: "git-stash-5",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git stash drop stash@{0}",
+    description: "discard a specific stash entry from the stash stack"
+  },
+  {
+    id: "git-stash-6",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git clean -fd",
+    description: "recursively remove untracked files and directories from the working tree"
+  },
+  {
+    id: "git-stash-7",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "STASHING & RECOVERY",
+    sectionDescription: "Temporarily shelving dirty working changes and cleaning untracked files",
+    command: "git clean -ndx",
+    description: "perform a dry run displaying untracked and gitignored files that would be removed"
+  },
+  {
+    id: "git-tag-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "TAGGING & RELEASES",
+    sectionDescription: "Marking release checkpoints, semantic versions, and deployment milestones",
+    command: "git tag -a v1.0.0 -m \"Release version 1.0.0\"",
+    description: "create an annotated release tag with message, author metadata, and cryptographic stamp"
+  },
+  {
+    id: "git-tag-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "TAGGING & RELEASES",
+    sectionDescription: "Marking release checkpoints, semantic versions, and deployment milestones",
+    command: "git tag -l",
+    description: "list all existing tags across the repository in alphabetical order"
+  },
+  {
+    id: "git-tag-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "TAGGING & RELEASES",
+    sectionDescription: "Marking release checkpoints, semantic versions, and deployment milestones",
+    command: "git push origin v1.0.0",
+    description: "push a specific release tag reference to the remote GitHub repository"
+  },
+  {
+    id: "git-tag-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "TAGGING & RELEASES",
+    sectionDescription: "Marking release checkpoints, semantic versions, and deployment milestones",
+    command: "git push origin --tags",
+    description: "publish all local release tags to the remote GitHub repository simultaneously"
+  },
+  {
+    id: "git-tag-5",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "TAGGING & RELEASES",
+    sectionDescription: "Marking release checkpoints, semantic versions, and deployment milestones",
+    command: "git tag -d v1.0.0",
+    description: "delete a tag from the local Git repository"
+  },
+  {
+    id: "git-tag-6",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "TAGGING & RELEASES",
+    sectionDescription: "Marking release checkpoints, semantic versions, and deployment milestones",
+    command: "git push origin --delete v1.0.0",
+    description: "delete a published tag from the remote GitHub repository"
+  },
+  {
+    id: "git-rebase-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "REBASING & SQUASHING",
+    sectionDescription: "Cleaning commit history, squashing commits, and rebasing branches",
+    command: "git rebase -i HEAD~4",
+    description: "launch interactive rebase editor to squash, edit, reword, or reorder the last 4 commits"
+  },
+  {
+    id: "git-rebase-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "REBASING & SQUASHING",
+    sectionDescription: "Cleaning commit history, squashing commits, and rebasing branches",
+    command: "git rebase main",
+    description: "reapply current branch commits on top of the tip of main branch"
+  },
+  {
+    id: "git-rebase-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "REBASING & SQUASHING",
+    sectionDescription: "Cleaning commit history, squashing commits, and rebasing branches",
+    command: "git rebase --continue",
+    description: "resume rebase process after manually resolving merge conflict markers"
+  },
+  {
+    id: "git-rebase-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "REBASING & SQUASHING",
+    sectionDescription: "Cleaning commit history, squashing commits, and rebasing branches",
+    command: "git rebase --abort",
+    description: "cancel interactive rebase and restore the branch to its exact pre-rebase state"
+  },
+  {
+    id: "git-rebase-5",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "REBASING & SQUASHING",
+    sectionDescription: "Cleaning commit history, squashing commits, and rebasing branches",
+    command: "git merge --squash [feature-branch]",
+    description: "combine all commits from feature branch into a single staged commit on current branch"
+  },
+  {
+    id: "git-cherry-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "CHERRY-PICK & REFLOG",
+    sectionDescription: "Applying specific commits and recovering lost history via reference logs",
+    command: "git cherry-pick [commit-hash]",
+    description: "apply the specific changes introduced by an existing commit onto current HEAD"
+  },
+  {
+    id: "git-cherry-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "CHERRY-PICK & REFLOG",
+    sectionDescription: "Applying specific commits and recovering lost history via reference logs",
+    command: "git cherry-pick --abort",
+    description: "cancel cherry-pick in progress and return to the pre-cherry-pick state"
+  },
+  {
+    id: "git-cherry-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "CHERRY-PICK & REFLOG",
+    sectionDescription: "Applying specific commits and recovering lost history via reference logs",
+    command: "git reflog",
+    description: "view chronological list of all HEAD reference movements to locate lost or amended commits"
+  },
+  {
+    id: "git-cherry-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "CHERRY-PICK & REFLOG",
+    sectionDescription: "Applying specific commits and recovering lost history via reference logs",
+    command: "git reset --hard HEAD@{1}",
+    description: "restore repository state to the prior commit recorded in reflog before the last action"
+  },
+  {
+    id: "git-submod-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "SUBMODULES & DEPENDENCIES",
+    sectionDescription: "Managing nested git repositories and sub-project dependencies",
+    command: "git submodule add [repository-url] [path]",
+    description: "incorporate an external repository as a tracked child submodule within current project"
+  },
+  {
+    id: "git-submod-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "SUBMODULES & DEPENDENCIES",
+    sectionDescription: "Managing nested git repositories and sub-project dependencies",
+    command: "git submodule update --init --recursive",
+    description: "clone, initialize, and checkout all configured nested submodules following repository clone"
+  },
+  {
+    id: "git-submod-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "SUBMODULES & DEPENDENCIES",
+    sectionDescription: "Managing nested git repositories and sub-project dependencies",
+    command: "git submodule status",
+    description: "show current commit SHA, relative path, and checkout status for each registered submodule"
+  },
+  {
+    id: "git-submod-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "SUBMODULES & DEPENDENCIES",
+    sectionDescription: "Managing nested git repositories and sub-project dependencies",
+    command: "git submodule foreach git pull origin main",
+    description: "execute a git command across every registered submodule directory automatically"
+  },
+  {
+    id: "git-worktree-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "GIT WORKTREES",
+    sectionDescription: "Checking out multiple branches at once in separate working directories",
+    command: "git worktree add ../hotfix-worktree [branch-name]",
+    description: "create and check out an independent branch in a separate filesystem folder simultaneously"
+  },
+  {
+    id: "git-worktree-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "GIT WORKTREES",
+    sectionDescription: "Checking out multiple branches at once in separate working directories",
+    command: "git worktree list",
+    description: "list details, paths, and current branch checkouts of all active linked working trees"
+  },
+  {
+    id: "git-worktree-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "GIT WORKTREES",
+    sectionDescription: "Checking out multiple branches at once in separate working directories",
+    command: "git worktree remove ../hotfix-worktree",
+    description: "safely unmount and remove a linked working tree directory after completing branch work"
+  },
+  {
+    id: "git-inspect-adv-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "INSPECT, BLAME & BISECT",
+    sectionDescription: "Binary search debugging, author attribution, and deep diff comparisons",
+    command: "git blame -L 1,30 [filename]",
+    description: "display line-by-line commit authorship, timestamps, and commit hashes for a file range"
+  },
+  {
+    id: "git-inspect-adv-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "INSPECT, BLAME & BISECT",
+    sectionDescription: "Binary search debugging, author attribution, and deep diff comparisons",
+    command: "git bisect start",
+    description: "initiate automated binary search wizard to isolate the exact commit that introduced a bug"
+  },
+  {
+    id: "git-inspect-adv-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "INSPECT, BLAME & BISECT",
+    sectionDescription: "Binary search debugging, author attribution, and deep diff comparisons",
+    command: "git bisect bad",
+    description: "mark the current commit as faulty in bisect wizard"
+  },
+  {
+    id: "git-inspect-adv-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "INSPECT, BLAME & BISECT",
+    sectionDescription: "Binary search debugging, author attribution, and deep diff comparisons",
+    command: "git bisect good [commit-hash]",
+    description: "designate a past commit known to be healthy to establish binary search boundaries"
+  },
+  {
+    id: "git-inspect-adv-5",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "INSPECT, BLAME & BISECT",
+    sectionDescription: "Binary search debugging, author attribution, and deep diff comparisons",
+    command: "git bisect reset",
+    description: "terminate binary search session and restore working directory to original branch HEAD"
+  },
+  {
+    id: "git-inspect-adv-6",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "INSPECT, BLAME & BISECT",
+    sectionDescription: "Binary search debugging, author attribution, and deep diff comparisons",
+    command: "git log -S \"[search-term]\"",
+    description: "search history for commits that added or removed a specific string of code (pickaxe search)"
+  },
+  {
+    id: "git-archive-1",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "ARCHIVE & LARGE FILE STORAGE",
+    sectionDescription: "Exporting clean code bundles and managing large binary assets with Git LFS",
+    command: "git archive --format=zip --output=release.zip HEAD",
+    description: "export repository source tree snapshot as a clean zip file excluding git history metadata"
+  },
+  {
+    id: "git-archive-2",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "ARCHIVE & LARGE FILE STORAGE",
+    sectionDescription: "Exporting clean code bundles and managing large binary assets with Git LFS",
+    command: "git lfs track \"*.psd\"",
+    description: "configure Git Large File Storage pointer tracking for large assets in .gitattributes"
+  },
+  {
+    id: "git-archive-3",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "ARCHIVE & LARGE FILE STORAGE",
+    sectionDescription: "Exporting clean code bundles and managing large binary assets with Git LFS",
+    command: "git lfs ls-files",
+    description: "list all large files currently tracked by Git Large File Storage in the repository"
+  },
+  {
+    id: "git-archive-4",
+    category: "github-git",
+    os: ["windows", "linux", "macos"],
+    section: "ARCHIVE & LARGE FILE STORAGE",
+    sectionDescription: "Exporting clean code bundles and managing large binary assets with Git LFS",
+    command: "git remote prune origin",
+    description: "delete stale local tracking references for branches that no longer exist on remote repository"
+  },
 
   // ==========================================
   // LINUX BASH COMMANDS
