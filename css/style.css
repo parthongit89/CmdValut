@@ -882,8 +882,12 @@ body.light-theme .copy-btn:hover svg {
   font-weight: 500;
   color: var(--text-tertiary);
   display: flex;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .footer-links a {
