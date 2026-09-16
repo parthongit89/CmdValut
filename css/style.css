@@ -1,6 +1,6 @@
 /* ==========================================================================
-   CmdVault Design System & Typography
-   Figma Exact Match (Node 767:3)
+   CmdVault - Google Material 3 / Modern Google Aesthetic
+   Typography: Google Sans Flex & Google Sans Code
    ========================================================================== */
 
 /* Local Font Declarations */
@@ -45,41 +45,77 @@
   font-display: swap;
 }
 
-/* CSS Variables */
+/* ==========================================================================
+   Google Design Tokens (Material 3 Dark by Default)
+   ========================================================================== */
 :root {
-  --bg-page: #1e1e1e;
-  --bg-surface: #1a1a1a;
-  --bg-surface-hover: #242424;
-  --border-color: rgba(255, 249, 249, 0.25);
-  --border-active: rgba(255, 249, 249, 0.6);
-  --text-white: #ffffff;
-  --text-offwhite: #fff9f9;
-  --text-sub: rgba(255, 255, 255, 0.85);
-  --text-dim: rgba(255, 255, 255, 0.55);
-  --text-faint: rgba(255, 255, 255, 0.25);
-  --accent-color: #60a5fa;
-  --toast-bg: #2d2d2d;
-  --font-ui: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Google Dark Theme Palette (Gemini & Google Cloud Dark) */
+  --g-bg: #131314;
+  --g-surface: #1e1f20;
+  --g-surface-elevated: #282a2c;
+  --g-surface-hover: #333537;
+  --g-surface-active: #3c4043;
+  --g-border: rgba(255, 255, 255, 0.12);
+  --g-border-subtle: rgba(255, 255, 255, 0.07);
+  --g-border-focus: #8ab4f8;
+
+  /* Google Colors */
+  --google-blue: #8ab4f8;
+  --google-blue-surface: rgba(138, 180, 248, 0.16);
+  --google-blue-hover: #aecbfa;
+  --google-red: #f28b82;
+  --google-yellow: #fdd663;
+  --google-green: #81c995;
+  --google-green-surface: rgba(129, 201, 149, 0.16);
+
+  /* Typography Text Colors */
+  --text-primary: #e3e3e3;
+  --text-secondary: #c4c7c5;
+  --text-tertiary: #8e918f;
+  --text-disabled: #5e6260;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 3px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 2px 6px 2px rgba(0, 0, 0, 0.3), 0 8px 24px 6px rgba(0, 0, 0, 0.2);
+
+  /* Fonts */
+  --font-display: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-code: 'Google Sans Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-/* Light Theme Support */
+/* Google Light Theme Palette */
 body.light-theme {
-  --bg-page: #f5f6f8;
-  --bg-surface: #ffffff;
-  --bg-surface-hover: #f0f2f5;
-  --border-color: rgba(0, 0, 0, 0.15);
-  --border-active: rgba(0, 0, 0, 0.4);
-  --text-white: #111827;
-  --text-offwhite: #111827;
-  --text-sub: rgba(17, 24, 39, 0.85);
-  --text-dim: rgba(17, 24, 39, 0.65);
-  --text-faint: rgba(17, 24, 39, 0.35);
-  --accent-color: #2563eb;
-  --toast-bg: #ffffff;
+  --g-bg: #f8fafd;
+  --g-surface: #ffffff;
+  --g-surface-elevated: #edf2fa;
+  --g-surface-hover: #e3e9f3;
+  --g-surface-active: #d7e0ee;
+  --g-border: rgba(0, 0, 0, 0.12);
+  --g-border-subtle: rgba(0, 0, 0, 0.06);
+  --g-border-focus: #1a73e8;
+
+  --google-blue: #1a73e8;
+  --google-blue-surface: rgba(26, 115, 232, 0.1);
+  --google-blue-hover: #1557b0;
+  --google-red: #d93025;
+  --google-yellow: #f9ab00;
+  --google-green: #188038;
+  --google-green-surface: rgba(24, 128, 56, 0.1);
+
+  --text-primary: #1f1f1f;
+  --text-secondary: #444746;
+  --text-tertiary: #747775;
+  --text-disabled: #a8aaa7;
+
+  --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --shadow-md: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  --shadow-lg: 0 2px 6px 2px rgba(60, 64, 67, 0.3), 0 8px 24px 6px rgba(60, 64, 67, 0.2);
 }
 
-/* Reset & Box Sizing */
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -87,90 +123,146 @@ body.light-theme {
 }
 
 body {
-  background-color: var(--bg-page);
-  color: var(--text-white);
-  font-family: var(--font-ui);
+  background-color: var(--g-bg);
+  color: var(--text-primary);
+  font-family: var(--font-display);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Container */
 .app-container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* ==========================================================================
-   Header Bar (Top Nav)
+   Header Bar (Google Brand & Pill Search)
    ========================================================================== */
 .header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 48px 25px 30px;
-  gap: 20px;
-  position: relative;
-  z-index: 10;
+  padding: 24px 56px 20px 56px;
+  gap: 28px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--g-bg);
+  transition: background-color 0.25s ease;
 }
 
+/* Google Logo Brand */
 .logo-wrapper {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  gap: 10px;
   text-decoration: none;
-  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--g-surface-elevated);
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+}
+
+.logo-wrapper:hover .logo-badge {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .logo-symbol {
-  font-size: 30px;
-  color: var(--text-offwhite);
-  font-weight: 400;
+  font-family: var(--font-code);
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4285F4 0%, #EA4335 35%, #FBBC05 70%, #34A853 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1;
+}
+
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-text {
-  font-size: 25px;
-  color: var(--text-white);
-  font-weight: 400;
-  line-height: 1;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-/* Center Search Bar */
+.logo-subtext {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--google-blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Google Search Pill */
 .search-container {
   flex: 1;
-  max-width: 693px;
-  height: 49px;
-  background-color: var(--bg-page);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
+  max-width: 680px;
+  height: 52px;
+  background-color: var(--g-surface);
+  border: 1px solid var(--g-border);
+  border-radius: 28px;
   display: flex;
   align-items: center;
-  padding: 0 18px 0 24px;
+  padding: 0 20px 0 24px;
   gap: 14px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-container:hover {
+  background-color: var(--g-surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+body.light-theme .search-container:hover {
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .search-container:focus-within {
-  border-color: var(--border-active);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+  background-color: var(--g-surface);
+  border-color: var(--g-border-focus);
+  box-shadow: 0 0 0 3px var(--google-blue-surface), var(--shadow-md);
 }
 
 .search-icon {
-  width: 22px;
-  height: 22px;
-  opacity: 0.55;
+  width: 20px;
+  height: 20px;
+  opacity: 0.65;
   flex-shrink: 0;
   pointer-events: none;
+  filter: brightness(1.2);
+}
+
+body.light-theme .search-icon {
+  filter: invert(0.6);
 }
 
 .search-input {
@@ -178,86 +270,119 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  font-family: var(--font-ui);
+  font-family: var(--font-display);
   font-size: 15px;
-  font-weight: 300;
-  color: var(--text-white);
+  font-weight: 400;
+  color: var(--text-primary);
 }
 
 .search-input::placeholder {
-  color: var(--text-faint);
+  color: var(--text-tertiary);
+  font-weight: 300;
+}
+
+/* Keyboard Shortcut Badge */
+.search-kbd {
+  font-family: var(--font-code);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  background: var(--g-surface-elevated);
+  border: 1px solid var(--g-border);
+  border-radius: 6px;
+  padding: 3px 7px;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.search-container:focus-within .search-kbd {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .search-clear {
   background: transparent;
   border: none;
-  color: var(--text-dim);
+  color: var(--text-tertiary);
   font-size: 18px;
   cursor: pointer;
   display: none;
-  padding: 2px 6px;
+  padding: 4px;
   border-radius: 50%;
+  transition: color 0.15s ease;
+}
+
+.search-clear:hover {
+  color: var(--text-primary);
 }
 
 .search-clear.visible {
   display: block;
 }
 
-/* Header Right Actions */
+/* Right Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
-/* GitHub Login Pill Button */
+/* Google Material 3 Tonal Button */
 .auth-btn {
-  height: 51px;
-  min-width: 220px;
+  height: 48px;
   padding: 0 24px;
-  background-color: var(--bg-surface);
-  border: 1px solid transparent;
-  border-radius: 20px;
+  background-color: var(--g-surface-elevated);
+  border: 1px solid var(--g-border);
+  border-radius: 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-btn:hover {
-  background-color: var(--bg-surface-hover);
-  border-color: var(--border-color);
+  background-color: var(--g-surface-hover);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+body.light-theme .auth-btn:hover {
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .auth-btn:active {
-  transform: scale(0.98);
+  transform: translateY(0);
 }
 
 .auth-icon {
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
 }
 
 .auth-label {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--text-white);
-  opacity: 0.85;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
   white-space: nowrap;
 }
 
-/* User Logged In Profile Menu */
+/* Logged In Profile */
 .user-profile {
   display: none;
   align-items: center;
   gap: 12px;
-  position: relative;
+  background: var(--g-surface-elevated);
+  padding: 4px 16px 4px 6px;
+  border-radius: 24px;
+  border: 1px solid var(--g-border);
 }
 
 .user-profile.active {
@@ -265,10 +390,10 @@ body {
 }
 
 .user-avatar {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--google-blue);
   object-fit: cover;
 }
 
@@ -278,9 +403,9 @@ body {
 }
 
 .user-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: var(--text-white);
+  color: var(--text-primary);
   max-width: 120px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -288,33 +413,41 @@ body {
 }
 
 .logout-link {
-  font-size: 12px;
-  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--google-red);
   cursor: pointer;
   text-decoration: none;
 }
 
 .logout-link:hover {
-  color: #ef4444;
+  text-decoration: underline;
 }
 
-/* Theme Toggle Button */
+/* Material 3 Icon Button (Theme Toggle) */
 .theme-btn {
-  height: 46px;
-  width: 50px;
-  background-color: var(--bg-surface);
-  border: 1px solid transparent;
-  border-radius: 20px;
+  height: 48px;
+  width: 48px;
+  background-color: var(--g-surface-elevated);
+  border: 1px solid var(--g-border);
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-btn:hover {
-  background-color: var(--bg-surface-hover);
-  border-color: var(--border-color);
+  background-color: var(--g-surface-hover);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+body.light-theme .theme-btn:hover {
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .theme-btn:active {
@@ -322,10 +455,10 @@ body {
 }
 
 .theme-icon {
-  width: 22px;
-  height: 22px;
-  filter: brightness(1);
-  transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.2);
 }
 
 body.light-theme .theme-icon {
@@ -334,54 +467,45 @@ body.light-theme .theme-icon {
 }
 
 /* ==========================================================================
-   Category Navigation Bar (Sub Header)
+   Category Navigation Bar (Google Material 3 Segmented Nav)
    ========================================================================== */
 .category-nav-bar {
-  background-color: var(--bg-surface);
-  height: 65px;
+  background-color: var(--g-surface);
+  height: 56px;
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 80px;
-  gap: 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0 56px;
+  gap: 12px;
+  border-top: 1px solid var(--g-border-subtle);
+  border-bottom: 1px solid var(--g-border-subtle);
+  overflow-x: auto;
 }
 
 .nav-tab {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--text-white);
-  opacity: 0.75;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 8px 18px;
   cursor: pointer;
-  background: none;
-  border: none;
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  transition: opacity 0.2s ease, color 0.2s ease;
-  user-select: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
 }
 
 .nav-tab:hover {
-  opacity: 1;
+  background-color: var(--g-surface-hover);
+  color: var(--text-primary);
 }
 
 .nav-tab.active {
-  opacity: 1;
-  font-weight: 500;
-}
-
-.nav-tab.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--text-white);
-  border-radius: 3px 3px 0 0;
+  background-color: var(--google-blue-surface);
+  color: var(--google-blue);
+  border-color: rgba(138, 180, 248, 0.3);
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -389,210 +513,251 @@ body.light-theme .theme-icon {
    ========================================================================== */
 .main-content {
   flex: 1;
-  padding: 60px 80px 100px 80px;
+  padding: 48px 56px 80px 56px;
   display: flex;
   flex-direction: column;
 }
 
 .section-title-wrap {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .page-title {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 500;
-  color: var(--text-white);
-  margin-bottom: 40px;
-  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
 }
 
-/* OS Filter Pills */
+/* Google Material 3 Filter Chips */
 .os-filters-group {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .os-pill {
-  height: 44px;
-  padding: 0 24px;
-  background-color: var(--bg-surface);
-  border: 1px solid transparent;
-  border-radius: 20px;
+  height: 40px;
+  padding: 0 20px;
+  background-color: var(--g-surface);
+  border: 1px solid var(--g-border);
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
 }
 
 .os-pill:hover {
-  background-color: var(--bg-surface-hover);
-  border-color: var(--border-color);
+  background-color: var(--g-surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.light-theme .os-pill:hover {
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .os-pill.active {
-  border-color: var(--border-active);
-  background-color: var(--bg-surface-hover);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  background-color: var(--google-blue-surface);
+  border-color: var(--google-blue);
+  box-shadow: 0 0 12px rgba(138, 180, 248, 0.2);
 }
 
 .os-pill img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
 .os-pill span {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.os-pill.active span {
+  color: var(--google-blue);
+  font-weight: 600;
 }
 
 /* ==========================================================================
-   Command Sections & Cards
+   Command Sections & Cards (Google Cloud Shell / DevTools Aesthetic)
    ========================================================================== */
 .commands-container {
   display: flex;
   flex-direction: column;
-  gap: 70px;
-  margin-top: 40px;
+  gap: 56px;
+  margin-top: 24px;
 }
 
 .command-section {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
   position: relative;
 }
 
 .section-heading {
-  font-size: 35px;
-  font-weight: 400;
-  color: var(--text-white);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-heading::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  background: var(--google-blue);
+  border-radius: 2px;
 }
 
 .section-desc {
-  font-size: 25px;
-  font-weight: 300;
-  color: var(--text-white);
-  opacity: 0.55;
-  margin-top: -10px;
-  margin-bottom: 12px;
-  line-height: 1.35;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: -12px;
+  margin-bottom: 6px;
+  line-height: 1.4;
 }
 
 .command-group {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 22px;
 }
 
 .command-item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 1000px;
+  gap: 12px;
+  max-width: 1040px;
 }
 
 /* Command Code Box */
 .command-box {
   width: 100%;
-  min-height: 63px;
-  background-color: var(--bg-surface);
-  border: 1px solid transparent;
-  border-radius: 10px;
+  min-height: 60px;
+  background-color: var(--g-surface);
+  border: 1px solid var(--g-border);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 28px;
-  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 14px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .command-box:hover {
-  border-color: var(--border-color);
-  background-color: var(--bg-surface-hover);
+  border-color: rgba(255, 255, 255, 0.24);
+  background-color: var(--g-surface-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+body.light-theme .command-box:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.command-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.command-prompt {
+  font-family: var(--font-code);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--google-green);
+  user-select: none;
+  flex-shrink: 0;
 }
 
 .command-code {
   font-family: var(--font-code);
-  font-size: 22px;
-  font-weight: 300;
-  color: var(--text-white);
-  opacity: 0.7;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-primary);
   white-space: pre-wrap;
   word-break: break-all;
   user-select: all;
-  transition: opacity 0.2s ease;
+  letter-spacing: -0.01em;
 }
 
-.command-box:hover .command-code {
-  opacity: 0.95;
-}
-
-/* Copy Action Button */
+/* Copy Action Button (Google Material Ripple) */
 .copy-btn {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+  border-radius: 50%;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   margin-left: 16px;
   flex-shrink: 0;
 }
 
 .copy-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--g-surface-active);
 }
 
 .copy-btn:active {
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
 
 .copy-btn img,
 .copy-btn svg {
-  width: 22px;
-  height: 22px;
-  opacity: 0.55;
-  transition: opacity 0.2s ease;
+  width: 20px;
+  height: 20px;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .copy-btn:hover img,
 .copy-btn:hover svg {
-  opacity: 0.95;
+  opacity: 1;
+}
+
+.copy-btn.copied {
+  background-color: var(--google-green-surface);
 }
 
 .copy-btn.copied svg path {
-  fill: #10b981;
+  fill: var(--google-green);
 }
 
-/* Command Explanation Text */
+/* Command Explanation */
 .command-explanation {
-  font-size: 20px;
-  font-weight: 300;
-  color: var(--text-white);
-  opacity: 0.85;
-  line-height: 1.4;
-  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  padding-left: 6px;
 }
 
-/* Divider Line */
+/* Section Divider */
 .section-divider {
   width: 100%;
-  max-width: 1240px;
-  margin-top: 40px;
-  opacity: 0.35;
+  max-width: 1040px;
+  margin-top: 32px;
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid var(--g-border-subtle);
 }
 
 /* Empty State */
@@ -611,32 +776,35 @@ body.light-theme .theme-icon {
 }
 
 .empty-state-title {
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--text-white);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .empty-state-subtitle {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--text-dim);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-tertiary);
 }
 
 .reset-search-btn {
-  margin-top: 12px;
+  margin-top: 14px;
   padding: 10px 24px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background-color: var(--google-blue);
+  color: #131314;
+  border: none;
   border-radius: 20px;
-  color: var(--text-white);
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reset-search-btn:hover {
-  background-color: var(--bg-surface-hover);
-  border-color: var(--border-active);
+  background-color: var(--google-blue-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -647,72 +815,80 @@ body.light-theme .theme-icon {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 80px 20px 60px 20px;
+  gap: 12px;
+  padding: 60px 20px 48px 20px;
   margin-top: auto;
+  border-top: 1px solid var(--g-border-subtle);
 }
 
 .footer-links {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--text-white);
-  opacity: 0.25;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-tertiary);
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
 }
 
 .footer-links a {
   color: inherit;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  opacity: 0.8;
+  color: var(--google-blue);
 }
 
 .footer-copyright {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
-  color: var(--text-white);
-  opacity: 0.25;
+  color: var(--text-disabled);
 }
 
 /* ==========================================================================
-   Toast Notification
+   Google Material 3 Snackbar (Toast Notification)
    ========================================================================== */
 .toast-container {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   pointer-events: none;
 }
 
 .toast {
-  background-color: var(--toast-bg);
-  color: var(--text-white);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 12px 20px;
+  background-color: var(--g-surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--g-border);
+  border-radius: 28px;
+  padding: 12px 24px;
   font-size: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(16px) scale(0.96);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: auto;
 }
 
 .toast.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+.toast-icon {
+  color: var(--google-green);
+  display: flex;
+  align-items: center;
 }
 
 /* ==========================================================================
@@ -720,7 +896,7 @@ body.light-theme .theme-icon {
    ========================================================================== */
 @media (max-width: 1024px) {
   .header-bar {
-    padding: 24px 30px;
+    padding: 20px 28px;
     flex-wrap: wrap;
   }
   .search-container {
@@ -729,49 +905,50 @@ body.light-theme .theme-icon {
     width: 100%;
   }
   .category-nav-bar {
-    padding: 0 30px;
-    gap: 30px;
-    overflow-x: auto;
+    padding: 0 28px;
   }
   .main-content {
-    padding: 40px 30px 80px 30px;
+    padding: 36px 28px 60px 28px;
   }
 }
 
 @media (max-width: 640px) {
   .header-bar {
-    padding: 18px 20px;
+    padding: 16px 20px;
+    gap: 16px;
   }
   .auth-btn {
-    min-width: unset;
     padding: 0 14px;
   }
   .auth-label {
     display: none;
   }
   .category-nav-bar {
-    padding: 0 20px;
-    gap: 20px;
+    padding: 0 16px;
+    gap: 8px;
   }
   .main-content {
-    padding: 30px 20px 60px 20px;
+    padding: 28px 18px 48px 18px;
   }
   .page-title {
-    font-size: 32px;
+    font-size: 30px;
   }
   .section-heading {
-    font-size: 26px;
+    font-size: 22px;
   }
   .section-desc {
-    font-size: 18px;
+    font-size: 15px;
   }
   .command-code {
-    font-size: 16px;
+    font-size: 15px;
   }
   .command-explanation {
-    font-size: 16px;
+    font-size: 14px;
   }
   .command-box {
-    padding: 12px 18px;
+    padding: 12px 16px;
+  }
+  .search-kbd {
+    display: none;
   }
 }

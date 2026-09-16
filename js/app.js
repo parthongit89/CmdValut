@@ -1,4 +1,4 @@
-// CmdVault Main Application Logic
+// CmdVault Main Application Logic - Google Aesthetic Edition
 
 document.addEventListener("DOMContentLoaded", () => {
   // State
@@ -37,6 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Global Keyboard Shortcut: '/' to focus search bar (Google Search style)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+    if (e.key === "Escape" && document.activeElement === searchInput) {
+      searchInput.blur();
+    }
+  });
+
   // Auth Handling
   if (window.CmdVaultAuth) {
     window.CmdVaultAuth.subscribeAuth((user) => {
@@ -56,12 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (authBtn) {
       authBtn.addEventListener("click", async (e) => {
         e.preventDefault();
-        showToast("Opening GitHub Authentication...");
+        showToast("Opening GitHub Authentication...", "info");
         const result = await window.CmdVaultAuth.loginWithGithub();
         if (result.success) {
-          showToast(`Welcome, ${result.user.displayName || "Developer"}!`);
+          showToast(`Welcome, ${result.user.displayName || "Developer"}!`, "success");
         } else {
-          showToast(`Sign in error: ${result.error || "Failed"}`, 4000);
+          showToast(`Sign in error: ${result.error || "Failed"}`, "error");
         }
       });
     }
@@ -70,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       logoutBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         await window.CmdVaultAuth.logoutUser();
-        showToast("Signed out successfully");
+        showToast("Signed out successfully", "info");
       });
     }
   }
@@ -90,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     pill.addEventListener("click", () => {
       const selectedOs = pill.dataset.os;
       if (currentOs === selectedOs) {
-        // Toggle off back to all
         currentOs = "all";
         pill.classList.remove("active");
       } else {
@@ -150,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       filtered = filtered.filter((item) => item.os.includes(currentOs));
     }
 
-    // Filter by search query (across all categories if search active)
+    // Filter by search query
     if (searchQuery) {
       filtered = window.COMMANDS_DATA.filter((item) => {
         const cmdMatch = item.command.toLowerCase().includes(searchQuery);
@@ -198,9 +209,12 @@ document.addEventListener("DOMContentLoaded", () => {
         html += `
           <div class="command-item" data-id="${item.id}">
             <div class="command-box">
-              <code class="command-code">${highlightMatch(escapeHtml(item.command), searchQuery)}</code>
-              <button class="copy-btn" title="Copy to clipboard" data-copy="${escapeHtml(item.command)}">
-                <img src="icons/copy.svg" alt="Copy" width="22" height="22" />
+              <div class="command-code-wrap">
+                <span class="command-prompt" aria-hidden="true">&gt;</span>
+                <code class="command-code">${highlightMatch(escapeHtml(item.command), searchQuery)}</code>
+              </div>
+              <button class="copy-btn" title="Copy to clipboard" data-copy="${escapeHtml(item.command)}" aria-label="Copy command">
+                <img src="icons/copy.svg" alt="Copy" width="20" height="20" />
               </button>
             </div>
             <p class="command-explanation">${highlightMatch(escapeHtml(item.description), searchQuery)}</p>
@@ -232,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
         triggerCopyFeedback(btnElement);
-        showToast("Copied to clipboard!");
+        showToast("Command copied to clipboard", "success");
       }).catch(() => fallbackCopy(text, btnElement));
     } else {
       fallbackCopy(text, btnElement);
@@ -250,9 +264,9 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       document.execCommand("copy");
       triggerCopyFeedback(btnElement);
-      showToast("Copied to clipboard!");
+      showToast("Command copied to clipboard", "success");
     } catch (err) {
-      showToast("Could not copy command", 2500);
+      showToast("Could not copy command", "error");
     }
     document.body.removeChild(textarea);
   }
@@ -261,8 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btnElement.classList.add("copied");
     const originalContent = btnElement.innerHTML;
     btnElement.innerHTML = `
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#10b981"/>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#81c995"/>
       </svg>
     `;
     setTimeout(() => {
@@ -271,17 +285,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1800);
   }
 
-  // Toast Notification
-  function showToast(message, duration = 2500) {
+  // Google Material 3 Snackbar Toast
+  function showToast(message, type = "info") {
     if (!toastContainer) return;
     const toast = document.createElement("div");
     toast.className = "toast";
-    toast.innerHTML = `
+    
+    let iconSvg = `
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="16" x2="12" y2="12"></line>
         <line x1="12" y1="8" x2="12.01" y2="8"></line>
       </svg>
+    `;
+    if (type === "success") {
+      iconSvg = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#81c995" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      `;
+    }
+
+    toast.innerHTML = `
+      <span class="toast-icon">${iconSvg}</span>
       <span>${escapeHtml(message)}</span>
     `;
     toastContainer.appendChild(toast);
@@ -289,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       toast.classList.remove("show");
       setTimeout(() => toast.remove(), 300);
-    }, duration);
+    }, 2800);
   }
 
   function escapeHtml(string) {
@@ -304,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function highlightMatch(text, query) {
     if (!query) return text;
     const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
-    return text.replace(regex, "<mark style='background-color: rgba(96, 165, 250, 0.35); color: inherit; padding: 1px 4px; border-radius: 3px;'>$1</mark>");
+    return text.replace(regex, "<mark style='background-color: rgba(138, 180, 248, 0.35); color: #8ab4f8; padding: 1px 4px; border-radius: 4px; font-weight: 500;'>$1</mark>");
   }
 
   // Initial Render
