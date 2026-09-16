@@ -20,7 +20,7 @@ Visit the live deployed site on Vercel:
 ## ✨ Features
 
 - **Google Material 3 Aesthetic**: Designed with Google dark palette (`#131314`, `#1e1f20`, `#282a2c`), Google brand accents (Blue `#8ab4f8`, Green `#81c995`, Amber `#fdd663`, Red `#f28b82`), and 4-color gradient brand badge.
-- **Under-Development Status Indicator**: Visual status chip reflecting active development.
+- **Under-Development Status**: Active development notice and badge maintained on GitHub.
 - **Local Typography**: Embedded `@font-face` rules for local `Google Sans Flex` and `Google Sans Code` fonts.
 - **Instant Search**: Real-time matching across commands, descriptions, and categories with keyboard shortcut (`/` to search).
 - **Categorized Command Vault**:
