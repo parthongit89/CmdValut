@@ -2369,6 +2369,668 @@ const COMMANDS_DATA = [
     command: "LOAD DATA INFILE '[path_to_file.csv]' INTO TABLE [table_name] FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;",
     description: "perform ultra-fast bulk data import from CSV directly into MySQL database table"
   }
+,
+
+  // ==========================================
+  // POSTGRESQL & SQL COMMANDS
+  // ==========================================
+  {
+    id: "pg-cli-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "psql -U [username] -d [database_name] -h [hostname] -p 5432",
+    description: "connect to a PostgreSQL database server instance via the interactive terminal client"
+  },
+  {
+    id: "pg-cli-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\l",
+    description: "list all existing databases, owners, encodings, and access privileges on the cluster"
+  },
+  {
+    id: "pg-cli-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\c [database_name]",
+    description: "switch and connect to a different database within the active psql terminal session"
+  },
+  {
+    id: "pg-cli-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\dt",
+    description: "list all relational tables present in the currently selected database schema"
+  },
+  {
+    id: "pg-cli-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\d [table_name]",
+    description: "describe detailed table schema including columns, data types, constraints, and indexes"
+  },
+  {
+    id: "pg-cli-6",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\du",
+    description: "list all configured database roles, usernames, and granted administrative attributes"
+  },
+  {
+    id: "pg-cli-7",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\dn",
+    description: "list all logical schema namespaces and their owners in the current database"
+  },
+  {
+    id: "pg-cli-8",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\timing",
+    description: "toggle real-time execution timer measurement for executed SQL queries"
+  },
+  {
+    id: "pg-cli-9",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\x",
+    description: "toggle expanded vertical display formatting for wide query rows"
+  },
+  {
+    id: "pg-cli-10",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "PSQL CLI & SHELL META-COMMANDS",
+    sectionDescription: "Interactive terminal navigation, session configuration, and metadata inspection",
+    command: "\\q",
+    description: "exit and quit the interactive psql terminal shell"
+  },
+  {
+    id: "pg-db-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA MANAGEMENT",
+    sectionDescription: "Creating, configuring, and organizing database schemas and namespaces",
+    command: "CREATE DATABASE [database_name] WITH ENCODING = 'UTF8';",
+    description: "create a new PostgreSQL database with standard UTF-8 international character encoding"
+  },
+  {
+    id: "pg-db-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA MANAGEMENT",
+    sectionDescription: "Creating, configuring, and organizing database schemas and namespaces",
+    command: "DROP DATABASE IF EXISTS [database_name];",
+    description: "permanently delete a PostgreSQL database and all its schemas, tables, and records"
+  },
+  {
+    id: "pg-db-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA MANAGEMENT",
+    sectionDescription: "Creating, configuring, and organizing database schemas and namespaces",
+    command: "CREATE SCHEMA [schema_name];",
+    description: "create a new logical schema namespace within the current database"
+  },
+  {
+    id: "pg-db-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA MANAGEMENT",
+    sectionDescription: "Creating, configuring, and organizing database schemas and namespaces",
+    command: "SET search_path TO [schema_name], public;",
+    description: "set the active schema search path order for table resolution in the current session"
+  },
+  {
+    id: "pg-db-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA MANAGEMENT",
+    sectionDescription: "Creating, configuring, and organizing database schemas and namespaces",
+    command: "DROP SCHEMA IF EXISTS [schema_name] CASCADE;",
+    description: "drop schema and recursively delete all contained tables, views, and functions"
+  },
+  {
+    id: "pg-table-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & DATA TYPES",
+    sectionDescription: "Defining tables, SERIAL sequences, UUID keys, and unlogged storage",
+    command: "CREATE TABLE [table_name] (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL, metadata JSONB, created_at TIMESTAMPTZ DEFAULT NOW());",
+    description: "create a table with auto-incrementing SERIAL primary key, JSONB, and timezone timestamp"
+  },
+  {
+    id: "pg-table-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & DATA TYPES",
+    sectionDescription: "Defining tables, SERIAL sequences, UUID keys, and unlogged storage",
+    command: "CREATE TABLE [table_name] (id UUID DEFAULT gen_random_uuid() PRIMARY KEY, email TEXT UNIQUE NOT NULL);",
+    description: "create a table using native UUID cryptographic primary keys with automated generation"
+  },
+  {
+    id: "pg-table-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & DATA TYPES",
+    sectionDescription: "Defining tables, SERIAL sequences, UUID keys, and unlogged storage",
+    command: "CREATE UNLOGGED TABLE [table_name] (id SERIAL PRIMARY KEY, payload TEXT);",
+    description: "create an unlogged table for high-speed writes that bypasses write-ahead logging (WAL)"
+  },
+  {
+    id: "pg-table-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & DATA TYPES",
+    sectionDescription: "Defining tables, SERIAL sequences, UUID keys, and unlogged storage",
+    command: "CREATE TABLE [new_table] AS SELECT * FROM [existing_table] WHERE false;",
+    description: "create a new empty table matching the column structure of an existing query"
+  },
+  {
+    id: "pg-table-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & DATA TYPES",
+    sectionDescription: "Defining tables, SERIAL sequences, UUID keys, and unlogged storage",
+    command: "DROP TABLE IF EXISTS [table_name] CASCADE;",
+    description: "delete table and automatically drop dependent foreign key constraints across other tables"
+  },
+  {
+    id: "pg-table-6",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & DATA TYPES",
+    sectionDescription: "Defining tables, SERIAL sequences, UUID keys, and unlogged storage",
+    command: "TRUNCATE TABLE [table_name] RESTART IDENTITY;",
+    description: "empty all table rows quickly and reset associated auto-incrementing SERIAL sequence"
+  },
+  {
+    id: "pg-dml-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA INSERTION & ADVANCED UPSERT",
+    sectionDescription: "Atomic row operations, returning generated values, and conflict handling",
+    command: "INSERT INTO [table_name] ([col1], [col2]) VALUES ('val1', 'val2') RETURNING id;",
+    description: "insert a record and immediately retrieve generated primary key ID without an extra query"
+  },
+  {
+    id: "pg-dml-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA INSERTION & ADVANCED UPSERT",
+    sectionDescription: "Atomic row operations, returning generated values, and conflict handling",
+    command: "INSERT INTO [table_name] ([col1], [col2]) VALUES ('a', 1), ('b', 2) RETURNING *;",
+    description: "batch insert multiple rows and return all inserted column records in single transaction"
+  },
+  {
+    id: "pg-dml-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA INSERTION & ADVANCED UPSERT",
+    sectionDescription: "Atomic row operations, returning generated values, and conflict handling",
+    command: "INSERT INTO [table_name] (id, name) VALUES (1, 'demo') ON CONFLICT (id) DO NOTHING;",
+    description: "insert record and gracefully ignore execution if a unique key or primary key conflict exists"
+  },
+  {
+    id: "pg-dml-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA INSERTION & ADVANCED UPSERT",
+    sectionDescription: "Atomic row operations, returning generated values, and conflict handling",
+    command: "INSERT INTO [table_name] (id, name, visits) VALUES (1, 'item', 1) ON CONFLICT (id) DO UPDATE SET visits = [table_name].visits + 1 RETURNING *;",
+    description: "PostgreSQL UPSERT modifying existing row on key conflict and returning updated values"
+  },
+  {
+    id: "pg-dml-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA INSERTION & ADVANCED UPSERT",
+    sectionDescription: "Atomic row operations, returning generated values, and conflict handling",
+    command: "UPDATE [table_name] SET [col] = 'new_val' WHERE [id] = 1 RETURNING *;",
+    description: "update record and immediately return the modified row values"
+  },
+  {
+    id: "pg-dml-6",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA INSERTION & ADVANCED UPSERT",
+    sectionDescription: "Atomic row operations, returning generated values, and conflict handling",
+    command: "DELETE FROM [table_name] WHERE [status] = 'expired' RETURNING id, name;",
+    description: "delete records matching condition while returning removed identifiers for auditing"
+  },
+  {
+    id: "pg-select-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ADVANCED QUERYING & FILTERING",
+    sectionDescription: "DISTINCT ON grouping, ILIKE search, COALESCE handling, and pagination",
+    command: "SELECT DISTINCT ON ([department_id]) * FROM [employees] ORDER BY [department_id], [salary] DESC;",
+    description: "return only the highest salary employee per department using PostgreSQL DISTINCT ON"
+  },
+  {
+    id: "pg-select-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ADVANCED QUERYING & FILTERING",
+    sectionDescription: "DISTINCT ON grouping, ILIKE search, COALESCE handling, and pagination",
+    command: "SELECT * FROM [table_name] WHERE [name] ILIKE '%search%';",
+    description: "search text column with case-insensitive pattern matching using PostgreSQL ILIKE"
+  },
+  {
+    id: "pg-select-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ADVANCED QUERYING & FILTERING",
+    sectionDescription: "DISTINCT ON grouping, ILIKE search, COALESCE handling, and pagination",
+    command: "SELECT COALESCE([nickname], [first_name], 'Anonymous') FROM [users];",
+    description: "evaluate and return the first non-null expression from a list of column candidates"
+  },
+  {
+    id: "pg-select-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ADVANCED QUERYING & FILTERING",
+    sectionDescription: "DISTINCT ON grouping, ILIKE search, COALESCE handling, and pagination",
+    command: "SELECT NULLIF([value1], [value2]);",
+    description: "return NULL if two arguments are equal, otherwise return first argument value"
+  },
+  {
+    id: "pg-select-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ADVANCED QUERYING & FILTERING",
+    sectionDescription: "DISTINCT ON grouping, ILIKE search, COALESCE handling, and pagination",
+    command: "SELECT * FROM [table_name] ORDER BY [id] LIMIT [count] OFFSET [offset];",
+    description: "paginate database results specifying maximum returned row count and skip offset"
+  },
+  {
+    id: "pg-json-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "JSON & JSONB OPERATIONS",
+    sectionDescription: "Querying binary JSON documents, indexing keys, and updating nested attributes",
+    command: "SELECT [jsonb_col]->>'email' FROM [users];",
+    description: "extract a top-level JSON key value directly as native PostgreSQL text using the ->> operator"
+  },
+  {
+    id: "pg-json-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "JSON & JSONB OPERATIONS",
+    sectionDescription: "Querying binary JSON documents, indexing keys, and updating nested attributes",
+    command: "SELECT * FROM [events] WHERE [metadata] @> '{\"status\": \"active\"}';",
+    description: "query rows containing matching nested key-value pairs using the @> JSONB containment operator"
+  },
+  {
+    id: "pg-json-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "JSON & JSONB OPERATIONS",
+    sectionDescription: "Querying binary JSON documents, indexing keys, and updating nested attributes",
+    command: "SELECT * FROM [orders] WHERE [details] ? 'tracking_number';",
+    description: "check whether a specified key exists at the top level of a JSONB column using the ? operator"
+  },
+  {
+    id: "pg-json-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "JSON & JSONB OPERATIONS",
+    sectionDescription: "Querying binary JSON documents, indexing keys, and updating nested attributes",
+    command: "SELECT jsonb_pretty([jsonb_col]) FROM [table_name];",
+    description: "format and pretty-print JSONB data into structured, indented text"
+  },
+  {
+    id: "pg-json-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "JSON & JSONB OPERATIONS",
+    sectionDescription: "Querying binary JSON documents, indexing keys, and updating nested attributes",
+    command: "UPDATE [table_name] SET [jsonb_col] = jsonb_set([jsonb_col], '{profile,tier}', '\"premium\"') WHERE [id] = 1;",
+    description: "modify or insert a specific nested attribute path within an existing JSONB document"
+  },
+  {
+    id: "pg-cte-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "COMMON TABLE EXPRESSIONS (CTE)",
+    sectionDescription: "Creating modular subqueries, temporary result sets, and recursive tree traversals",
+    command: "WITH regional_sales AS (SELECT region, SUM(amount) AS total FROM orders GROUP BY region) SELECT * FROM regional_sales WHERE total > 10000;",
+    description: "define a temporary named result set using a Common Table Expression (WITH clause)"
+  },
+  {
+    id: "pg-cte-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "COMMON TABLE EXPRESSIONS (CTE)",
+    sectionDescription: "Creating modular subqueries, temporary result sets, and recursive tree traversals",
+    command: "WITH RECURSIVE org AS (SELECT id, name, manager_id FROM employees WHERE manager_id IS NULL UNION ALL SELECT e.id, e.name, e.manager_id FROM employees e INNER JOIN org o ON e.manager_id = o.id) SELECT * FROM org;",
+    description: "traverse organizational hierarchies and graph structures recursively using WITH RECURSIVE"
+  },
+  {
+    id: "pg-win-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "WINDOW FUNCTIONS & ANALYTICS",
+    sectionDescription: "Row numbering, ranking across partitions, and historical lag calculations",
+    command: "SELECT name, dept, salary, ROW_NUMBER() OVER (PARTITION BY dept ORDER BY salary DESC) AS rank FROM employees;",
+    description: "assign a sequential 1-based row index to records grouped by department partitions"
+  },
+  {
+    id: "pg-win-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "WINDOW FUNCTIONS & ANALYTICS",
+    sectionDescription: "Row numbering, ranking across partitions, and historical lag calculations",
+    command: "SELECT score, RANK() OVER (ORDER BY score DESC), DENSE_RANK() OVER (ORDER BY score DESC) FROM leaderboard;",
+    description: "calculate rank with gaps alongside dense rank without gaps across ordered rows"
+  },
+  {
+    id: "pg-win-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "WINDOW FUNCTIONS & ANALYTICS",
+    sectionDescription: "Row numbering, ranking across partitions, and historical lag calculations",
+    command: "SELECT date, revenue, LAG(revenue, 1) OVER (ORDER BY date) AS previous_day FROM daily_stats;",
+    description: "access data from the preceding row without performing an expensive self-join using LAG()"
+  },
+  {
+    id: "pg-win-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "WINDOW FUNCTIONS & ANALYTICS",
+    sectionDescription: "Row numbering, ranking across partitions, and historical lag calculations",
+    command: "SELECT date, revenue, LEAD(revenue, 1) OVER (ORDER BY date) AS next_day FROM daily_stats;",
+    description: "inspect subsequent row data ahead of current record using LEAD() window function"
+  },
+  {
+    id: "pg-agg-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATES & ARRAY OPERATIONS",
+    sectionDescription: "String concatenation aggregation, array transformations, and unnesting",
+    command: "SELECT department_id, STRING_AGG(employee_name, ', ' ORDER BY employee_name) FROM employees GROUP BY department_id;",
+    description: "concatenate grouped string values into a formatted, sorted comma-separated text list"
+  },
+  {
+    id: "pg-agg-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATES & ARRAY OPERATIONS",
+    sectionDescription: "String concatenation aggregation, array transformations, and unnesting",
+    command: "SELECT tag_category, ARRAY_AGG(tag_id) FROM tags GROUP BY tag_category;",
+    description: "aggregate grouped values into a native PostgreSQL array structure"
+  },
+  {
+    id: "pg-agg-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATES & ARRAY OPERATIONS",
+    sectionDescription: "String concatenation aggregation, array transformations, and unnesting",
+    command: "SELECT UNNEST(ARRAY['apple', 'banana', 'orange']);",
+    description: "expand a PostgreSQL array into a set of separate individual rows"
+  },
+  {
+    id: "pg-alter-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Schema migrations, modifying column constraints, and renaming entities",
+    command: "ALTER TABLE [table_name] ADD COLUMN [column_name] VARCHAR(255) DEFAULT 'val';",
+    description: "add a new column to an existing table schema with optional default value"
+  },
+  {
+    id: "pg-alter-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Schema migrations, modifying column constraints, and renaming entities",
+    command: "ALTER TABLE [table_name] DROP COLUMN [column_name];",
+    description: "permanently delete a column and its stored data values from existing table"
+  },
+  {
+    id: "pg-alter-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Schema migrations, modifying column constraints, and renaming entities",
+    command: "ALTER TABLE [table_name] ALTER COLUMN [column_name] TYPE TEXT;",
+    description: "alter and convert the underlying data type of an existing table column"
+  },
+  {
+    id: "pg-alter-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Schema migrations, modifying column constraints, and renaming entities",
+    command: "ALTER TABLE [table_name] ALTER COLUMN [column_name] SET NOT NULL;",
+    description: "add a strict NOT NULL constraint on a column to prevent null value storage"
+  },
+  {
+    id: "pg-alter-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Schema migrations, modifying column constraints, and renaming entities",
+    command: "ALTER TABLE [old_table] RENAME TO [new_table];",
+    description: "rename an existing PostgreSQL table to a new identifier name"
+  },
+  {
+    id: "pg-idx-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES, PERFORMANCE & VACUUM",
+    sectionDescription: "Creating B-tree & GIN indexes, analyzing execution plans, and vacuuming tables",
+    command: "CREATE INDEX [idx_name] ON [table_name] ([column_name]);",
+    description: "create standard B-tree index on table column to accelerate filter lookups"
+  },
+  {
+    id: "pg-idx-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES, PERFORMANCE & VACUUM",
+    sectionDescription: "Creating B-tree & GIN indexes, analyzing execution plans, and vacuuming tables",
+    command: "CREATE INDEX [idx_name] ON [table_name] USING GIN ([jsonb_column]);",
+    description: "create Generalized Inverted Index (GIN) on JSONB column for rapid key search"
+  },
+  {
+    id: "pg-idx-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES, PERFORMANCE & VACUUM",
+    sectionDescription: "Creating B-tree & GIN indexes, analyzing execution plans, and vacuuming tables",
+    command: "CREATE UNIQUE INDEX [idx_name] ON [table_name] ([column_name]);",
+    description: "create unique constraint index enforcing non-repeating column values"
+  },
+  {
+    id: "pg-idx-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES, PERFORMANCE & VACUUM",
+    sectionDescription: "Creating B-tree & GIN indexes, analyzing execution plans, and vacuuming tables",
+    command: "EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM [table_name] WHERE [id] = 1;",
+    description: "execute query and output actual runtime execution plan with cache buffer statistics"
+  },
+  {
+    id: "pg-idx-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES, PERFORMANCE & VACUUM",
+    sectionDescription: "Creating B-tree & GIN indexes, analyzing execution plans, and vacuuming tables",
+    command: "VACUUM (VERBOSE, ANALYZE) [table_name];",
+    description: "reclaim dead tuple disk space, remove dead rows, and update optimizer statistics"
+  },
+  {
+    id: "pg-role-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "CREATE ROLE [username] WITH LOGIN PASSWORD '[password]';",
+    description: "create a new PostgreSQL user account with interactive login authentication enabled"
+  },
+  {
+    id: "pg-role-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "GRANT ALL PRIVILEGES ON DATABASE [database_name] TO [username];",
+    description: "grant complete administrative permissions on specified database to role"
+  },
+  {
+    id: "pg-role-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO [username];",
+    description: "grant full DML data read and write privileges on all schema tables to user"
+  },
+  {
+    id: "pg-role-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO [username];",
+    description: "configure automated read permissions for role on all tables created in the future"
+  },
+  {
+    id: "pg-role-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "ALTER ROLE [username] WITH PASSWORD '[new_password]';",
+    description: "update or reset the authentication login password for an existing database role"
+  },
+  {
+    id: "pg-role-6",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "REVOKE ALL ON ALL TABLES IN SCHEMA public FROM [username];",
+    description: "revoke and strip all table permissions in schema from specified user role"
+  },
+  {
+    id: "pg-role-7",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "ROLES, USERS & PERMISSIONS",
+    sectionDescription: "Managing cluster roles, configuring login passwords, and granting object access",
+    command: "DROP ROLE IF EXISTS [username];",
+    description: "delete and remove a role account from the PostgreSQL cluster catalog"
+  },
+  {
+    id: "pg-backup-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "IMPORT, EXPORT & BACKUP",
+    sectionDescription: "Importing CSV files, streaming data dumps, and restoring database archives",
+    command: "\\copy [table_name] FROM '[file.csv]' WITH (FORMAT csv, HEADER true);",
+    description: "client-side fast bulk import of a CSV data file directly into PostgreSQL table"
+  },
+  {
+    id: "pg-backup-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "IMPORT, EXPORT & BACKUP",
+    sectionDescription: "Importing CSV files, streaming data dumps, and restoring database archives",
+    command: "\\copy (SELECT * FROM [table_name] WHERE [status] = 'active') TO '[export.csv]' WITH (FORMAT csv, HEADER true);",
+    description: "export query output results directly into a formatted CSV file with column headers"
+  },
+  {
+    id: "pg-backup-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "IMPORT, EXPORT & BACKUP",
+    sectionDescription: "Importing CSV files, streaming data dumps, and restoring database archives",
+    command: "pg_dump -U [user] -h [host] -Fc [database_name] > [backup.dump]",
+    description: "export database backup into PostgreSQL custom compressed archive format"
+  },
+  {
+    id: "pg-backup-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "IMPORT, EXPORT & BACKUP",
+    sectionDescription: "Importing CSV files, streaming data dumps, and restoring database archives",
+    command: "pg_restore -U [user] -d [database_name] -v [backup.dump]",
+    description: "restore a PostgreSQL database from a pg_dump custom format archive with verbose output"
+  },
+  {
+    id: "pg-backup-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "IMPORT, EXPORT & BACKUP",
+    sectionDescription: "Importing CSV files, streaming data dumps, and restoring database archives",
+    command: "pg_dumpall -U [user] -h [host] > [cluster_backup.sql]",
+    description: "dump all databases and cluster global objects including roles and tablespaces"
+  },
+  {
+    id: "pg-ext-1",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "EXTENSIONS & SYSTEM MONITORING",
+    sectionDescription: "Enabling cryptographic modules, auditing connections, and terminating locks",
+    command: "CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";",
+    description: "install extension providing functions for generating universally unique identifiers (UUIDs)"
+  },
+  {
+    id: "pg-ext-2",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "EXTENSIONS & SYSTEM MONITORING",
+    sectionDescription: "Enabling cryptographic modules, auditing connections, and terminating locks",
+    command: "CREATE EXTENSION IF NOT EXISTS pgcrypto;",
+    description: "enable cryptographic hashing and encryption functions like crypt and gen_salt"
+  },
+  {
+    id: "pg-ext-3",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "EXTENSIONS & SYSTEM MONITORING",
+    sectionDescription: "Enabling cryptographic modules, auditing connections, and terminating locks",
+    command: "SELECT pid, usename, client_addr, state, query FROM pg_stat_activity WHERE state != 'idle';",
+    description: "inspect currently running queries, client IP addresses, and active server connections"
+  },
+  {
+    id: "pg-ext-4",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "EXTENSIONS & SYSTEM MONITORING",
+    sectionDescription: "Enabling cryptographic modules, auditing connections, and terminating locks",
+    command: "SELECT pg_terminate_backend([pid]);",
+    description: "terminate a stuck, locked, or runaway database query process thread immediately"
+  },
+  {
+    id: "pg-ext-5",
+    category: "sql-postgresql",
+    os: ["windows", "linux", "macos"],
+    section: "EXTENSIONS & SYSTEM MONITORING",
+    sectionDescription: "Enabling cryptographic modules, auditing connections, and terminating locks",
+    command: "SELECT pg_size_pretty(pg_database_size('[database_name]'));",
+    description: "report total disk space consumed by a database in human-readable MB or GB format"
+  }
 ];
 
 // Attach globally
