@@ -3031,6 +3031,1120 @@ const COMMANDS_DATA = [
     command: "SELECT pg_size_pretty(pg_database_size('[database_name]'));",
     description: "report total disk space consumed by a database in human-readable MB or GB format"
   }
+,
+  // ==========================================
+  // PYTHON: PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)
+  // ==========================================
+  {
+    id: "py-pip-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install [package_name]",
+    description: "install the latest stable release of a package from the Python Package Index (PyPI)"
+  },
+  {
+    id: "py-pip-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install [package_name]==[version]",
+    description: "install an exact pinned release version of a package (e.g. requests==2.31.0)"
+  },
+  {
+    id: "py-pip-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install \"[package_name]>=[version]\"",
+    description: "install a package satisfying minimum compatible version constraint"
+  },
+  {
+    id: "py-pip-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install --upgrade [package_name]",
+    description: "upgrade an existing installed package to its newest available release on PyPI"
+  },
+  {
+    id: "py-pip-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install --upgrade --force-reinstall [package_name]",
+    description: "reinstall a package and all dependencies even if they are currently up to date"
+  },
+  {
+    id: "py-pip-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install -r requirements.txt",
+    description: "batch install all pinned project dependencies listed in a requirements file"
+  },
+  {
+    id: "py-pip-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install --no-cache-dir [package_name]",
+    description: "install package without saving wheel archive cache to disk (essential for minimal Docker images)"
+  },
+  {
+    id: "py-pip-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install -e .",
+    description: "install current project in editable development mode so code changes reflect instantly"
+  },
+  {
+    id: "py-pip-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install git+https://github.com/[user]/[repo].git",
+    description: "install package directly from a remote Git repository branch or commit tag"
+  },
+  {
+    id: "py-pip-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install [package_name] --pre",
+    description: "allow installation of alpha, beta, and development pre-release versions"
+  },
+  {
+    id: "py-pip-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install --index-url [custom_url] [package_name]",
+    description: "install package from a private corporate repository or custom PyPI mirror index"
+  },
+  {
+    id: "py-pip-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP PACKAGE MANAGEMENT (INSTALLATION & UPGRADES)",
+    sectionDescription: "Installing, upgrading, and version-pinning libraries from the Python Package Index",
+    command: "pip install --trusted-host [host] -i [url] [package_name]",
+    description: "install behind corporate proxy or internal mirror host bypassing SSL verification"
+  },
+  // ==========================================
+  // PYTHON: PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP
+  // ==========================================
+  {
+    id: "py-audit-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip list",
+    description: "display all currently installed Python packages and their version numbers in formatted table"
+  },
+  {
+    id: "py-audit-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip list --outdated",
+    description: "list all installed packages that have newer version releases available on PyPI"
+  },
+  {
+    id: "py-audit-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip freeze > requirements.txt",
+    description: "export an exact snapshot of installed packages with locked versions to requirements.txt"
+  },
+  {
+    id: "py-audit-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip show [package_name]",
+    description: "display metadata for package including version, author, license, location, and dependencies"
+  },
+  {
+    id: "py-audit-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip show -f [package_name]",
+    description: "list all installed files, modules, and binary paths belonging to a specific package"
+  },
+  {
+    id: "py-audit-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip check",
+    description: "verify that installed packages have compatible dependencies and identify broken requirements"
+  },
+  {
+    id: "py-audit-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip uninstall -y [package_name]",
+    description: "uninstall package immediately without prompting for interactive confirmation"
+  },
+  {
+    id: "py-audit-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip cache dir",
+    description: "display the system filesystem path of pip's local HTTP and wheel download cache"
+  },
+  {
+    id: "py-audit-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip cache list",
+    description: "display list of all pre-built binary wheel archives cached locally on the machine"
+  },
+  {
+    id: "py-audit-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip cache purge",
+    description: "delete all cached wheel files and downloaded tarballs to reclaim disk space"
+  },
+  {
+    id: "py-audit-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PIP INSPECTION, DEPENDENCY AUDIT & CLEANUP",
+    sectionDescription: "Auditing dependencies, exporting requirement locks, checking conflicts, and cache management",
+    command: "pip download -r requirements.txt -d ./wheels",
+    description: "download wheel archives for dependencies into folder for air-gapped offline deployment"
+  },
+  // ==========================================
+  // PYTHON: VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)
+  // ==========================================
+  {
+    id: "py-venv-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "python -m venv .venv",
+    description: "create an isolated local virtual environment directory using Python standard library"
+  },
+  {
+    id: "py-venv-2",
+    category: "python",
+    os: ["linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "source .venv/bin/activate",
+    description: "activate virtual environment in Bash, Zsh, or POSIX Unix terminal shell"
+  },
+  {
+    id: "py-venv-3",
+    category: "python",
+    os: ["windows"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: ".\\.venv\\Scripts\\activate",
+    description: "activate virtual environment in Windows PowerShell or Command Prompt"
+  },
+  {
+    id: "py-venv-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "deactivate",
+    description: "deactivate current virtual environment and restore default system Python shell"
+  },
+  {
+    id: "py-venv-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "python -m venv --clear .venv",
+    description: "wipe and recreate virtual environment folder cleanly from scratch"
+  },
+  {
+    id: "py-venv-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "python -m venv --system-site-packages .venv",
+    description: "create virtual environment with inherit access to global system site-packages"
+  },
+  {
+    id: "py-venv-7",
+    category: "python",
+    os: ["linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "which python",
+    description: "display exact filesystem executable path of active Python interpreter on Unix"
+  },
+  {
+    id: "py-venv-8",
+    category: "python",
+    os: ["windows"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "where.exe python",
+    description: "display all registered Python interpreter executable paths in Windows PATH"
+  },
+  {
+    id: "py-venv-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "conda create -n [env_name] python=[version]",
+    description: "create isolated Anaconda/Miniconda environment with specific Python version"
+  },
+  {
+    id: "py-venv-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "conda activate [env_name]",
+    description: "activate specified Anaconda/Miniconda virtual environment"
+  },
+  {
+    id: "py-venv-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "conda deactivate",
+    description: "deactivate active Conda environment and return to base system terminal"
+  },
+  {
+    id: "py-venv-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "conda env list",
+    description: "display list of all Conda virtual environments created on local system"
+  },
+  {
+    id: "py-venv-13",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "VIRTUAL ENVIRONMENTS (VENV, VIRTUALENV & CONDA)",
+    sectionDescription: "Creating and activating isolated Python runtimes to prevent dependency pollution",
+    command: "conda env export > environment.yml",
+    description: "export entire Conda environment configuration including native C-libraries to YAML"
+  },
+  // ==========================================
+  // PYTHON: MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)
+  // ==========================================
+  {
+    id: "py-pm-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "pipenv install [package_name]",
+    description: "install package, add dependency entry to Pipfile, and lock hashes in Pipfile.lock"
+  },
+  {
+    id: "py-pm-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "pipenv shell",
+    description: "spawn a new interactive shell session activated within the Pipenv virtual environment"
+  },
+  {
+    id: "py-pm-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry new [project_name]",
+    description: "scaffold a modern Python package repository with standard pyproject.toml layout"
+  },
+  {
+    id: "py-pm-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry init",
+    description: "interactively configure and create pyproject.toml configuration in existing directory"
+  },
+  {
+    id: "py-pm-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry add [package_name]",
+    description: "add dependency to pyproject.toml, resolve graph, and install into Poetry virtualenv"
+  },
+  {
+    id: "py-pm-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry add --group dev [package_name]",
+    description: "add dependency designated strictly for development and testing environments"
+  },
+  {
+    id: "py-pm-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry install",
+    description: "install all exact dependencies and transitive packages recorded in poetry.lock"
+  },
+  {
+    id: "py-pm-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry run python [script.py]",
+    description: "execute script inside Poetry virtual environment without manual activation"
+  },
+  {
+    id: "py-pm-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "poetry show --tree",
+    description: "render hierarchical tree showing installed packages and their nested sub-dependencies"
+  },
+  {
+    id: "py-pm-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "uv venv",
+    description: "instantly create a virtual environment in milliseconds using the Rust-based uv tool"
+  },
+  {
+    id: "py-pm-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "uv pip install -r requirements.txt",
+    description: "install project requirements with 10-100x speedup as drop-in replacement for pip"
+  },
+  {
+    id: "py-pm-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PROJECT MANAGERS (POETRY, UV & PIPENV)",
+    sectionDescription: "Next-generation dependency resolution, deterministic lockfiles, and Rust-accelerated tooling",
+    command: "uv pip compile requirements.in -o requirements.txt",
+    description: "compile high-level dependency declarations into pinned deterministic lockfile"
+  },
+  // ==========================================
+  // PYTHON: RUNTIME EXECUTION & CLI FLAGS
+  // ==========================================
+  {
+    id: "py-cli-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python [script.py]",
+    description: "execute Python script file through the standard CPython interpreter"
+  },
+  {
+    id: "py-cli-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -m [module_name]",
+    description: "run installed library module as script by executing its __main__.py entrypoint"
+  },
+  {
+    id: "py-cli-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -c \"[python_code]\"",
+    description: "execute inline Python code statement directly from terminal without creating a script file"
+  },
+  {
+    id: "py-cli-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -i [script.py]",
+    description: "execute script and remain in interactive REPL session allowing variable and state inspection"
+  },
+  {
+    id: "py-cli-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -V",
+    description: "display version number of active Python interpreter (equivalent to python --version)"
+  },
+  {
+    id: "py-cli-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -v [script.py]",
+    description: "run script in verbose mode tracing all imported module files and locations during runtime"
+  },
+  {
+    id: "py-cli-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -O [script.py]",
+    description: "run script with basic bytecode optimization (removes assert statements and sets __debug__ to False)"
+  },
+  {
+    id: "py-cli-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -OO [script.py]",
+    description: "run script with full optimization stripping assert statements as well as docstrings"
+  },
+  {
+    id: "py-cli-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -u [script.py]",
+    description: "force unbuffered binary stdout and stderr output (essential for real-time Docker container logs)"
+  },
+  {
+    id: "py-cli-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -W ignore [script.py]",
+    description: "run script suppressing all deprecation warnings, syntax warnings, and runtime notices"
+  },
+  {
+    id: "py-cli-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -X dev [script.py]",
+    description: "enable Python Development Mode activating memory debug hooks and asyncio checks"
+  },
+  {
+    id: "py-cli-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "RUNTIME EXECUTION & CLI FLAGS",
+    sectionDescription: "Invoking Python interpreter scripts, inline expressions, interactive shells, and runtime flags",
+    command: "python -X faulthandler [script.py]",
+    description: "dump complete Python tracebacks automatically on segmentation fault or fatal crash"
+  },
+  // ==========================================
+  // PYTHON: BUILT-IN CLI UTILITIES & MODULES
+  // ==========================================
+  {
+    id: "py-tool-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m http.server [port]",
+    description: "start instant zero-configuration local HTTP server serving current directory (default port 8000)"
+  },
+  {
+    id: "py-tool-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m http.server [port] --bind 127.0.0.1",
+    description: "start local HTTP server bound exclusively to localhost preventing local network exposure"
+  },
+  {
+    id: "py-tool-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m json.tool [input.json] [output.json]",
+    description: "validate, reformat, and pretty-print JSON files with 4-space indent from command line"
+  },
+  {
+    id: "py-tool-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "curl -s [url] | python -m json.tool",
+    description: "pipe raw REST API JSON response directly into pretty-printer for terminal formatting"
+  },
+  {
+    id: "py-tool-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m timeit -s \"[setup_code]\" \"[code_snippet]\"",
+    description: "benchmark execution speed of Python snippet with statistical repetitions and timing"
+  },
+  {
+    id: "py-tool-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m zipfile -c [archive.zip] [folder/]",
+    description: "compress directory and files into a standard ZIP archive from terminal without external tools"
+  },
+  {
+    id: "py-tool-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m zipfile -e [archive.zip] [output_dir]",
+    description: "extract contents of ZIP archive into specified destination directory"
+  },
+  {
+    id: "py-tool-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m tarfile -c [archive.tar.gz] [folder/]",
+    description: "compress directory into gzip-compressed tarball archive directly from command line"
+  },
+  {
+    id: "py-tool-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m tarfile -e [archive.tar.gz] [output_dir]",
+    description: "extract tarball archive contents into designated target destination directory"
+  },
+  {
+    id: "py-tool-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m site",
+    description: "print interpreter module search paths (sys.path) and user site-packages directory locations"
+  },
+  {
+    id: "py-tool-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m calendar [year]",
+    description: "render complete 12-month calendar grid in terminal output for specified calendar year"
+  },
+  {
+    id: "py-tool-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "BUILT-IN CLI UTILITIES & MODULES",
+    sectionDescription: "Instant web servers, JSON formatters, benchmarks, and archive tools shipped with Python",
+    command: "python -m webbrowser -t \"[url]\"",
+    description: "launch default web browser and open target URL in a new browser tab from command line"
+  },
+  // ==========================================
+  // PYTHON: DEBUGGING, PROFILING & BYTECODE
+  // ==========================================
+  {
+    id: "py-dbg-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m pdb [script.py]",
+    description: "launch Python Interactive Debugger from the entrypoint of script for step-by-step debugging"
+  },
+  {
+    id: "py-dbg-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m pdb -c continue [script.py]",
+    description: "run script under pdb and pause into interactive debugger only upon uncaught exception"
+  },
+  {
+    id: "py-dbg-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m cProfile -s time [script.py]",
+    description: "profile script execution time sorted by internal time spent inside individual functions"
+  },
+  {
+    id: "py-dbg-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m cProfile -s cumulative [script.py]",
+    description: "profile execution time sorted by cumulative time spent including called sub-functions"
+  },
+  {
+    id: "py-dbg-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m cProfile -o profile.pstats [script.py]",
+    description: "export profiling metrics into binary pstats file for SnakeViz or gprof2dot visualization"
+  },
+  {
+    id: "py-dbg-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m trace --trace [script.py]",
+    description: "execute script while printing every executed line of code to terminal in real-time"
+  },
+  {
+    id: "py-dbg-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m trace --count [script.py]",
+    description: "record exact execution frequency count for every source line to perform coverage analysis"
+  },
+  {
+    id: "py-dbg-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m py_compile [script.py]",
+    description: "compile Python source file into .pyc bytecode to detect syntax errors without running"
+  },
+  {
+    id: "py-dbg-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m compileall [directory/]",
+    description: "recursively compile all Python files in directory tree into bytecode in __pycache__"
+  },
+  {
+    id: "py-dbg-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & BYTECODE",
+    sectionDescription: "Interactive step debugging, bottleneck profiling, execution tracing, and bytecode inspection",
+    command: "python -m dis [script.py]",
+    description: "disassemble script into low-level CPython bytecode instructions, opcodes, and stack operations"
+  },
+  // ==========================================
+  // PYTHON: TESTING FRAMEWORKS (PYTEST & UNITTEST)
+  // ==========================================
+  {
+    id: "py-test-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest",
+    description: "automatically discover and execute all unit and integration test suites in current project"
+  },
+  {
+    id: "py-test-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest -v",
+    description: "run pytest in verbose mode displaying individual test function names and pass/fail status"
+  },
+  {
+    id: "py-test-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest -s",
+    description: "disable stdout and stderr capture so print statements and log outputs appear live"
+  },
+  {
+    id: "py-test-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest -k \"[expression]\"",
+    description: "filter and execute only test functions matching keyword expression or function substring"
+  },
+  {
+    id: "py-test-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest -m \"[marker]\"",
+    description: "run only test cases decorated with specific custom marker (e.g. smoke, integration, slow)"
+  },
+  {
+    id: "py-test-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest -x",
+    description: "halt pytest test runner execution immediately upon encountering the very first test failure"
+  },
+  {
+    id: "py-test-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest --maxfail=[n]",
+    description: "stop test suite execution after reaching specified maximum number of failed tests"
+  },
+  {
+    id: "py-test-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest --lf",
+    description: "re-run only test cases that failed in the immediate preceding test execution session"
+  },
+  {
+    id: "py-test-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest --cov=[package_name]",
+    description: "measure and report statement test coverage percentage across specified package"
+  },
+  {
+    id: "py-test-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "pytest --cov=[package_name] --cov-report=html",
+    description: "generate interactive visual HTML test coverage report into htmlcov/ directory"
+  },
+  {
+    id: "py-test-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "python -m unittest discover -s tests -p \"test_*.py\"",
+    description: "discover and run all unit test classes using built-in standard library unittest runner"
+  },
+  {
+    id: "py-test-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "python -m unittest [tests/test_api.py]",
+    description: "run tests inside a single specific test file using built-in unittest module"
+  },
+  {
+    id: "py-test-13",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING FRAMEWORKS (PYTEST & UNITTEST)",
+    sectionDescription: "Automated test discovery, parallel execution, assertions, and code coverage measurement",
+    command: "python -m doctest -v [script.py]",
+    description: "discover and execute interactive docstring unit tests embedded inside module functions"
+  },
+  // ==========================================
+  // PYTHON: CODE QUALITY, LINTING & FORMATTING
+  // ==========================================
+  {
+    id: "py-qual-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "ruff check .",
+    description: "run blazing-fast Rust-based linter across entire codebase to detect errors and anti-patterns"
+  },
+  {
+    id: "py-qual-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "ruff check --fix .",
+    description: "automatically apply safe linting fixes and code optimizations across repository"
+  },
+  {
+    id: "py-qual-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "ruff format .",
+    description: "format entire codebase adhering to Black-compatible formatting rules with instant Rust speed"
+  },
+  {
+    id: "py-qual-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "black [path/]",
+    description: "uncompromisingly format Python source files according to Black standard styling rules"
+  },
+  {
+    id: "py-qual-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "black --check --diff [path/]",
+    description: "check if files comply with Black formatting and preview the diff without writing changes"
+  },
+  {
+    id: "py-qual-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "flake8 [path/]",
+    description: "analyze Python codebase for PEP 8 styling violations, syntax errors, and complexity issues"
+  },
+  {
+    id: "py-qual-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "flake8 --max-line-length=100 [path/]",
+    description: "run flake8 linter with customized maximum allowed line length limit"
+  },
+  {
+    id: "py-qual-8",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "mypy [path/]",
+    description: "perform static type analysis verifying PEP 484 type annotations across Python files"
+  },
+  {
+    id: "py-qual-9",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "mypy --strict [path/]",
+    description: "run static type checking with strict type flags enabled disallowing untyped definitions"
+  },
+  {
+    id: "py-qual-10",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "isort [path/]",
+    description: "sort and organize import statements alphabetically and grouped by standard library and third party"
+  },
+  {
+    id: "py-qual-11",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "bandit -r [path/]",
+    description: "recursively scan codebase for common security vulnerabilities, weak hashes, and injection flaws"
+  },
+  {
+    id: "py-qual-12",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "CODE QUALITY, LINTING & FORMATTING",
+    sectionDescription: "Enforcing PEP 8 styling, static type checking, automated code formatting, and security audits",
+    command: "pre-commit run --all-files",
+    description: "manually execute all configured Git pre-commit verification hooks across every project file"
+  },
+  // ==========================================
+  // PYTHON: PACKAGING, WHEELS & PYPI PUBLISHING
+  // ==========================================
+  {
+    id: "py-pkg-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, validating package manifests, and publishing to PyPI",
+    command: "python -m pip install --upgrade build twine",
+    description: "install official PyPA package build engine and secure upload distribution tools"
+  },
+  {
+    id: "py-pkg-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, validating package manifests, and publishing to PyPI",
+    command: "python -m build",
+    description: "build both source distribution (.tar.gz) and binary wheel (.whl) packages into dist/ folder"
+  },
+  {
+    id: "py-pkg-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, validating package manifests, and publishing to PyPI",
+    command: "twine check dist/*",
+    description: "validate package metadata and verify that README markdown renders properly for PyPI"
+  },
+  {
+    id: "py-pkg-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, validating package manifests, and publishing to PyPI",
+    command: "twine upload dist/*",
+    description: "upload built binary wheels and source packages to the official Python Package Index (PyPI)"
+  },
+  {
+    id: "py-pkg-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, vintage package manifests, and publishing to PyPI",
+    command: "twine upload --repository testpypi dist/*",
+    description: "publish package to TestPyPI sandbox repository to verify distribution before production release"
+  },
+  {
+    id: "py-pkg-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, validating package manifests, and publishing to PyPI",
+    command: "python setup.py sdist bdist_wheel",
+    description: "legacy build command to produce source distribution and wheel archives for setup.py projects"
+  },
+  {
+    id: "py-pkg-7",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING, WHEELS & PYPI PUBLISHING",
+    sectionDescription: "Building distributable wheel archives, validating package manifests, and publishing to PyPI",
+    command: "pip wheel --no-deps -w ./wheels -r requirements.txt",
+    description: "compile binary wheel archives for all requirements without installing them locally"
+  },
+  // ==========================================
+  // PYTHON: INTERACTIVE REPL & JUPYTER ECOSYSTEM
+  // ==========================================
+  {
+    id: "py-repl-1",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "INTERACTIVE REPL & JUPYTER ECOSYSTEM",
+    sectionDescription: "Interactive Python exploration, IPython enhancements, and Jupyter notebook management",
+    command: "python",
+    description: "launch standard interactive Python REPL shell for instant prototyping and testing"
+  },
+  {
+    id: "py-repl-2",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "INTERACTIVE REPL & JUPYTER ECOSYSTEM",
+    sectionDescription: "Interactive Python exploration, IPython enhancements, and Jupyter notebook management",
+    command: "python -m IPython",
+    description: "launch enhanced IPython shell with syntax highlighting, autocomplete, and magic commands"
+  },
+  {
+    id: "py-repl-3",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "INTERACTIVE REPL & JUPYTER ECOSYSTEM",
+    sectionDescription: "Interactive Python exploration, IPython enhancements, and Jupyter notebook management",
+    command: "jupyter notebook",
+    description: "launch local Jupyter Notebook server and open interactive web workspace in default browser"
+  },
+  {
+    id: "py-repl-4",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "INTERACTIVE REPL & JUPYTER ECOSYSTEM",
+    sectionDescription: "Interactive Python exploration, IPython enhancements, and Jupyter notebook management",
+    command: "jupyter lab",
+    description: "launch modern extensible JupyterLab workspace environment in default browser"
+  },
+  {
+    id: "py-repl-5",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "INTERACTIVE REPL & JUPYTER ECOSYSTEM",
+    sectionDescription: "Interactive Python exploration, IPython enhancements, and Jupyter notebook management",
+    command: "jupyter nbconvert --to script [notebook.ipynb]",
+    description: "convert interactive Jupyter notebook (.ipynb) into clean standalone Python script (.py)"
+  },
+  {
+    id: "py-repl-6",
+    category: "python",
+    os: ["windows", "linux", "macos"],
+    section: "INTERACTIVE REPL & JUPYTER ECOSYSTEM",
+    sectionDescription: "Interactive Python exploration, IPython enhancements, and Jupyter notebook management",
+    command: "jupyter nbconvert --to html [notebook.ipynb]",
+    description: "export Jupyter notebook with interactive cell outputs and charts into standalone HTML page"
+  }
 ];
 
 // Attach globally

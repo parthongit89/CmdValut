@@ -34,7 +34,7 @@
 
 ## 📖 Overview
 
-**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, database administrators, and DevOps engineers instant access to essential commands and queries across **GitHub & Git**, **Linux & Bash**, **Windows PowerShell**, **MySQL**, and **PostgreSQL**.
+**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, database administrators, and DevOps engineers instant access to essential commands and queries across **GitHub & Git**, **Linux & Bash**, **Windows PowerShell**, **MySQL**, **PostgreSQL**, and **Python**.
 
 No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semantic HTML5, modern CSS3, and modular vanilla JavaScript**, delivering zero-latency search, instantaneous 1-click clipboard copying, and edge performance on Vercel.
 
@@ -70,6 +70,7 @@ No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semant
 | **PowerShell** | Navigation, Process Control, Admin Scripts, Network Diagnostics | `Get-Service`, `Stop-Process`, `Test-NetConnection`, execution policies, package management |
 | **MySQL** | Databases, Tables, DDL/DML, Joins, Indexes, Transactions, User Security, Administration, mysqldump | `CREATE DATABASE`, `SELECT ... JOIN`, `INSERT ... ON DUPLICATE`, `CREATE INDEX`, `START TRANSACTION`, `GRANT`, `mysqldump` |
 | **PostgreSQL** | CLI Meta-Commands, Schemas, JSONB, CTEs, Window Functions, Upsert, Indexes, VACUUM, pg_dump | `\dt`, `\d`, `JSONB ->>`, `WITH RECURSIVE`, `ON CONFLICT DO UPDATE`, `EXPLAIN (ANALYZE)`, `pg_dump` |
+| **Python** | Pip Package Management, Virtual Environments (venv, conda), Modern Tools (poetry, uv), CLI Execution, Built-in Modules, Debugging, Testing, Quality, Packaging | `pip install`, `python -m venv`, `poetry`, `uv`, `python -m http.server`, `python -m pdb`, `pytest`, `black`, `ruff`, `build`, `twine` |
 
 ---
 
