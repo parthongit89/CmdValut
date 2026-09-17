@@ -133,30 +133,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-}
-
-/* Background Watermark Logo (15-20% Opacity) */
-body::before {
-  content: "";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(560px, 75vw);
-  height: min(560px, 75vw);
-  background-image: url('../images/logo.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-  transition: opacity 0.25s ease;
-}
-
-body.light-theme::before {
-  opacity: 0.14;
 }
 
 .app-container {
@@ -165,7 +141,6 @@ body.light-theme::before {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
 }
 
 /* ==========================================================================
@@ -1080,8 +1055,6 @@ body.light-theme .copy-btn:hover svg {
   padding: 40px 24px 80px 24px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
 }
 
 .legal-header {
