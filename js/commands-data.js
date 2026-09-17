@@ -4145,6 +4145,1120 @@ const COMMANDS_DATA = [
     command: "jupyter nbconvert --to html [notebook.ipynb]",
     description: "export Jupyter notebook with interactive cell outputs and charts into standalone HTML page"
   }
+,
+  // ==========================================
+  // NODE.JS: NPM PACKAGE INSTALLATION & DEPENDENCIES
+  // ==========================================
+  {
+    id: "node-npm-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm init -y",
+    description: "scaffold a new Node.js project instantly with default package.json values"
+  },
+  {
+    id: "node-npm-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm init",
+    description: "interactively configure package.json setting name, version, description, and author"
+  },
+  {
+    id: "node-npm-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install [package_name]",
+    description: "install package from npm registry and add to production dependencies in package.json"
+  },
+  {
+    id: "node-npm-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install -D [package_name]",
+    description: "install package strictly as a development dependency in devDependencies (e.g. nodemon, typescript)"
+  },
+  {
+    id: "node-npm-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install -g [package_name]",
+    description: "install package globally on system path to use as a global terminal command line tool"
+  },
+  {
+    id: "node-npm-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install [package_name]@[version]",
+    description: "install an exact specified semantic version or distribution tag of a package"
+  },
+  {
+    id: "node-npm-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install [package_name]@latest",
+    description: "install or update package to the newest stable release published on npm registry"
+  },
+  {
+    id: "node-npm-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install --save-exact [package_name]",
+    description: "install package and save exact pinned version without adding ^ or ~ semver prefix"
+  },
+  {
+    id: "node-npm-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install --legacy-peer-deps",
+    description: "bypass peer dependency conflicts and install packages ignoring strict peer requirement trees"
+  },
+  {
+    id: "node-npm-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install --force",
+    description: "force npm to fetch remote resources and overwrite existing installed dependencies"
+  },
+  {
+    id: "node-npm-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install --no-optional",
+    description: "skip installation of optional dependencies to speed up install times and minimize container size"
+  },
+  {
+    id: "node-npm-12",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM PACKAGE INSTALLATION & DEPENDENCIES",
+    sectionDescription: "Initializing projects, installing libraries, and managing package dependencies",
+    command: "npm install [user]/[repo]",
+    description: "install package source code directly from a GitHub repository branch or commit hash"
+  },
+  // ==========================================
+  // NODE.JS: NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS
+  // ==========================================
+  {
+    id: "node-audit-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm list",
+    description: "display a hierarchical tree of all installed packages and dependencies in node_modules"
+  },
+  {
+    id: "node-audit-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm list --depth=0",
+    description: "display only top-level project dependencies without printing nested sub-dependencies"
+  },
+  {
+    id: "node-audit-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm list -g --depth=0",
+    description: "display all globally installed packages on the system with their installed versions"
+  },
+  {
+    id: "node-audit-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm outdated",
+    description: "check registry to inspect which installed packages have newer versions available"
+  },
+  {
+    id: "node-audit-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm update",
+    description: "update all dependencies to the highest version permitted by package.json semver constraints"
+  },
+  {
+    id: "node-audit-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm update [package_name]",
+    description: "update a single specified package to its latest semver-compatible release"
+  },
+  {
+    id: "node-audit-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm uninstall [package_name]",
+    description: "remove package from node_modules, package.json dependencies, and package-lock.json"
+  },
+  {
+    id: "node-audit-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm uninstall -g [package_name]",
+    description: "uninstall globally installed package binary from the operating system"
+  },
+  {
+    id: "node-audit-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm audit",
+    description: "scan project dependency tree for known security vulnerabilities and generate advisory report"
+  },
+  {
+    id: "node-audit-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm audit fix",
+    description: "automatically install compatible semver updates to fix identified security vulnerabilities"
+  },
+  {
+    id: "node-audit-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm audit fix --force",
+    description: "aggressively install major version upgrades to resolve deep vulnerabilities (may introduce breaking changes)"
+  },
+  {
+    id: "node-audit-12",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm ci",
+    description: "clean install exact locked dependencies from package-lock.json (standard for CI/CD and Docker builds)"
+  },
+  {
+    id: "node-audit-13",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm cache clean --force",
+    description: "delete all data from npm local package cache directory to reclaim storage"
+  },
+  {
+    id: "node-audit-14",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPM AUDIT, DEPENDENCY INSPECTION & SCRIPTS",
+    sectionDescription: "Inspecting dependency trees, checking outdated modules, auditing vulnerabilities, and clean CI installs",
+    command: "npm cache verify",
+    description: "verify integrity of npm cache data, garbage collect extraneous data, and validate index"
+  },
+  // ==========================================
+  // NODE.JS: NPX RUNTIME & ON-DEMAND EXECUTION
+  // ==========================================
+  {
+    id: "node-npx-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx [package_name]",
+    description: "fetch, execute, and discard a CLI package binary on demand without saving to node_modules"
+  },
+  {
+    id: "node-npx-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx --no-install [command]",
+    description: "enforce execution of locally installed project binary only and fail if not installed"
+  },
+  {
+    id: "node-npx-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx -p [package_name] [command]",
+    description: "execute specific binary command exposed by an on-demand downloaded npm package"
+  },
+  {
+    id: "node-npx-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx create-next-app@latest [app_name]",
+    description: "scaffold a complete modern Next.js web application with TypeScript, Tailwind CSS, and App Router"
+  },
+  {
+    id: "node-npx-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx tsx [script.ts]",
+    description: "execute TypeScript files directly in Node.js runtime without ahead-of-time compilation"
+  },
+  {
+    id: "node-npx-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx nodemon [script.js]",
+    description: "launch Node.js application with automatic process restart upon detecting source file changes"
+  },
+  {
+    id: "node-npx-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx rimraf [folder_name]",
+    description: "cross-platform recursive directory deletion utility (works reliably across Windows, Linux, and macOS)"
+  },
+  {
+    id: "node-npx-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx kill-port [port]",
+    description: "terminate any process holding a specific local TCP port (e.g. npx kill-port 3000)"
+  },
+  {
+    id: "node-npx-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx prettier --write .",
+    description: "execute Prettier code formatter across all repository files without permanent installation"
+  },
+  {
+    id: "node-npx-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NPX RUNTIME & ON-DEMAND EXECUTION",
+    sectionDescription: "Executing command-line binaries on demand without permanent local or global installation",
+    command: "npx npm-check-updates -u",
+    description: "upgrade all package.json dependencies to their latest major releases bypassing semver ranges"
+  },
+  // ==========================================
+  // NODE.JS: NODE.JS CLI RUNTIME FLAGS & EXECUTION
+  // ==========================================
+  {
+    id: "node-cli-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node [script.js]",
+    description: "execute JavaScript file sequentially through the Node.js V8 runtime engine"
+  },
+  {
+    id: "node-cli-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node -e \"[javascript_code]\"",
+    description: "evaluate inline JavaScript code string directly from terminal without saving a file"
+  },
+  {
+    id: "node-cli-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node -p \"[javascript_code]\"",
+    description: "evaluate JavaScript expression and print the returned value directly to terminal stdout"
+  },
+  {
+    id: "node-cli-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node -v",
+    description: "print installed Node.js runtime version number (equivalent to node --version)"
+  },
+  {
+    id: "node-cli-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --watch [script.js]",
+    description: "run script with native built-in file watcher and auto-restart on file edits (Node.js 18+)"
+  },
+  {
+    id: "node-cli-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --env-file=.env [script.js]",
+    description: "natively load environment variables from .env file into process.env without dotenv (Node.js 20+)"
+  },
+  {
+    id: "node-cli-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --max-old-space-size=[megabytes] [script.js]",
+    description: "increase V8 heap memory limit ceiling (e.g. --max-old-space-size=4096 for 4GB heap)"
+  },
+  {
+    id: "node-cli-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --check [script.js]",
+    description: "verify syntax and parse script for errors without executing any of the code"
+  },
+  {
+    id: "node-cli-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --trace-uncaught [script.js]",
+    description: "print full stack trace identifying exact origin point of uncaught exception"
+  },
+  {
+    id: "node-cli-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --trace-warnings [script.js]",
+    description: "print full stack traces for process runtime warnings and deprecation alerts"
+  },
+  {
+    id: "node-cli-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --enable-source-maps [script.js]",
+    description: "enable native source map resolution for accurate stack traces in compiled/bundled code"
+  },
+  {
+    id: "node-cli-12",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS CLI RUNTIME FLAGS & EXECUTION",
+    sectionDescription: "Invoking the V8 engine, evaluating expressions, watch mode, memory management, and runtime flags",
+    command: "node --experimental-vm-modules [script.js]",
+    description: "enable experimental ECMAScript module support inside the Node.js VM context"
+  },
+  // ==========================================
+  // NODE.JS: DEBUGGING, PROFILING & PERFORMANCE AUDIT
+  // ==========================================
+  {
+    id: "node-dbg-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --inspect [script.js]",
+    description: "enable V8 inspector agent on 127.0.0.1:9229 for remote debugging via Chrome DevTools or VS Code"
+  },
+  {
+    id: "node-dbg-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --inspect-brk [script.js]",
+    description: "launch inspector and pause execution at first line of script awaiting debugger connection"
+  },
+  {
+    id: "node-dbg-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --inspect=0.0.0.0:9229 [script.js]",
+    description: "bind debugger to all network interfaces allowing remote debugging across Docker containers"
+  },
+  {
+    id: "node-dbg-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --prof [script.js]",
+    description: "generate V8 execution CPU profile log file (isolate-*.log) for performance bottleneck analysis"
+  },
+  {
+    id: "node-dbg-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --prof-process isolate-*.log > processed.txt",
+    description: "parse raw V8 profiling log into human-readable text report showing function tick frequencies"
+  },
+  {
+    id: "node-dbg-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --cpu-prof [script.js]",
+    description: "generate .cpuprofile file natively importable into Chrome DevTools Performance panel"
+  },
+  {
+    id: "node-dbg-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --heap-prof [script.js]",
+    description: "generate V8 heap allocation sampling profile upon process exit to diagnose memory leaks"
+  },
+  {
+    id: "node-dbg-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --trace-gc [script.js]",
+    description: "print every V8 garbage collection event with memory space reclamation to terminal stdout"
+  },
+  {
+    id: "node-dbg-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "DEBUGGING, PROFILING & PERFORMANCE AUDIT",
+    sectionDescription: "V8 inspector agent, Chrome DevTools debugging, CPU profiling, heap snapshots, and GC telemetry",
+    command: "node --expose-gc -e \"gc()\"",
+    description: "expose V8 engine manual garbage collection function to JavaScript runtime code"
+  },
+  // ==========================================
+  // NODE.JS: NODE.JS INTERACTIVE REPL COMMANDS
+  // ==========================================
+  {
+    id: "node-repl-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: "node",
+    description: "launch interactive Node.js REPL prompt for live JavaScript code evaluation"
+  },
+  {
+    id: "node-repl-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".help",
+    description: "print help menu showing all built-in REPL commands and interactive keyboard shortcuts"
+  },
+  {
+    id: "node-repl-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".break",
+    description: "break out of multiline input buffer or abort an incomplete expression in REPL"
+  },
+  {
+    id: "node-repl-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".clear",
+    description: "reset the REPL context object and clear multiline expression buffer"
+  },
+  {
+    id: "node-repl-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".save [file_path]",
+    description: "save all expressions and commands evaluated in current REPL session into a .js file"
+  },
+  {
+    id: "node-repl-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".load [file_path]",
+    description: "load and execute JavaScript file directly into active REPL session namespace"
+  },
+  {
+    id: "node-repl-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".editor",
+    description: "enter multiline editor mode allowing structured function typing (press Ctrl+D to execute)"
+  },
+  {
+    id: "node-repl-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE.JS INTERACTIVE REPL COMMANDS",
+    sectionDescription: "Interactive JavaScript exploration, session persistence, and built-in REPL dot-commands",
+    command: ".exit",
+    description: "exit interactive Node.js REPL session and return to system command line"
+  },
+  // ==========================================
+  // NODE.JS: PROCESS & CLUSTER MANAGEMENT (PM2)
+  // ==========================================
+  {
+    id: "node-pm2-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "npm install -g pm2",
+    description: "install PM2 production process manager globally on the system"
+  },
+  {
+    id: "node-pm2-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 start [app.js] --name [app_name]",
+    description: "start Node.js application as a daemonized background process managed by PM2"
+  },
+  {
+    id: "node-pm2-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 start [app.js] -i max",
+    description: "launch application in cluster mode load-balanced across all available CPU cores"
+  },
+  {
+    id: "node-pm2-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 list",
+    description: "display status overview table of all managed processes, CPU usage, memory, and status"
+  },
+  {
+    id: "node-pm2-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 logs [app_name]",
+    description: "stream combined stdout and stderr log outputs for specified application in real-time"
+  },
+  {
+    id: "node-pm2-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 logs --lines 100",
+    description: "display the last 100 log lines across all managed background processes"
+  },
+  {
+    id: "node-pm2-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 restart [app_name]",
+    description: "restart specified running application process thread immediately"
+  },
+  {
+    id: "node-pm2-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 reload all",
+    description: "execute zero-downtime rolling reload across all clustered worker instances"
+  },
+  {
+    id: "node-pm2-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 stop [app_name]",
+    description: "stop application execution while keeping process configuration registered in PM2"
+  },
+  {
+    id: "node-pm2-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 delete [app_name]",
+    description: "stop process and remove its configuration completely from PM2 active registry"
+  },
+  {
+    id: "node-pm2-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 monit",
+    description: "open visual terminal dashboard monitoring real-time CPU, RAM, and event loop metrics"
+  },
+  {
+    id: "node-pm2-12",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 save",
+    description: "save current active process list snapshot to persist applications across server reboots"
+  },
+  {
+    id: "node-pm2-13",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PROCESS & CLUSTER MANAGEMENT (PM2)",
+    sectionDescription: "Daemonizing background services, cluster load-balancing, zero-downtime reloads, and logging",
+    command: "pm2 startup",
+    description: "generate and configure OS system service boot script to revive PM2 on server restart"
+  },
+  // ==========================================
+  // NODE.JS: NODE VERSION MANAGEMENT (NVM & FNM)
+  // ==========================================
+  {
+    id: "node-nvm-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm install [version]",
+    description: "download and install specified Node.js version release (e.g. nvm install 20)"
+  },
+  {
+    id: "node-nvm-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm install --lts",
+    description: "download and install the latest Long Term Support (LTS) version of Node.js"
+  },
+  {
+    id: "node-nvm-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm use [version]",
+    description: "switch active Node.js interpreter version in current terminal session"
+  },
+  {
+    id: "node-nvm-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm alias default [version]",
+    description: "set default Node.js version to automatically load across all new terminal windows"
+  },
+  {
+    id: "node-nvm-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm list",
+    description: "display all Node.js versions currently installed on local machine (alias: nvm ls)"
+  },
+  {
+    id: "node-nvm-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm ls-remote --lts",
+    description: "query remote registry for all available Long Term Support versions released by Node.js team"
+  },
+  {
+    id: "node-nvm-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm uninstall [version]",
+    description: "remove a previously downloaded Node.js version and its binaries from local storage"
+  },
+  {
+    id: "node-nvm-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "nvm which [version]",
+    description: "display full filesystem binary path to Node.js executable for specified version"
+  },
+  {
+    id: "node-nvm-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "fnm install [version]",
+    description: "install Node.js version using ultra-fast Rust-based Fast Node Manager (fnm)"
+  },
+  {
+    id: "node-nvm-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "fnm use [version]",
+    description: "switch active Node.js version with sub-millisecond latency using fnm"
+  },
+  {
+    id: "node-nvm-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "NODE VERSION MANAGEMENT (NVM & FNM)",
+    sectionDescription: "Installing, switching, and managing multiple concurrent Node.js runtime versions",
+    command: "fnm default [version]",
+    description: "set persistent system default Node.js version inside fnm configuration"
+  },
+  // ==========================================
+  // NODE.JS: MODERN PACKAGE MANAGERS (PNPM & YARN)
+  // ==========================================
+  {
+    id: "node-alt-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "pnpm install",
+    description: "install dependencies using hard links saving up to 70% disk space through global content-addressable store"
+  },
+  {
+    id: "node-alt-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "pnpm add [package_name]",
+    description: "install package and record into production dependencies in pnpm project"
+  },
+  {
+    id: "node-alt-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "pnpm add -D [package_name]",
+    description: "install package as development dependency in devDependencies using pnpm"
+  },
+  {
+    id: "node-alt-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "pnpm remove [package_name]",
+    description: "uninstall package and clean up hard links from pnpm workspace"
+  },
+  {
+    id: "node-alt-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "pnpm dlx [package_name]",
+    description: "fetch and execute CLI package binary on demand without installing it (pnpm equivalent of npx)"
+  },
+  {
+    id: "node-alt-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "pnpm update --interactive --latest",
+    description: "launch interactive terminal UI to inspect and choose packages to upgrade to newest versions"
+  },
+  {
+    id: "node-alt-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "yarn install",
+    description: "install all dependencies locked in yarn.lock using Yarn package manager"
+  },
+  {
+    id: "node-alt-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "yarn add [package_name]",
+    description: "add package to dependencies and update yarn.lock hash entries"
+  },
+  {
+    id: "node-alt-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "yarn add --dev [package_name]",
+    description: "add package to devDependencies using Yarn"
+  },
+  {
+    id: "node-alt-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "yarn dlx [package_name]",
+    description: "execute one-off package binary without modifying project dependencies in Yarn v2+"
+  },
+  {
+    id: "node-alt-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "MODERN PACKAGE MANAGERS (PNPM & YARN)",
+    sectionDescription: "Disk-efficient content-addressable storage, strict dependency resolution, and workspace tooling",
+    command: "corepack enable",
+    description: "activate native Node.js Corepack bridge for managing pnpm and yarn without global npm installs"
+  },
+  // ==========================================
+  // NODE.JS: TESTING, LINTING & BUILD AUTOMATION
+  // ==========================================
+  {
+    id: "node-test-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "node --test",
+    description: "discover and run unit tests natively using built-in Node.js test runner without extra libraries (Node 18+)"
+  },
+  {
+    id: "node-test-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "node --test \"tests/**/*.test.js\"",
+    description: "execute matching test files with native test runner using glob pattern"
+  },
+  {
+    id: "node-test-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx jest",
+    description: "execute Jest testing framework test runner across project test suites"
+  },
+  {
+    id: "node-test-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx jest --watch",
+    description: "run Jest in interactive watch mode re-running tests related to changed source files"
+  },
+  {
+    id: "node-test-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx jest --coverage",
+    description: "run test suites and generate comprehensive code coverage report in terminal and coverage/"
+  },
+  {
+    id: "node-test-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx vitest",
+    description: "execute modern Vite-powered unit test runner with instant HMR and multithreading"
+  },
+  {
+    id: "node-test-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx eslint .",
+    description: "analyze all JavaScript and TypeScript source files for syntax errors and coding style violations"
+  },
+  {
+    id: "node-test-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx eslint . --fix",
+    description: "automatically apply safe fixes for code style and formatting violations across project"
+  },
+  {
+    id: "node-test-9",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npx tsc --noEmit",
+    description: "run TypeScript compiler static type analysis across project without emitting compiled .js files"
+  },
+  {
+    id: "node-test-10",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npm run [script_name]",
+    description: "execute custom automation script defined under the scripts property in package.json"
+  },
+  {
+    id: "node-test-11",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npm test",
+    description: "shorthand command to run test command defined in package.json scripts"
+  },
+  {
+    id: "node-test-12",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "TESTING, LINTING & BUILD AUTOMATION",
+    sectionDescription: "Native Node test runner, Jest/Vitest frameworks, ESLint code standards, and TypeScript checks",
+    command: "npm start",
+    description: "shorthand command to execute entrypoint start command defined in package.json scripts"
+  },
+  // ==========================================
+  // NODE.JS: PACKAGING & REGISTRY PUBLISHING
+  // ==========================================
+  {
+    id: "node-pub-1",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm pack",
+    description: "create a distribution tarball archive (.tgz) of package exactly as it would be published to npm"
+  },
+  {
+    id: "node-pub-2",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm publish",
+    description: "publish package distribution archive to the official public npm registry"
+  },
+  {
+    id: "node-pub-3",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm publish --access public",
+    description: "publish scoped organization package (@scope/name) with public registry accessibility"
+  },
+  {
+    id: "node-pub-4",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm publish --tag beta",
+    description: "publish pre-release package version tagged under a custom distribution tag without affecting latest"
+  },
+  {
+    id: "node-pub-5",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm deprecate [package_name]@[version] \"[message]\"",
+    description: "mark specific package release as deprecated showing warning message during user installations"
+  },
+  {
+    id: "node-pub-6",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm unpublish [package_name] --force",
+    description: "remove published package release completely from npm registry (within allowed 72-hour window)"
+  },
+  {
+    id: "node-pub-7",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm whoami",
+    description: "display username currently logged into npm registry from local environment"
+  },
+  {
+    id: "node-pub-8",
+    category: "nodejs",
+    os: ["windows", "linux", "macos"],
+    section: "PACKAGING & REGISTRY PUBLISHING",
+    sectionDescription: "Inspecting package tarballs, semver version tagging, authentication, and publishing to npm",
+    command: "npm login",
+    description: "authenticate terminal session with npm registry credentials and generate auth token"
+  }
 ];
 
 // Attach globally

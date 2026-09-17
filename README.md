@@ -34,7 +34,7 @@
 
 ## 📖 Overview
 
-**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, database administrators, and DevOps engineers instant access to essential commands and queries across **GitHub & Git**, **Linux & Bash**, **Windows PowerShell**, **MySQL**, **PostgreSQL**, and **Python**.
+**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, database administrators, and DevOps engineers instant access to essential commands and queries across **GitHub & Git**, **Linux & Bash**, **Windows PowerShell**, **MySQL**, **PostgreSQL**, **Python**, and **Node.js**.
 
 No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semantic HTML5, modern CSS3, and modular vanilla JavaScript**, delivering zero-latency search, instantaneous 1-click clipboard copying, and edge performance on Vercel.
 
@@ -71,6 +71,7 @@ No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semant
 | **MySQL** | Databases, Tables, DDL/DML, Joins, Indexes, Transactions, User Security, Administration, mysqldump | `CREATE DATABASE`, `SELECT ... JOIN`, `INSERT ... ON DUPLICATE`, `CREATE INDEX`, `START TRANSACTION`, `GRANT`, `mysqldump` |
 | **PostgreSQL** | CLI Meta-Commands, Schemas, JSONB, CTEs, Window Functions, Upsert, Indexes, VACUUM, pg_dump | `\dt`, `\d`, `JSONB ->>`, `WITH RECURSIVE`, `ON CONFLICT DO UPDATE`, `EXPLAIN (ANALYZE)`, `pg_dump` |
 | **Python** | Pip Package Management, Virtual Environments (venv, conda), Modern Tools (poetry, uv), CLI Execution, Built-in Modules, Debugging, Testing, Quality, Packaging | `pip install`, `python -m venv`, `poetry`, `uv`, `python -m http.server`, `python -m pdb`, `pytest`, `black`, `ruff`, `build`, `twine` |
+| **Node.js** | NPM Package Management, Auditing, NPX Runners, V8 Flags, Debugging & Profiling, PM2 Process Clustering, NVM/FNM Versions, PNPM/Yarn, Native Testing, Registry Publishing | `npm install`, `npm ci`, `npx`, `node --watch`, `node --inspect`, `pm2 start -i max`, `nvm use`, `pnpm install`, `node --test`, `npm publish` |
 
 ---
 
