@@ -66,7 +66,7 @@ No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semant
 | Ecosystem | Focus Areas | Key Capabilities |
 | :--- | :--- | :--- |
 | **GitHub & Git** | Setup, Init, Staging, Branching, Merging, Remote Updates, History Rewrites | Global configurations, commit snapshots, interactive rebase, cherry-pick, stash, branch management |
-| **Linux & Bash** | Filesystem, Permissions, Process Management, Systemd Services, Diagnostics | `chown`, `chmod`, `systemctl`, `journalctl`, disk diagnostics, tar compression, networking |
+| **Linux & Bash** | Filesystem, Searching, Permissions, Diagnostics, Processes, Disk Usage, Systemd, Users, Networking, SSH/SCP, Package Managers, I/O Pipes, Compression | `chmod`, `systemctl`, `journalctl`, `grep`, `lsof`, `ip`, `ssh-keygen`, `apt/pacman/dnf`, `tee`, `tar` |
 | **PowerShell** | Navigation, Process Control, Admin Scripts, Network Diagnostics | `Get-Service`, `Stop-Process`, `Test-NetConnection`, execution policies, package management |
 
 ---

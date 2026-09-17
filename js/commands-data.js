@@ -673,7 +673,7 @@ const COMMANDS_DATA = [
     category: "linux-bash",
     os: ["linux", "macos"],
     section: "FILE & DIRECTORY MANAGEMENT",
-    sectionDescription: "Inspecting, navigating, creating, and modifying filesystem items",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
     command: "ls -la",
     description: "list all directory contents including hidden files, permissions, and sizes"
   },
@@ -682,7 +682,7 @@ const COMMANDS_DATA = [
     category: "linux-bash",
     os: ["linux", "macos"],
     section: "FILE & DIRECTORY MANAGEMENT",
-    sectionDescription: "Inspecting, navigating, creating, and modifying filesystem items",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
     command: "pwd",
     description: "print name of current working directory path"
   },
@@ -691,7 +691,7 @@ const COMMANDS_DATA = [
     category: "linux-bash",
     os: ["linux", "macos"],
     section: "FILE & DIRECTORY MANAGEMENT",
-    sectionDescription: "Inspecting, navigating, creating, and modifying filesystem items",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
     command: "mkdir -p [dir_name]",
     description: "create directory path with all required parent directories without errors"
   },
@@ -700,7 +700,7 @@ const COMMANDS_DATA = [
     category: "linux-bash",
     os: ["linux", "macos"],
     section: "FILE & DIRECTORY MANAGEMENT",
-    sectionDescription: "Inspecting, navigating, creating, and modifying filesystem items",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
     command: "cp -rv [source] [dest]",
     description: "copy files or directories recursively with verbose output"
   },
@@ -709,7 +709,7 @@ const COMMANDS_DATA = [
     category: "linux-bash",
     os: ["linux", "macos"],
     section: "FILE & DIRECTORY MANAGEMENT",
-    sectionDescription: "Inspecting, navigating, creating, and modifying filesystem items",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
     command: "rm -rf [path]",
     description: "forcefully and recursively remove files or non-empty directories"
   },
@@ -718,9 +718,171 @@ const COMMANDS_DATA = [
     category: "linux-bash",
     os: ["linux", "macos"],
     section: "FILE & DIRECTORY MANAGEMENT",
-    sectionDescription: "Inspecting, navigating, creating, and modifying filesystem items",
-    command: 'find . -type f -name "*.log"',
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "find . -type f -name \"*.log\"",
     description: "search current directory recursively for regular files matching pattern"
+  },
+  {
+    id: "linux-file-7",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "cd -",
+    description: "switch back to the previously visited working directory"
+  },
+  {
+    id: "linux-file-8",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "touch [filename]",
+    description: "create a new empty file or update the access and modification timestamp of an existing file"
+  },
+  {
+    id: "linux-file-9",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "cat [file]",
+    description: "concatenate and display the entire contents of a file to standard output"
+  },
+  {
+    id: "linux-file-10",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "head -n [number] [file]",
+    description: "output the first specified number of lines from the beginning of a file"
+  },
+  {
+    id: "linux-file-11",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "tail -n [number] -f [file]",
+    description: "display the last lines of a file and actively follow new appended lines in real time"
+  },
+  {
+    id: "linux-file-12",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "less [file]",
+    description: "open a file in an interactive terminal viewer with forward and backward paging navigation"
+  },
+  {
+    id: "linux-file-13",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "mv [source] [dest]",
+    description: "move or rename files and directories to a new filename or destination directory"
+  },
+  {
+    id: "linux-file-14",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "ln -s [target_path] [link_name]",
+    description: "create a symbolic link pointing to an existing file or directory target"
+  },
+  {
+    id: "linux-file-15",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "ls -lhS",
+    description: "list files in long format with human-readable sizes sorted from largest to smallest"
+  },
+  {
+    id: "linux-file-16",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "ls -lt",
+    description: "list directory contents sorted by modification time with newest files displayed first"
+  },
+  {
+    id: "linux-file-17",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "FILE & DIRECTORY MANAGEMENT",
+    sectionDescription: "Inspecting, navigating, creating, moving, and modifying filesystem items",
+    command: "stat [file]",
+    description: "display comprehensive low-level metadata including inode number, permissions, and timestamps"
+  },
+  {
+    id: "linux-search-1",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "grep -rn \"[pattern]\" [directory]",
+    description: "search recursively across all files in a directory for a pattern and show line numbers"
+  },
+  {
+    id: "linux-search-2",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "grep -i \"[pattern]\" [file]",
+    description: "search for a specific text string or regex pattern within a file ignoring letter casing"
+  },
+  {
+    id: "linux-search-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "which [command_name]",
+    description: "locate and display the exact binary executable path in PATH associated with a command"
+  },
+  {
+    id: "linux-search-4",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "whereis [command_name]",
+    description: "find the binary executable, source code files, and manual man pages for a command"
+  },
+  {
+    id: "linux-search-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "locate [filename]",
+    description: "quickly search for files anywhere across the filesystem using the prebuilt mlocate database"
+  },
+  {
+    id: "linux-search-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "find . -type f -mtime -7",
+    description: "find all regular files within the current directory hierarchy modified in the last 7 days"
+  },
+  {
+    id: "linux-search-7",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SEARCHING & PATTERN MATCHING",
+    sectionDescription: "Locating files, grepping text, and finding items by metadata attributes",
+    command: "find . -type f -size +100M",
+    description: "search the filesystem recursively for files exceeding 100 megabytes in size"
   },
   {
     id: "linux-perm-1",
@@ -739,6 +901,42 @@ const COMMANDS_DATA = [
     sectionDescription: "Configuring user privileges, mode bits, and file group access",
     command: "chown -R [user]:[group] [path]",
     description: "change ownership of file or directory tree to specified user and group"
+  },
+  {
+    id: "linux-perm-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PERMISSIONS & OWNERSHIP",
+    sectionDescription: "Configuring user privileges, mode bits, and file group access",
+    command: "chmod +x [script.sh]",
+    description: "grant executable permissions on a script or binary file for user, group, and others"
+  },
+  {
+    id: "linux-perm-4",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PERMISSIONS & OWNERSHIP",
+    sectionDescription: "Configuring user privileges, mode bits, and file group access",
+    command: "chmod -R 644 [directory]",
+    description: "recursively set read and write permissions for owner and read-only access for others"
+  },
+  {
+    id: "linux-perm-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PERMISSIONS & OWNERSHIP",
+    sectionDescription: "Configuring user privileges, mode bits, and file group access",
+    command: "chown [user] [file]",
+    description: "change file user ownership while leaving the existing group assignment unmodified"
+  },
+  {
+    id: "linux-perm-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PERMISSIONS & OWNERSHIP",
+    sectionDescription: "Configuring user privileges, mode bits, and file group access",
+    command: "umask",
+    description: "display or configure the default file creation permission mask for the current shell"
   },
   {
     id: "linux-sys-1",
@@ -777,6 +975,213 @@ const COMMANDS_DATA = [
     description: "interactive visual process viewer and hardware resource monitor"
   },
   {
+    id: "linux-sys-5",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "lsb_release -a",
+    description: "display Linux distribution distributor ID, release version, and official codename"
+  },
+  {
+    id: "linux-sys-6",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "cat /etc/os-release",
+    description: "inspect standard system identification metadata and operating system release attributes"
+  },
+  {
+    id: "linux-sys-7",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "hostnamectl",
+    description: "query or modify system hostname, deployment environment, kernel, and OS architecture"
+  },
+  {
+    id: "linux-sys-8",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "lscpu",
+    description: "display detailed CPU architecture information including sockets, cores, threads, and cache levels"
+  },
+  {
+    id: "linux-sys-9",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "lshw -short",
+    description: "generate a concise summary table of detected hardware components, devices, and memory banks"
+  },
+  {
+    id: "linux-sys-10",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "lspci",
+    description: "list all PCI buses, controllers, graphics cards, and attached peripheral hardware devices"
+  },
+  {
+    id: "linux-sys-11",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "lsusb",
+    description: "list all USB buses, root hubs, and connected external USB hardware devices"
+  },
+  {
+    id: "linux-sys-12",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "uptime -p",
+    description: "show how long the system has been continuously running in a human-friendly format"
+  },
+  {
+    id: "linux-sys-13",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "dmesg -T",
+    description: "print kernel ring buffer messages and boot diagnostics with human-readable timestamps"
+  },
+  {
+    id: "linux-sys-14",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEM DIAGNOSTICS & HARDWARE",
+    sectionDescription: "Auditing kernel, memory, storage volumes, and CPU performance",
+    command: "cat /proc/version",
+    description: "display the running Linux kernel version, GCC compiler build details, and compile date"
+  },
+  {
+    id: "linux-proc-1",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "ps aux",
+    description: "list all running processes across all users with CPU and memory usage statistics"
+  },
+  {
+    id: "linux-proc-2",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "ps -ef | grep [process_name]",
+    description: "filter and search for running process instances by name or PID in the process table"
+  },
+  {
+    id: "linux-proc-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "top",
+    description: "launch the classic real-time interactive process monitor displaying CPU and memory loads"
+  },
+  {
+    id: "linux-proc-4",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "kill [pid]",
+    description: "terminate a process gracefully by sending the standard termination signal (SIGTERM)"
+  },
+  {
+    id: "linux-proc-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "kill -9 [pid]",
+    description: "forcefully terminate an unresponsive process immediately with uncatchable kill signal (SIGKILL)"
+  },
+  {
+    id: "linux-proc-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "killall [process_name]",
+    description: "terminate all running process instances matching the specified executable name"
+  },
+  {
+    id: "linux-proc-7",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "lsof -i :[port]",
+    description: "list all active network connections and open file descriptors bound to a specific port"
+  },
+  {
+    id: "linux-proc-8",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PROCESS MONITORING & MANAGEMENT",
+    sectionDescription: "Inspecting, filtering, monitoring, and terminating running system processes",
+    command: "vmstat 1 5",
+    description: "report virtual memory statistics, process states, block I/O, and CPU activity 5 times every 1 second"
+  },
+  {
+    id: "linux-disk-1",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "STORAGE & DISK USAGE",
+    sectionDescription: "Analyzing directory sizes, checking mount capacities, and inspecting storage devices",
+    command: "du -sh [directory]",
+    description: "display the total disk space consumed by a directory in human-readable megabytes or gigabytes"
+  },
+  {
+    id: "linux-disk-2",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "STORAGE & DISK USAGE",
+    sectionDescription: "Analyzing directory sizes, checking mount capacities, and inspecting storage devices",
+    command: "du -h --max-depth=1 [path] | sort -hr",
+    description: "list immediate subdirectories and files sorted by size from highest to lowest disk usage"
+  },
+  {
+    id: "linux-disk-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "STORAGE & DISK USAGE",
+    sectionDescription: "Analyzing directory sizes, checking mount capacities, and inspecting storage devices",
+    command: "df -i",
+    description: "report filesystem inode usage count and percentage capacity instead of block space"
+  },
+  {
+    id: "linux-disk-4",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "STORAGE & DISK USAGE",
+    sectionDescription: "Analyzing directory sizes, checking mount capacities, and inspecting storage devices",
+    command: "lsblk",
+    description: "display a visual tree view of all available block devices, partitions, sizes, and mount points"
+  },
+  {
+    id: "linux-disk-5",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "STORAGE & DISK USAGE",
+    sectionDescription: "Analyzing directory sizes, checking mount capacities, and inspecting storage devices",
+    command: "sudo fdisk -l",
+    description: "view partition tables, sector sizes, and disk partition types for all connected storage drives"
+  },
+  {
     id: "linux-service-1",
     category: "linux-bash",
     os: ["linux"],
@@ -804,6 +1209,357 @@ const COMMANDS_DATA = [
     description: "follow live logs and stderr output emitted by specified systemd unit"
   },
   {
+    id: "linux-service-4",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl start [service]",
+    description: "start and activate a systemd service daemon immediately"
+  },
+  {
+    id: "linux-service-5",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl stop [service]",
+    description: "stop and deactivate a currently running systemd service daemon"
+  },
+  {
+    id: "linux-service-6",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl enable [service]",
+    description: "enable a service to launch automatically upon system boot"
+  },
+  {
+    id: "linux-service-7",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl disable [service]",
+    description: "disable a service from automatically starting on system boot"
+  },
+  {
+    id: "linux-service-8",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl is-active [service]",
+    description: "check whether a specific service daemon is currently in an active running state"
+  },
+  {
+    id: "linux-service-9",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl list-units --type=service --state=running",
+    description: "list all service units currently loaded and active in the system"
+  },
+  {
+    id: "linux-service-10",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "SYSTEMD SERVICE MANAGEMENT",
+    sectionDescription: "Controlling daemons, background tasks, and service unit lifecycles",
+    command: "systemctl daemon-reload",
+    description: "reload the systemd manager configuration after creating or editing custom unit files"
+  },
+  {
+    id: "linux-user-1",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "USER & GROUP ADMINISTRATION",
+    sectionDescription: "Managing user accounts, credentials, groups, and administrative privileges",
+    command: "sudo useradd -m -s /bin/bash [username]",
+    description: "create a new user account with a home directory and default bash login shell"
+  },
+  {
+    id: "linux-user-2",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "USER & GROUP ADMINISTRATION",
+    sectionDescription: "Managing user accounts, credentials, groups, and administrative privileges",
+    command: "sudo passwd [username]",
+    description: "change or initialize the authentication password for a user account"
+  },
+  {
+    id: "linux-user-3",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "USER & GROUP ADMINISTRATION",
+    sectionDescription: "Managing user accounts, credentials, groups, and administrative privileges",
+    command: "sudo usermod -aG sudo [username]",
+    description: "append a user account to the sudo administrative group granting superuser rights"
+  },
+  {
+    id: "linux-user-4",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "USER & GROUP ADMINISTRATION",
+    sectionDescription: "Managing user accounts, credentials, groups, and administrative privileges",
+    command: "sudo userdel -r [username]",
+    description: "delete a user account along with their user home directory and mail spool files"
+  },
+  {
+    id: "linux-user-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "USER & GROUP ADMINISTRATION",
+    sectionDescription: "Managing user accounts, credentials, groups, and administrative privileges",
+    command: "id [username]",
+    description: "print effective user ID (UID), group ID (GID), and all associated supplementary groups"
+  },
+  {
+    id: "linux-user-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "USER & GROUP ADMINISTRATION",
+    sectionDescription: "Managing user accounts, credentials, groups, and administrative privileges",
+    command: "whoami",
+    description: "print the effective username of the currently active logged-in terminal user"
+  },
+  {
+    id: "linux-net-1",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "ip a",
+    description: "display all network interfaces, assigned IPv4/IPv6 addresses, subnet masks, and link statuses"
+  },
+  {
+    id: "linux-net-2",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "ip route",
+    description: "display kernel IP routing tables and configured default network gateway route"
+  },
+  {
+    id: "linux-net-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "ping -c 4 [hostname_or_ip]",
+    description: "send 4 ICMP echo request packets to verify network connectivity and response latency"
+  },
+  {
+    id: "linux-net-4",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "ss -tuln",
+    description: "list all currently open and listening TCP and UDP sockets with numeric port numbers"
+  },
+  {
+    id: "linux-net-5",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "netstat -plnt",
+    description: "display active TCP listening ports along with their corresponding process IDs and program names"
+  },
+  {
+    id: "linux-net-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "curl -I [url]",
+    description: "fetch HTTP/HTTPS response headers only from a remote web server without downloading body"
+  },
+  {
+    id: "linux-net-7",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "dig [domain] +short",
+    description: "perform a DNS query to quickly retrieve resolved IP addresses for a specified domain name"
+  },
+  {
+    id: "linux-net-8",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "NETWORKING & CONNECTIVITY",
+    sectionDescription: "Auditing network interfaces, IP routing, DNS resolution, sockets, and ports",
+    command: "nslookup [domain]",
+    description: "query Internet domain name servers to inspect DNS records and reverse lookups"
+  },
+  {
+    id: "linux-ssh-1",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "REMOTE ACCESS & SECURE SHELL",
+    sectionDescription: "Connecting securely to remote hosts, managing keys, and copying files via SSH",
+    command: "ssh [user]@[host]",
+    description: "establish an encrypted SSH shell session to a remote server with default port 22"
+  },
+  {
+    id: "linux-ssh-2",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "REMOTE ACCESS & SECURE SHELL",
+    sectionDescription: "Connecting securely to remote hosts, managing keys, and copying files via SSH",
+    command: "ssh -p [port] [user]@[host]",
+    description: "connect to an SSH daemon running on a customized non-standard port number"
+  },
+  {
+    id: "linux-ssh-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "REMOTE ACCESS & SECURE SHELL",
+    sectionDescription: "Connecting securely to remote hosts, managing keys, and copying files via SSH",
+    command: "ssh-keygen -t ed25519 -C \"[email]\"",
+    description: "generate an elliptic curve ED25519 public and private cryptographic SSH key pair"
+  },
+  {
+    id: "linux-ssh-4",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "REMOTE ACCESS & SECURE SHELL",
+    sectionDescription: "Connecting securely to remote hosts, managing keys, and copying files via SSH",
+    command: "ssh-copy-id [user]@[host]",
+    description: "copy local public SSH key to the remote host authorized_keys file for passwordless login"
+  },
+  {
+    id: "linux-ssh-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "REMOTE ACCESS & SECURE SHELL",
+    sectionDescription: "Connecting securely to remote hosts, managing keys, and copying files via SSH",
+    command: "scp [file] [user]@[host]:[destination_path]",
+    description: "securely transfer a local file to a destination directory on a remote server over SSH"
+  },
+  {
+    id: "linux-ssh-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "REMOTE ACCESS & SECURE SHELL",
+    sectionDescription: "Connecting securely to remote hosts, managing keys, and copying files via SSH",
+    command: "scp -r [folder] [user]@[host]:[destination_path]",
+    description: "recursively copy an entire directory structure and its contents to a remote server over SSH"
+  },
+  {
+    id: "linux-pkg-1",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo apt update && sudo apt upgrade -y",
+    description: "resynchronize package index files and upgrade all installed packages on Debian/Ubuntu systems"
+  },
+  {
+    id: "linux-pkg-2",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo apt install -y [package_name]",
+    description: "install new software package and its required dependencies automatically using APT"
+  },
+  {
+    id: "linux-pkg-3",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo apt remove --purge [package_name]",
+    description: "uninstall a package and completely purge all of its configuration files from the system"
+  },
+  {
+    id: "linux-pkg-4",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo pacman -Syu",
+    description: "synchronize package repositories and upgrade all installed packages on Arch Linux"
+  },
+  {
+    id: "linux-pkg-5",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo pacman -S [package_name]",
+    description: "install one or more packages from the official repositories using pacman"
+  },
+  {
+    id: "linux-pkg-6",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo dnf update -y",
+    description: "check for updates and refresh all installed RPM packages on Fedora / RHEL / CentOS"
+  },
+  {
+    id: "linux-pkg-7",
+    category: "linux-bash",
+    os: ["linux"],
+    section: "PACKAGE MANAGERS & INSTALLATION",
+    sectionDescription: "Updating repositories, installing, and removing software packages across distros",
+    command: "sudo dnf install [package_name]",
+    description: "install software package and dependencies using DNF on modern Red Hat-based distributions"
+  },
+  {
+    id: "linux-pipe-1",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "TEXT PROCESSING & I/O REDIRECTION",
+    sectionDescription: "Piping streams, splitting output with tee, sorting, and stream filtering",
+    command: "[command] | tee [file]",
+    description: "duplicate standard output to display in terminal while simultaneously writing to a file"
+  },
+  {
+    id: "linux-pipe-2",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "TEXT PROCESSING & I/O REDIRECTION",
+    sectionDescription: "Piping streams, splitting output with tee, sorting, and stream filtering",
+    command: "[command] | tee -a [file]",
+    description: "append output stream to the end of an existing file while also displaying in the terminal"
+  },
+  {
+    id: "linux-pipe-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "TEXT PROCESSING & I/O REDIRECTION",
+    sectionDescription: "Piping streams, splitting output with tee, sorting, and stream filtering",
+    command: "[command] > [file] 2>&1",
+    description: "redirect both standard output (stdout) and standard error (stderr) into a destination file"
+  },
+  {
+    id: "linux-pipe-4",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "TEXT PROCESSING & I/O REDIRECTION",
+    sectionDescription: "Piping streams, splitting output with tee, sorting, and stream filtering",
+    command: "sort [file] | uniq -c",
+    description: "sort lines in a file alphabetically and count occurrences of each adjacent duplicate line"
+  },
+  {
+    id: "linux-pipe-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "TEXT PROCESSING & I/O REDIRECTION",
+    sectionDescription: "Piping streams, splitting output with tee, sorting, and stream filtering",
+    command: "wc -l [file]",
+    description: "count and report the total number of lines in a specified text file"
+  },
+  {
     id: "linux-tar-1",
     category: "linux-bash",
     os: ["linux", "macos"],
@@ -820,6 +1576,42 @@ const COMMANDS_DATA = [
     sectionDescription: "Packaging and extracting compressed tarballs and zip bundles",
     command: "tar -xzvf [archive.tar.gz]",
     description: "extract contents of gzip tarball into the current directory"
+  },
+  {
+    id: "linux-tar-3",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "ARCHIVING & COMPRESSION",
+    sectionDescription: "Packaging and extracting compressed tarballs and zip bundles",
+    command: "tar -tvf [archive.tar.gz]",
+    description: "list file contents and permissions of a gzip-compressed archive without extracting it"
+  },
+  {
+    id: "linux-tar-4",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "ARCHIVING & COMPRESSION",
+    sectionDescription: "Packaging and extracting compressed tarballs and zip bundles",
+    command: "tar -czvf [archive.tar.gz] --exclude=\"[folder]\" [directory]",
+    description: "create a compressed tarball while skipping specified files or subdirectories"
+  },
+  {
+    id: "linux-tar-5",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "ARCHIVING & COMPRESSION",
+    sectionDescription: "Packaging and extracting compressed tarballs and zip bundles",
+    command: "zip -r [archive.zip] [folder]",
+    description: "package an entire folder and subfolders recursively into a cross-platform zip archive"
+  },
+  {
+    id: "linux-tar-6",
+    category: "linux-bash",
+    os: ["linux", "macos"],
+    section: "ARCHIVING & COMPRESSION",
+    sectionDescription: "Packaging and extracting compressed tarballs and zip bundles",
+    command: "unzip [archive.zip] -d [destination]",
+    description: "extract the contents of a zip archive into a designated destination directory"
   },
 
   // ==========================================
