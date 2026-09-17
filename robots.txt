@@ -1,0 +1,9 @@
+﻿# CmdVault robots.txt
+# https://cmd-valut.vercel.app/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Official XML Sitemap
+Sitemap: https://cmd-valut.vercel.app/sitemap.xml
