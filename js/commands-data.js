@@ -5259,6 +5259,1231 @@ const COMMANDS_DATA = [
     command: "npm login",
     description: "authenticate terminal session with npm registry credentials and generate auth token"
   }
+,
+  // ==========================================
+  // CSS: FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)
+  // ==========================================
+  {
+    id: "css-flex-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "display: flex; justify-content: center; align-items: center;",
+    description: "create a flexbox container and center all child items both horizontally and vertically"
+  },
+  {
+    id: "css-flex-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "display: flex; justify-content: space-between; align-items: center;",
+    description: "distribute flex children with maximum space between edges and centered vertical alignment (standard navbar)"
+  },
+  {
+    id: "css-flex-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "display: flex; flex-direction: column; gap: 1rem;",
+    description: "stack flex items vertically in a single column with uniform 1rem spacing between elements"
+  },
+  {
+    id: "css-flex-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "display: flex; flex-wrap: wrap; gap: 12px;",
+    description: "allow flex items to wrap automatically onto new rows when exceeding container width"
+  },
+  {
+    id: "css-flex-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "flex: 1 1 0%;",
+    description: "allow flex item to grow and shrink equally from an initial zero basis point (equal width columns)"
+  },
+  {
+    id: "css-flex-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "flex-shrink: 0;",
+    description: "prevent a flex item or icon from collapsing or shrinking when container width narrows"
+  },
+  {
+    id: "css-flex-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "margin-left: auto;",
+    description: "push specific flex child all the way to the far right edge inside a flex parent"
+  },
+  {
+    id: "css-flex-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "align-self: flex-end;",
+    description: "override parent cross-axis alignment for an individual flex child element"
+  },
+  {
+    id: "css-flex-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "display: inline-flex; align-items: center; gap: 8px;",
+    description: "create an inline flex container with vertically aligned icon and text badge layout"
+  },
+  {
+    id: "css-flex-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "justify-content: space-evenly;",
+    description: "distribute items with equal spacing between each item and before first / after last item"
+  },
+  {
+    id: "css-flex-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "order: -1;",
+    description: "reorder an individual flex child visually to render before all preceding sibling elements"
+  },
+  {
+    id: "css-flex-12",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FLEXBOX LAYOUT (1D CONTAINERS & ALIGNMENT)",
+    sectionDescription: "Flexible 1-dimensional box layouts, item distribution, alignment, and wrapping",
+    command: "min-height: 100vh; display: flex; flex-direction: column;",
+    description: "classic sticky-footer container setup ensuring footer stays pinned to viewport bottom"
+  },
+  // ==========================================
+  // CSS: CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)
+  // ==========================================
+  {
+    id: "css-grid-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;",
+    description: "create a fully responsive auto-fitting card grid that wraps without writing media queries"
+  },
+  {
+    id: "css-grid-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "display: grid; place-items: center;",
+    description: "two-line ultimate centering technique aligning children both horizontally and vertically"
+  },
+  {
+    id: "css-grid-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "display: grid; grid-template-columns: 240px 1fr; min-height: 100vh;",
+    description: "standard application dashboard layout with fixed-width sidebar and fluid main content area"
+  },
+  {
+    id: "css-grid-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-column: 1 / -1;",
+    description: "span a grid child across the entire horizontal width from first track to last track"
+  },
+  {
+    id: "css-grid-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-template-columns: repeat(3, 1fr); gap: 20px;",
+    description: "define three equal-width fractional columns with uniform 20px gutters"
+  },
+  {
+    id: "css-grid-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-template-areas: \"header header\" \"sidebar main\" \"footer footer\";",
+    description: "define visual semantic layout template using named template area strings"
+  },
+  {
+    id: "css-grid-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-area: header;",
+    description: "assign element to fill the corresponding named grid-template-area position"
+  },
+  {
+    id: "css-grid-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-column: span 2; grid-row: span 2;",
+    description: "expand grid item to span across 2 columns and 2 rows (featured bento-box card)"
+  },
+  {
+    id: "css-grid-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-auto-flow: dense;",
+    description: "instruct grid algorithm to automatically backfill empty gaps with smaller elements"
+  },
+  {
+    id: "css-grid-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-template-rows: auto 1fr auto; min-height: 100vh;",
+    description: "holy grail page layout with header height based on content, expanding main body, and footer"
+  },
+  {
+    id: "css-grid-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "display: subgrid;",
+    description: "adopt and align directly with the row and column track sizing of the parent grid container"
+  },
+  {
+    id: "css-grid-12",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CSS GRID LAYOUT (2D TEMPLATES & AUTO-FIT)",
+    sectionDescription: "Two-dimensional grid tracks, auto-responsive card matrices, and named area layouts",
+    command: "grid-template-columns: minmax(150px, 30%) 1fr;",
+    description: "constrain first column between 150px min and 30% max with remaining space given to second column"
+  },
+  // ==========================================
+  // CSS: CENTERING TECHNIQUES & BOX ALIGNMENT
+  // ==========================================
+  {
+    id: "css-center-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "margin-inline: auto;",
+    description: "modern logical property to center block-level element horizontally inside parent container"
+  },
+  {
+    id: "css-center-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);",
+    description: "absolute centering pattern that centers element precisely regardless of its width or height"
+  },
+  {
+    id: "css-center-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "position: absolute; inset: 0; margin: auto;",
+    description: "modern zero-transform absolute centering technique utilizing inset: 0 and margin auto"
+  },
+  {
+    id: "css-center-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "text-align: center;",
+    description: "center all inline and inline-block children (text, buttons, images) horizontally"
+  },
+  {
+    id: "css-center-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "display: flex; justify-content: center;",
+    description: "center flex children along the main horizontal axis"
+  },
+  {
+    id: "css-center-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "display: flex; align-items: center;",
+    description: "center flex children along the cross vertical axis"
+  },
+  {
+    id: "css-center-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "display: grid; place-content: center;",
+    description: "center entire grid track structure within the grid container space"
+  },
+  {
+    id: "css-center-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "line-height: [element_height];",
+    description: "center single line of text vertically by matching line-height to fixed container height"
+  },
+  {
+    id: "css-center-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "vertical-align: middle;",
+    description: "align inline-block element or table cell vertically with adjacent inline text"
+  },
+  {
+    id: "css-center-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CENTERING TECHNIQUES & BOX ALIGNMENT",
+    sectionDescription: "Universal horizontal, vertical, and absolute centering patterns for all element types",
+    command: "max-width: 1200px; margin-inline: auto; padding-inline: 24px;",
+    description: "standard responsive website wrapper constraining content with centered margins and side gutters"
+  },
+  // ==========================================
+  // CSS: POSITIONING, Z-INDEX & STACKING CONTEXTS
+  // ==========================================
+  {
+    id: "css-pos-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "position: relative;",
+    description: "establish a positioned reference context for absolute positioned child elements without breaking flow"
+  },
+  {
+    id: "css-pos-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "position: absolute; top: 0; right: 0;",
+    description: "pin element to top-right corner of its closest positioned ancestor container"
+  },
+  {
+    id: "css-pos-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;",
+    description: "lock navigation bar to the top of viewport staying visible throughout page scroll"
+  },
+  {
+    id: "css-pos-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "position: sticky; top: 0; z-index: 10;",
+    description: "element scrolls naturally until reaching specified viewport threshold, then sticks in place"
+  },
+  {
+    id: "css-pos-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 9999;",
+    description: "full-screen modal backdrop overlay covering entire viewport with dark translucent tint"
+  },
+  {
+    id: "css-pos-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "inset: 0;",
+    description: "modern shorthand for top: 0; right: 0; bottom: 0; left: 0; in positioned elements"
+  },
+  {
+    id: "css-pos-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "z-index: 1;",
+    description: "elevate stacking order of positioned element to render on top of default sibling elements"
+  },
+  {
+    id: "css-pos-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "isolation: isolate;",
+    description: "create a new independent stacking context without requiring z-index or transform hacks"
+  },
+  {
+    id: "css-pos-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "position: static;",
+    description: "reset element to default normal document flow removing custom top/left/z-index offsets"
+  },
+  {
+    id: "css-pos-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "POSITIONING, Z-INDEX & STACKING CONTEXTS",
+    sectionDescription: "Document flow control, sticky headers, fixed overlays, modals, and stacking levels",
+    command: "pointer-events: none;",
+    description: "make element transparent to mouse clicks and touch events passing them to elements underneath"
+  },
+  // ==========================================
+  // CSS: BOX MODEL, SPACING & SIZING
+  // ==========================================
+  {
+    id: "css-box-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "*, *::before, *::after { box-sizing: border-box; }",
+    description: "universal box-sizing reset including padding and border inside total width and height calculations"
+  },
+  {
+    id: "css-box-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "aspect-ratio: 16 / 9;",
+    description: "enforce precise responsive widescreen aspect ratio regardless of container width"
+  },
+  {
+    id: "css-box-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "width: min(100%, 800px);",
+    description: "responsive container sizing using smaller of 100% viewport width or fixed 800px maximum"
+  },
+  {
+    id: "css-box-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "overflow: hidden; text-overflow: ellipsis; white-space: nowrap;",
+    description: "truncate single-line overflowing text with an ellipsis (...) instead of wrapping"
+  },
+  {
+    id: "css-box-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;",
+    description: "multi-line text truncation clamping paragraph to exactly 3 lines with trailing ellipsis"
+  },
+  {
+    id: "css-box-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "overflow-y: auto; overflow-x: hidden;",
+    description: "enable vertical scrolling on demand while strictly hiding horizontal overflow"
+  },
+  {
+    id: "css-box-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "border-radius: 9999px;",
+    description: "create perfect pill / capsule shaped rounded button or badge"
+  },
+  {
+    id: "css-box-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "border-radius: 50%; aspect-ratio: 1 / 1;",
+    description: "create a circular profile avatar container from any square element"
+  },
+  {
+    id: "css-box-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "object-fit: cover; object-position: center;",
+    description: "scale image or video to completely cover container while preserving natural aspect ratio"
+  },
+  {
+    id: "css-box-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "BOX MODEL, SPACING & SIZING",
+    sectionDescription: "Dimensions, margins, padding, box-sizing models, overflow management, and aspect ratios",
+    command: "padding-block: 1rem; padding-inline: 2rem;",
+    description: "logical properties specifying 1rem top/bottom padding and 2rem left/right padding"
+  },
+  // ==========================================
+  // CSS: TYPOGRAPHY, WEBFONTS & TEXT EFFECTS
+  // ==========================================
+  {
+    id: "css-type-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;",
+    description: "system font stack providing native OS typography with instant zero-download rendering speed"
+  },
+  {
+    id: "css-type-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "font-family: 'Google Sans Code', 'Fira Code', 'Courier New', monospace;",
+    description: "modern monospaced code font stack for terminal displays, code snippets, and editors"
+  },
+  {
+    id: "css-type-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "font-size: clamp(1.25rem, 2.5vw, 2.5rem);",
+    description: "fluid typography scaling smoothly between 1.25rem minimum and 2.5rem maximum without media queries"
+  },
+  {
+    id: "css-type-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "background: linear-gradient(135deg, #4285f4, #ea4335); -webkit-background-clip: text; -webkit-text-fill-color: transparent;",
+    description: "render vibrant multi-color gradient text clipping background gradient onto glyphs"
+  },
+  {
+    id: "css-type-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "letter-spacing: -0.02em; line-height: 1.2;",
+    description: "tight modern editorial typography for bold display headlines and hero titles"
+  },
+  {
+    id: "css-type-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "line-height: 1.6; letter-spacing: 0.01em;",
+    description: "optimal readability typography settings for long-form body copy and article paragraphs"
+  },
+  {
+    id: "css-type-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem;",
+    description: "standard micro-copy styling for uppercase category badges, chip labels, and breadcrumbs"
+  },
+  {
+    id: "css-type-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);",
+    description: "subtle drop shadow behind text to enhance contrast and legibility over photographic backgrounds"
+  },
+  {
+    id: "css-type-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "hyphens: auto; word-break: break-word;",
+    description: "automatically hyphenate long words and prevent layout breakage on mobile viewports"
+  },
+  {
+    id: "css-type-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;",
+    description: "render crisp subpixel font glyphs on WebKit, Chrome, Safari, and macOS browsers"
+  },
+  {
+    id: "css-type-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "@font-face { font-family: 'CustomFont'; src: url('font.woff2') format('woff2'); font-display: swap; }",
+    description: "define local custom webfont utilizing WOFF2 compression and font-display: swap for fast FCP"
+  },
+  {
+    id: "css-type-12",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TYPOGRAPHY, WEBFONTS & TEXT EFFECTS",
+    sectionDescription: "Font families, variable fonts, font-face declarations, line heights, and gradient text",
+    command: "font-variant-numeric: tabular-nums;",
+    description: "format numbers with equal tabular monospaced width ensuring numbers align in columns and tables"
+  },
+  // ==========================================
+  // CSS: COLORS, GRADIENTS & BLEND MODES
+  // ==========================================
+  {
+    id: "css-color-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "background: linear-gradient(180deg, #1e1f20 0%, #131314 100%);",
+    description: "smooth vertical gradient transition between elevated surface dark tone and background"
+  },
+  {
+    id: "css-color-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "background: radial-gradient(circle at top left, #3b82f6, transparent 60%);",
+    description: "radial glow accent radiating outward from the top-left corner of the container"
+  },
+  {
+    id: "css-color-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "background: conic-gradient(from 0deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4);",
+    description: "conic angle gradient creating circular chromatic color wheel or gradient border effect"
+  },
+  {
+    id: "css-color-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "background-size: cover; background-position: center; background-repeat: no-repeat;",
+    description: "fill background image across entire container maintaining aspect ratio without tiling"
+  },
+  {
+    id: "css-color-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "background-attachment: fixed;",
+    description: "fix background image in place creating parallax scroll effect as page scrolls past"
+  },
+  {
+    id: "css-color-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "color: currentColor;",
+    description: "inherit text color dynamically into borders, SVG fill, or box shadows"
+  },
+  {
+    id: "css-color-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "mix-blend-mode: multiply;",
+    description: "blend foreground element pixels with underlying background layer using multiply algorithm"
+  },
+  {
+    id: "css-color-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "background-blend-mode: overlay;",
+    description: "combine background image with background color overlay for dramatic tint effects"
+  },
+  {
+    id: "css-color-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "color: hsl(217deg 91% 60% / 80%);",
+    description: "modern space-separated HSL notation with 80% opacity alpha channel"
+  },
+  {
+    id: "css-color-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "accent-color: #4285f4;",
+    description: "customize brand accent color for native HTML checkboxes, radio buttons, and range sliders"
+  },
+  {
+    id: "css-color-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "COLORS, GRADIENTS & BLEND MODES",
+    sectionDescription: "Color notations, linear/radial/conic gradients, alpha channels, and blending algorithms",
+    command: "caret-color: #8ab4f8;",
+    description: "customize color of text insertion caret cursor inside text inputs and textareas"
+  },
+  // ==========================================
+  // CSS: TRANSFORMS & 3D SPATIAL EFFECTS
+  // ==========================================
+  {
+    id: "css-tf-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform: translateY(-4px);",
+    description: "lift card slightly upward on hover to create interactive tactile elevation"
+  },
+  {
+    id: "css-tf-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform: scale(1.05);",
+    description: "magnify element by 5% smoothly without altering layout geometry of surrounding elements"
+  },
+  {
+    id: "css-tf-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform: rotate(180deg);",
+    description: "rotate element 180 degrees (standard for collapsible accordion arrow toggles)"
+  },
+  {
+    id: "css-tf-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform-origin: center center;",
+    description: "set pivot point for scale, rotate, and skew transformations (e.g. top left, bottom right)"
+  },
+  {
+    id: "css-tf-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform: translate(-50%, -50%);",
+    description: "shift element backwards by exactly half its own width and height for coordinate centering"
+  },
+  {
+    id: "css-tf-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "perspective: 1000px;",
+    description: "establish 3D depth perspective viewing distance for children with 3D transforms"
+  },
+  {
+    id: "css-tf-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform-style: preserve-3d;",
+    description: "instruct child elements to remain positioned in 3D spatial coordinate planes"
+  },
+  {
+    id: "css-tf-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "backface-visibility: hidden;",
+    description: "hide the reverse side of an element when rotated in 3D (essential for card flip widgets)"
+  },
+  {
+    id: "css-tf-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "transform: rotateX(15deg) rotateY(-15deg);",
+    description: "apply 3D isometric tilt angle across both X and Y axes"
+  },
+  {
+    id: "css-tf-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSFORMS & 3D SPATIAL EFFECTS",
+    sectionDescription: "Translation, scaling, rotation, skewing, 3D perspectives, and transform origins",
+    command: "translate: 0 -4px; scale: 1.02;",
+    description: "modern individual transform properties allowing translation and scaling without overriding each other"
+  },
+  // ==========================================
+  // CSS: TRANSITIONS & KEYFRAME ANIMATIONS
+  // ==========================================
+  {
+    id: "css-anim-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);",
+    description: "standard Google Material Design easing curve for smooth interactive UI state transitions"
+  },
+  {
+    id: "css-anim-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "transition: transform 0.2s ease, opacity 0.2s ease;",
+    description: "explicitly transition only composite-friendly properties (transform and opacity) for 60fps performance"
+  },
+  {
+    id: "css-anim-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "animation: spin 1s linear infinite;",
+    description: "infinitely rotating loading spinner animation with constant angular velocity"
+  },
+  {
+    id: "css-anim-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }",
+    description: "keyframe sequence rotating element 360 degrees around central axis"
+  },
+  {
+    id: "css-anim-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "animation: fadeIn 0.3s ease-out forwards;",
+    description: "fade-in animation that persists final keyframe styling upon completion (forwards fill mode)"
+  },
+  {
+    id: "css-anim-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }",
+    description: "classic smooth entrance animation combining opacity fade with subtle upward slide"
+  },
+  {
+    id: "css-anim-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;",
+    description: "subtle pulsing animation loop ideal for live activity badges or skeleton loading placeholders"
+  },
+  {
+    id: "css-anim-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "animation-delay: 0.15s;",
+    description: "stagger entry animation timing for cascade effects across list items"
+  },
+  {
+    id: "css-anim-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "animation-play-state: paused;",
+    description: "pause running CSS animation dynamically (e.g. on :hover to pause ticker or carousel)"
+  },
+  {
+    id: "css-anim-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "will-change: transform, opacity;",
+    description: "inform browser compositor ahead of time to allocate GPU layer for butter-smooth animation"
+  },
+  {
+    id: "css-anim-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSITIONS & KEYFRAME ANIMATIONS",
+    sectionDescription: "Hardware-accelerated transitions, custom cubic-bezier easings, and keyframe loops",
+    command: "@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }",
+    description: "accessibility media query disabling animations for users with vestibular motion sensitivity"
+  },
+  // ==========================================
+  // CSS: FILTERS, GLASSMORPHISM & BOX SHADOWS
+  // ==========================================
+  {
+    id: "css-fx-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);",
+    description: "natural layered ambient card drop shadow with soft realistic diffusion"
+  },
+  {
+    id: "css-fx-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);",
+    description: "high-elevation floating modal or dropdown menu shadow with prominent depth"
+  },
+  {
+    id: "css-fx-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);",
+    description: "inner shadow giving input fields, wells, or pressed buttons an inset recessed appearance"
+  },
+  {
+    id: "css-fx-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(30, 31, 32, 0.75);",
+    description: "frosted glassmorphism effect blurring content underneath header or modal surface"
+  },
+  {
+    id: "css-fx-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));",
+    description: "cast shadow adhering strictly to the alpha contours of transparent PNGs or SVGs"
+  },
+  {
+    id: "css-fx-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "filter: grayscale(100%);",
+    description: "convert image or element completely to black and white monochrome"
+  },
+  {
+    id: "css-fx-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "filter: brightness(1.2) contrast(1.1);",
+    description: "enhance image vibrancy by boosting brightness by 20% and contrast by 10%"
+  },
+  {
+    id: "css-fx-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "filter: blur(8px);",
+    description: "apply Gaussian blur filter across element contents (ideal for placeholder image previews)"
+  },
+  {
+    id: "css-fx-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.4);",
+    description: "clean accessibility focus ring outline without distorting element box dimensions"
+  },
+  {
+    id: "css-fx-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "FILTERS, GLASSMORPHISM & BOX SHADOWS",
+    sectionDescription: "Drop shadows, frosted glass blur, backdrop filters, brightness, and visual elevation",
+    command: "clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);",
+    description: "clip container into an angled modern diagonal section break divider"
+  },
+  // ==========================================
+  // CSS: MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS
+  // ==========================================
+  {
+    id: "css-mq-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@media (max-width: 768px) { .nav-bar { flex-direction: column; } }",
+    description: "apply mobile layout styles when screen width is 768px or narrower (tablet/mobile breakpoint)"
+  },
+  {
+    id: "css-mq-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@media (min-width: 1024px) { .container { grid-template-columns: repeat(4, 1fr); } }",
+    description: "expand layout to 4 columns on desktop monitors 1024px and wider"
+  },
+  {
+    id: "css-mq-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@media (prefers-color-scheme: dark) { :root { --bg-color: #131314; --text-color: #e3e3e3; } }",
+    description: "automatically detect operating system dark mode preference and apply dark theme tokens"
+  },
+  {
+    id: "css-mq-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@media (hover: hover) and (pointer: fine) { .card:hover { transform: translateY(-4px); } }",
+    description: "enable hover effects exclusively on devices with precise pointers (mouse) preventing sticky touch bugs"
+  },
+  {
+    id: "css-mq-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "container-type: inline-size; container-name: card-container;",
+    description: "declare container context enabling child components to adapt based on parent width (CSS Container Queries)"
+  },
+  {
+    id: "css-mq-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@container card-container (min-width: 400px) { .card { display: flex; flex-direction: row; } }",
+    description: "switch card to horizontal layout when parent container width exceeds 400px regardless of screen size"
+  },
+  {
+    id: "css-mq-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "height: 100dvh;",
+    description: "dynamic viewport height adapting in real time to mobile browser address bar expansions/retractions"
+  },
+  {
+    id: "css-mq-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);",
+    description: "pad content away from iPhone notches, rounded screen corners, and home indicator bars"
+  },
+  {
+    id: "css-mq-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@media print { .no-print { display: none !important; } body { color: #000; background: #fff; } }",
+    description: "clean printer stylesheet hiding navigation and optimizing page for paper printing"
+  },
+  {
+    id: "css-mq-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "@media (orientation: landscape) and (max-height: 500px) { .nav { display: none; } }",
+    description: "target mobile devices held in horizontal landscape orientation with limited vertical height"
+  },
+  {
+    id: "css-mq-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "width: min(90vw, 1200px);",
+    description: "responsive width taking 90% of screen on small displays and capping at 1200px on widescreen displays"
+  },
+  {
+    id: "css-mq-12",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "MEDIA QUERIES, CONTAINER QUERIES & RESPONSIVENESS",
+    sectionDescription: "Breakpoints, device adaptation, dark/light themes, container queries, and logical units",
+    command: "scroll-behavior: smooth;",
+    description: "enable smooth animated scrolling across page when clicking internal anchor hash links"
+  },
+  // ==========================================
+  // CSS: CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS
+  // ==========================================
+  {
+    id: "css-var-1",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: ":root { --primary: #8ab4f8; --surface: #1e1f20; --bg: #131314; }",
+    description: "declare globally scoped CSS design tokens and color variables on root pseudo-class"
+  },
+  {
+    id: "css-var-2",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "color: var(--text-color, #ffffff);",
+    description: "resolve CSS variable with fallback value in case the variable is undefined"
+  },
+  {
+    id: "css-var-3",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "width: calc(100% - 32px);",
+    description: "dynamically compute element dimension mixing percentage widths and fixed pixel gutter margins"
+  },
+  {
+    id: "css-var-4",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: ":is(h1, h2, h3, h4) { font-family: 'Google Sans Flex', sans-serif; }",
+    description: "match any selector in the list with specificity equal to the most specific item in the group"
+  },
+  {
+    id: "css-var-5",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: ":where(button, input, select) { all: unset; }",
+    description: "match multiple selectors with zero (0) specificity making CSS resets easily overridable"
+  },
+  {
+    id: "css-var-6",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "header:has(.nav-menu.open) { background: rgba(0, 0, 0, 0.95); }",
+    description: "the CSS parent selector: style parent element conditionally if it contains a matching child (:has)"
+  },
+  {
+    id: "css-var-7",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "button:not(:disabled):hover { transform: translateY(-2px); cursor: pointer; }",
+    description: "negation pseudo-class targeting buttons only when not in a disabled state"
+  },
+  {
+    id: "css-var-8",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: ":focus-visible { outline: 2px solid #8ab4f8; outline-offset: 2px; }",
+    description: "display accessibility focus ring exclusively for keyboard navigation while suppressing on mouse clicks"
+  },
+  {
+    id: "css-var-9",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "&::before { content: ''; position: absolute; inset: 0; }",
+    description: "native CSS nesting selector (&) creating an absolute positioned pseudo-element layer"
+  },
+  {
+    id: "css-var-10",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "input::placeholder { color: #80868b; opacity: 1; }",
+    description: "customize color and opacity of form input placeholder text"
+  },
+  {
+    id: "css-var-11",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "user-select: none; -webkit-user-select: none;",
+    description: "prevent user from highlighting or selecting text on interactive UI buttons and icons"
+  },
+  {
+    id: "css-var-12",
+    category: "css",
+    os: ["windows", "linux", "macos"],
+    section: "CUSTOM PROPERTIES (VARIABLES) & MODERN SELECTORS",
+    sectionDescription: "Root custom properties, variable cascading, fallbacks, calc(), and modern pseudo-classes",
+    command: "all: unset;",
+    description: "completely strip all default user-agent styling, borders, and margins from an HTML element"
+  }
 ];
 
 // Attach globally
