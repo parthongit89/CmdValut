@@ -1725,6 +1725,650 @@ const COMMANDS_DATA = [
     command: "Get-NetIPAddress -AddressFamily IPv4",
     description: "list all active IPv4 network interface addresses, subnets, and adapters"
   }
+,
+
+  // ==========================================
+  // MYSQL & SQL COMMANDS
+  // ==========================================
+  {
+    id: "mysql-db-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA OPERATIONS",
+    sectionDescription: "Creating, managing, selecting, and dropping relational MySQL databases",
+    command: "CREATE DATABASE [database_name];",
+    description: "create a new MySQL database schema with default character set and collation"
+  },
+  {
+    id: "mysql-db-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA OPERATIONS",
+    sectionDescription: "Creating, managing, selecting, and dropping relational MySQL databases",
+    command: "CREATE DATABASE IF NOT EXISTS [database_name] CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;",
+    description: "create database safely if not exists with complete modern unicode utf8mb4 support"
+  },
+  {
+    id: "mysql-db-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA OPERATIONS",
+    sectionDescription: "Creating, managing, selecting, and dropping relational MySQL databases",
+    command: "SHOW DATABASES;",
+    description: "display a list of all databases available on the connected MySQL server instance"
+  },
+  {
+    id: "mysql-db-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA OPERATIONS",
+    sectionDescription: "Creating, managing, selecting, and dropping relational MySQL databases",
+    command: "USE [database_name];",
+    description: "switch and select the active database for all subsequent SQL queries and statements"
+  },
+  {
+    id: "mysql-db-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATABASE & SCHEMA OPERATIONS",
+    sectionDescription: "Creating, managing, selecting, and dropping relational MySQL databases",
+    command: "DROP DATABASE IF EXISTS [database_name];",
+    description: "permanently delete a database along with all its tables, views, and data"
+  },
+  {
+    id: "mysql-table-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & CONSTRAINTS",
+    sectionDescription: "Creating, inspecting, truncating, and dropping database tables and constraints",
+    command: "CREATE TABLE [table_name] (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, email VARCHAR(150) UNIQUE, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);",
+    description: "create a new database table with auto-incrementing primary key and timestamp defaults"
+  },
+  {
+    id: "mysql-table-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & CONSTRAINTS",
+    sectionDescription: "Creating, inspecting, truncating, and dropping database tables and constraints",
+    command: "SHOW TABLES;",
+    description: "list all existing tables contained in the currently selected database"
+  },
+  {
+    id: "mysql-table-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & CONSTRAINTS",
+    sectionDescription: "Creating, inspecting, truncating, and dropping database tables and constraints",
+    command: "DESCRIBE [table_name];",
+    description: "view table column schemas including data types, nullability, default values, and keys"
+  },
+  {
+    id: "mysql-table-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & CONSTRAINTS",
+    sectionDescription: "Creating, inspecting, truncating, and dropping database tables and constraints",
+    command: "SHOW CREATE TABLE [table_name];",
+    description: "display the exact SQL statement and storage engine used to create the specified table"
+  },
+  {
+    id: "mysql-table-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & CONSTRAINTS",
+    sectionDescription: "Creating, inspecting, truncating, and dropping database tables and constraints",
+    command: "DROP TABLE IF EXISTS [table_name];",
+    description: "permanently delete a table and remove its schema definition from the database"
+  },
+  {
+    id: "mysql-table-6",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE DEFINITION & CONSTRAINTS",
+    sectionDescription: "Creating, inspecting, truncating, and dropping database tables and constraints",
+    command: "TRUNCATE TABLE [table_name];",
+    description: "fast wipe of all table rows while resetting auto-increment counters and preserving schema"
+  },
+  {
+    id: "mysql-alter-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Modifying existing table structures, adding columns, and altering data types",
+    command: "ALTER TABLE [table_name] ADD COLUMN [column_name] VARCHAR(255) AFTER [existing_column];",
+    description: "add a new column to an existing table positioned after a specified column"
+  },
+  {
+    id: "mysql-alter-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Modifying existing table structures, adding columns, and altering data types",
+    command: "ALTER TABLE [table_name] DROP COLUMN [column_name];",
+    description: "remove and permanently drop an existing column from the table definition"
+  },
+  {
+    id: "mysql-alter-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Modifying existing table structures, adding columns, and altering data types",
+    command: "ALTER TABLE [table_name] MODIFY COLUMN [column_name] VARCHAR(200) NOT NULL;",
+    description: "modify the data type, nullability constraint, or length of an existing column"
+  },
+  {
+    id: "mysql-alter-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Modifying existing table structures, adding columns, and altering data types",
+    command: "ALTER TABLE [table_name] CHANGE [old_col] [new_col] INT NOT NULL;",
+    description: "rename an existing column and redefine its data type in a single statement"
+  },
+  {
+    id: "mysql-alter-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Modifying existing table structures, adding columns, and altering data types",
+    command: "ALTER TABLE [old_table] RENAME TO [new_table];",
+    description: "rename an existing database table to a new table name"
+  },
+  {
+    id: "mysql-alter-6",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TABLE MODIFICATION (ALTER TABLE)",
+    sectionDescription: "Modifying existing table structures, adding columns, and altering data types",
+    command: "ALTER TABLE [table_name] ADD CONSTRAINT fk_name FOREIGN KEY ([column]) REFERENCES [parent_table]([id]) ON DELETE CASCADE;",
+    description: "add a foreign key constraint to link child records and cascade deletions"
+  },
+  {
+    id: "mysql-select-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT * FROM [table_name];",
+    description: "retrieve all columns and all stored rows from a specified table"
+  },
+  {
+    id: "mysql-select-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT DISTINCT [column_name] FROM [table_name];",
+    description: "query and return unique, non-duplicated values for specified table column"
+  },
+  {
+    id: "mysql-select-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT * FROM [table_name] WHERE [status] = 'active' AND [age] >= 18;",
+    description: "filter query results matching multiple combined Boolean AND conditions"
+  },
+  {
+    id: "mysql-select-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT * FROM [table_name] WHERE [name] LIKE '%keyword%';",
+    description: "search text column for substring occurrences using SQL wildcard percent symbols"
+  },
+  {
+    id: "mysql-select-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT * FROM [table_name] WHERE [status] IN ('pending', 'approved', 'shipped');",
+    description: "filter records matching any item in a discrete set of allowed values"
+  },
+  {
+    id: "mysql-select-6",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT * FROM [table_name] WHERE [created_at] BETWEEN '2026-01-01' AND '2026-12-31';",
+    description: "query rows where a date or numeric column falls within an inclusive continuous range"
+  },
+  {
+    id: "mysql-select-7",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA QUERYING & FILTERING",
+    sectionDescription: "Fetching data rows, filtering records with WHERE clauses, and evaluating criteria",
+    command: "SELECT * FROM [table_name] WHERE [deleted_at] IS NULL;",
+    description: "retrieve records where specified column contains an unassigned NULL value"
+  },
+  {
+    id: "mysql-order-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SORTING & PAGINATION",
+    sectionDescription: "Ordering query result sets, paginating data, and limiting output volumes",
+    command: "SELECT * FROM [table_name] ORDER BY [column_name] DESC;",
+    description: "sort query output in descending order by specified column"
+  },
+  {
+    id: "mysql-order-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SORTING & PAGINATION",
+    sectionDescription: "Ordering query result sets, paginating data, and limiting output volumes",
+    command: "SELECT * FROM [table_name] ORDER BY [priority] DESC, [created_at] ASC;",
+    description: "order query results by multiple columns with varying directional sorting"
+  },
+  {
+    id: "mysql-order-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SORTING & PAGINATION",
+    sectionDescription: "Ordering query result sets, paginating data, and limiting output volumes",
+    command: "SELECT * FROM [table_name] LIMIT [count];",
+    description: "restrict query result to return only the first specified number of records"
+  },
+  {
+    id: "mysql-order-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SORTING & PAGINATION",
+    sectionDescription: "Ordering query result sets, paginating data, and limiting output volumes",
+    command: "SELECT * FROM [table_name] LIMIT [offset], [count];",
+    description: "fetch a paginated slice of records starting from an offset row index"
+  },
+  {
+    id: "mysql-group-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATION & GROUPING",
+    sectionDescription: "Aggregating metrics, calculating sums and averages, and grouping records",
+    command: "SELECT COUNT(*) FROM [table_name];",
+    description: "count total number of rows stored in a table or matching filter criteria"
+  },
+  {
+    id: "mysql-group-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATION & GROUPING",
+    sectionDescription: "Aggregating metrics, calculating sums and averages, and grouping records",
+    command: "SELECT AVG([col]), SUM([col]), MIN([col]), MAX([col]) FROM [table_name];",
+    description: "compute statistical aggregates including average, total sum, minimum, and maximum"
+  },
+  {
+    id: "mysql-group-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATION & GROUPING",
+    sectionDescription: "Aggregating metrics, calculating sums and averages, and grouping records",
+    command: "SELECT [category], COUNT(*) AS total FROM [table_name] GROUP BY [category];",
+    description: "group records by distinct column values and count items per group"
+  },
+  {
+    id: "mysql-group-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "AGGREGATION & GROUPING",
+    sectionDescription: "Aggregating metrics, calculating sums and averages, and grouping records",
+    command: "SELECT [category], COUNT(*) AS total FROM [table_name] GROUP BY [category] HAVING total > 10;",
+    description: "filter grouped results based on aggregate condition using having clause"
+  },
+  {
+    id: "mysql-join-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "RELATIONAL JOINS & UNIONS",
+    sectionDescription: "Combining data from multiple relational tables via foreign keys and unions",
+    command: "SELECT a.*, b.[col] FROM [table_a] a INNER JOIN [table_b] b ON a.[id] = b.[a_id];",
+    description: "return rows that have matching values in both related tables"
+  },
+  {
+    id: "mysql-join-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "RELATIONAL JOINS & UNIONS",
+    sectionDescription: "Combining data from multiple relational tables via foreign keys and unions",
+    command: "SELECT a.*, b.[col] FROM [table_a] a LEFT JOIN [table_b] b ON a.[id] = b.[a_id];",
+    description: "return all rows from left table with matching data from right table or NULL"
+  },
+  {
+    id: "mysql-join-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "RELATIONAL JOINS & UNIONS",
+    sectionDescription: "Combining data from multiple relational tables via foreign keys and unions",
+    command: "SELECT a.*, b.[col] FROM [table_a] a RIGHT JOIN [table_b] b ON a.[id] = b.[a_id];",
+    description: "return all rows from right table with corresponding records from left table or NULL"
+  },
+  {
+    id: "mysql-join-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "RELATIONAL JOINS & UNIONS",
+    sectionDescription: "Combining data from multiple relational tables via foreign keys and unions",
+    command: "SELECT [column] FROM [table_a] UNION SELECT [column] FROM [table_b];",
+    description: "combine distinct results of two queries eliminating duplicate entries"
+  },
+  {
+    id: "mysql-join-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "RELATIONAL JOINS & UNIONS",
+    sectionDescription: "Combining data from multiple relational tables via foreign keys and unions",
+    command: "SELECT [column] FROM [table_a] UNION ALL SELECT [column] FROM [table_b];",
+    description: "combine results of two queries preserving all records including duplicate rows"
+  },
+  {
+    id: "mysql-dml-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA MODIFICATION (DML)",
+    sectionDescription: "Inserting new records, updating existing data values, and deleting rows",
+    command: "INSERT INTO [table_name] ([column1], [column2]) VALUES ('val1', 'val2');",
+    description: "insert a new single row of data into specified table columns"
+  },
+  {
+    id: "mysql-dml-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA MODIFICATION (DML)",
+    sectionDescription: "Inserting new records, updating existing data values, and deleting rows",
+    command: "INSERT INTO [table_name] ([col1], [col2]) VALUES ('a1', 'b1'), ('a2', 'b2'), ('a3', 'b3');",
+    description: "batch insert multiple records simultaneously in a single atomic SQL transaction"
+  },
+  {
+    id: "mysql-dml-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA MODIFICATION (DML)",
+    sectionDescription: "Inserting new records, updating existing data values, and deleting rows",
+    command: "INSERT INTO [table_name] (id, views) VALUES (1, 1) ON DUPLICATE KEY UPDATE views = views + 1;",
+    description: "insert a new row or update specified fields if unique key collision occurs (upsert)"
+  },
+  {
+    id: "mysql-dml-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA MODIFICATION (DML)",
+    sectionDescription: "Inserting new records, updating existing data values, and deleting rows",
+    command: "UPDATE [table_name] SET [col1] = 'new_val', [col2] = 'new_val' WHERE [id] = 1;",
+    description: "update column values for records satisfying the specified where condition"
+  },
+  {
+    id: "mysql-dml-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "DATA MODIFICATION (DML)",
+    sectionDescription: "Inserting new records, updating existing data values, and deleting rows",
+    command: "DELETE FROM [table_name] WHERE [status] = 'inactive';",
+    description: "delete specific rows meeting where condition from table"
+  },
+  {
+    id: "mysql-idx-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES & QUERY PERFORMANCE",
+    sectionDescription: "Creating B-tree indexes, analyzing query plans, and optimizing execution speeds",
+    command: "CREATE INDEX [idx_name] ON [table_name] ([column_name]);",
+    description: "create a standard B-tree index on table column to accelerate query lookups"
+  },
+  {
+    id: "mysql-idx-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES & QUERY PERFORMANCE",
+    sectionDescription: "Creating B-tree indexes, analyzing query plans, and optimizing execution speeds",
+    command: "CREATE UNIQUE INDEX [idx_name] ON [table_name] ([column_name]);",
+    description: "create a unique constraint index enforcing non-repeating values in a column"
+  },
+  {
+    id: "mysql-idx-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES & QUERY PERFORMANCE",
+    sectionDescription: "Creating B-tree indexes, analyzing query plans, and optimizing execution speeds",
+    command: "SHOW INDEX FROM [table_name];",
+    description: "display all indexes, index types, cardinality, and indexed column sequences on a table"
+  },
+  {
+    id: "mysql-idx-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES & QUERY PERFORMANCE",
+    sectionDescription: "Creating B-tree indexes, analyzing query plans, and optimizing execution speeds",
+    command: "DROP INDEX [idx_name] ON [table_name];",
+    description: "delete and remove an existing index from specified database table"
+  },
+  {
+    id: "mysql-idx-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "INDEXES & QUERY PERFORMANCE",
+    sectionDescription: "Creating B-tree indexes, analyzing query plans, and optimizing execution speeds",
+    command: "EXPLAIN SELECT * FROM [table_name] WHERE [column_name] = 'value';",
+    description: "analyze query execution plan, estimated rows scanned, and index keys utilized"
+  },
+  {
+    id: "mysql-trans-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSACTIONS & DATA INTEGRITY",
+    sectionDescription: "Controlling atomic operations, managing rollbacks, and data consistency",
+    command: "START TRANSACTION;",
+    description: "begin an atomic transaction block disabling autocommit for subsequent queries"
+  },
+  {
+    id: "mysql-trans-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSACTIONS & DATA INTEGRITY",
+    sectionDescription: "Controlling atomic operations, managing rollbacks, and data consistency",
+    command: "COMMIT;",
+    description: "permanently persist and apply all database modifications made in the active transaction"
+  },
+  {
+    id: "mysql-trans-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSACTIONS & DATA INTEGRITY",
+    sectionDescription: "Controlling atomic operations, managing rollbacks, and data consistency",
+    command: "ROLLBACK;",
+    description: "revert all uncommitted database changes made during the current transaction"
+  },
+  {
+    id: "mysql-trans-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSACTIONS & DATA INTEGRITY",
+    sectionDescription: "Controlling atomic operations, managing rollbacks, and data consistency",
+    command: "SAVEPOINT [savepoint_name];",
+    description: "create an intermediate named checkpoint within an open transaction"
+  },
+  {
+    id: "mysql-trans-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "TRANSACTIONS & DATA INTEGRITY",
+    sectionDescription: "Controlling atomic operations, managing rollbacks, and data consistency",
+    command: "ROLLBACK TO [savepoint_name];",
+    description: "undo query changes back to a specific checkpoint without aborting the entire transaction"
+  },
+  {
+    id: "mysql-user-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "CREATE USER '[username]'@'localhost' IDENTIFIED BY '[password]';",
+    description: "create a new MySQL user account restricted to local host connections"
+  },
+  {
+    id: "mysql-user-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "GRANT ALL PRIVILEGES ON [database_name].* TO '[username]'@'localhost';",
+    description: "grant all database rights and permissions on specified schema to user"
+  },
+  {
+    id: "mysql-user-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "GRANT SELECT, INSERT, UPDATE, DELETE ON [database_name].* TO '[username]'@'%';",
+    description: "grant DML permissions on database schema to user connecting from any remote host"
+  },
+  {
+    id: "mysql-user-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "SHOW GRANTS FOR '[username]'@'localhost';",
+    description: "inspect list of all granted privileges and permissions assigned to a user account"
+  },
+  {
+    id: "mysql-user-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "REVOKE ALL PRIVILEGES ON [database_name].* FROM '[username]'@'localhost';",
+    description: "revoke and strip all assigned database privileges from specified user"
+  },
+  {
+    id: "mysql-user-6",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "DROP USER '[username]'@'localhost';",
+    description: "delete user account permanently from MySQL authentication user store"
+  },
+  {
+    id: "mysql-user-7",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "FLUSH PRIVILEGES;",
+    description: "reload in-memory MySQL grant tables to apply permission changes immediately"
+  },
+  {
+    id: "mysql-user-8",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "USER MANAGEMENT & SECURITY",
+    sectionDescription: "Creating database accounts, configuring passwords, and managing GRANT privileges",
+    command: "ALTER USER '[username]'@'localhost' IDENTIFIED BY '[new_password]';",
+    description: "change and update authentication password for an existing MySQL user account"
+  },
+  {
+    id: "mysql-admin-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SERVER ADMINISTRATION & MONITORING",
+    sectionDescription: "Auditing active connections, terminating processes, and checking system variables",
+    command: "SHOW PROCESSLIST;",
+    description: "display all active connection threads, client hosts, execution states, and queries"
+  },
+  {
+    id: "mysql-admin-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SERVER ADMINISTRATION & MONITORING",
+    sectionDescription: "Auditing active connections, terminating processes, and checking system variables",
+    command: "KILL [thread_id];",
+    description: "terminate a long-running, locked, or runaway client query process thread"
+  },
+  {
+    id: "mysql-admin-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SERVER ADMINISTRATION & MONITORING",
+    sectionDescription: "Auditing active connections, terminating processes, and checking system variables",
+    command: "SHOW STATUS LIKE '%Threads_connected%';",
+    description: "inspect real-time server runtime status metrics and connection load"
+  },
+  {
+    id: "mysql-admin-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SERVER ADMINISTRATION & MONITORING",
+    sectionDescription: "Auditing active connections, terminating processes, and checking system variables",
+    command: "SHOW VARIABLES LIKE '%max_connections%';",
+    description: "view configured system configuration variables and resource thresholds"
+  },
+  {
+    id: "mysql-admin-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "SERVER ADMINISTRATION & MONITORING",
+    sectionDescription: "Auditing active connections, terminating processes, and checking system variables",
+    command: "SELECT VERSION();",
+    description: "display the official release version string of the running MySQL server"
+  },
+  {
+    id: "mysql-cli-1",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "CLI UTILITIES & BACKUP",
+    sectionDescription: "Connecting via terminal CLI, creating database backups, and importing data",
+    command: "mysql -u [username] -p -h [hostname] -P 3306 [database_name]",
+    description: "connect to MySQL database server through terminal CLI with authentication prompt"
+  },
+  {
+    id: "mysql-cli-2",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "CLI UTILITIES & BACKUP",
+    sectionDescription: "Connecting via terminal CLI, creating database backups, and importing data",
+    command: "mysql -u [username] -p [database_name] < [backup_file.sql]",
+    description: "restore or execute SQL commands from an external dump file into database"
+  },
+  {
+    id: "mysql-cli-3",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "CLI UTILITIES & BACKUP",
+    sectionDescription: "Connecting via terminal CLI, creating database backups, and importing data",
+    command: "mysqldump -u [username] -p [database_name] > [backup.sql]",
+    description: "export complete database schema and stored records into a SQL dump file"
+  },
+  {
+    id: "mysql-cli-4",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "CLI UTILITIES & BACKUP",
+    sectionDescription: "Connecting via terminal CLI, creating database backups, and importing data",
+    command: "mysqldump -u [username] -p --all-databases > [all_databases.sql]",
+    description: "backup all databases across the entire MySQL server instance into single file"
+  },
+  {
+    id: "mysql-cli-5",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "CLI UTILITIES & BACKUP",
+    sectionDescription: "Connecting via terminal CLI, creating database backups, and importing data",
+    command: "mysqldump -u [username] -p --no-data [database_name] > [schema_only.sql]",
+    description: "dump database structure, DDL, and table definitions without any data rows"
+  },
+  {
+    id: "mysql-cli-6",
+    category: "sql-mysql",
+    os: ["windows", "linux", "macos"],
+    section: "CLI UTILITIES & BACKUP",
+    sectionDescription: "Connecting via terminal CLI, creating database backups, and importing data",
+    command: "LOAD DATA INFILE '[path_to_file.csv]' INTO TABLE [table_name] FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;",
+    description: "perform ultra-fast bulk data import from CSV directly into MySQL database table"
+  }
 ];
 
 // Attach globally

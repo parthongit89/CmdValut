@@ -34,7 +34,7 @@
 
 ## 📖 Overview
 
-**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, and DevOps engineers instant access to essential commands across **GitHub & Git**, **Linux & Bash**, and **Windows PowerShell**.
+**CmdVault** is a fast, responsive, and developer-centric command line reference tool built with a clean **Google Material 3 / Google Cloud Shell** dark aesthetic. It is engineered to give developers, sysadmins, database administrators, and DevOps engineers instant access to essential commands and queries across **GitHub & Git**, **Linux & Bash**, **Windows PowerShell**, and **MySQL**.
 
 No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semantic HTML5, modern CSS3, and modular vanilla JavaScript**, delivering zero-latency search, instantaneous 1-click clipboard copying, and edge performance on Vercel.
 
@@ -68,6 +68,7 @@ No heavy frameworks, no bloated bundles — CmdVault is crafted in **pure semant
 | **GitHub & Git** | Setup, Init, Staging, Branching, Merging, Remote Updates, History Rewrites | Global configurations, commit snapshots, interactive rebase, cherry-pick, stash, branch management |
 | **Linux & Bash** | Filesystem, Searching, Permissions, Diagnostics, Processes, Disk Usage, Systemd, Users, Networking, SSH/SCP, Package Managers, I/O Pipes, Compression | `chmod`, `systemctl`, `journalctl`, `grep`, `lsof`, `ip`, `ssh-keygen`, `apt/pacman/dnf`, `tee`, `tar` |
 | **PowerShell** | Navigation, Process Control, Admin Scripts, Network Diagnostics | `Get-Service`, `Stop-Process`, `Test-NetConnection`, execution policies, package management |
+| **MySQL** | Databases, Tables, DDL/DML, Joins, Indexes, Transactions, User Security, Administration, mysqldump | `CREATE DATABASE`, `SELECT ... JOIN`, `INSERT ... ON DUPLICATE`, `CREATE INDEX`, `START TRANSACTION`, `GRANT`, `mysqldump` |
 
 ---
 
